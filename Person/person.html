@@ -13,7 +13,9 @@
 		<meta name="keywords" content="Kuture,AustinKuture,Kuture'Blog,李亚坤,李亚坤的博客,Kuture的博客," />
 		<meta name="author" content="Kuture" />
 
-  
+
+        <!--引入Echarts-->
+        <script src="../echarts.js"></script>
 
   	<!-- Facebook and Twitter integration -->
 	<meta property="og:title" content=""/>
@@ -91,26 +93,261 @@
         <!--<div class="copyrights">Collect from <a href="http://www.cssmoban.com/"  title="网站模板">网站模板</a></div>-->
 
 		<!-- END .fh5co-section -->
+		
 
 		<div class="fh5co-section">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-4 col-sm-4 col-xs-12 section-heading">
+					<div  class="col-md-4 col-sm-4 col-xs-12 section-heading">
 						<h2>02. About Me</h2>
 					</div>
-					<div class="col-md-8 col-sm-8 col-xs-12">
+					<div  class="col-md-12 col-sm-8 col-xs-12">
 						<div class="row">
 							<div class="col-md-12">
-							<p>Hello I'm <strong>Austin Kuture</strong> An iOS Software Engineer</p>
-							
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+							<!--<p>Hello I'm <strong>Austin Kuture</strong> An iOS Software Engineer</p>-->
+
+                                <!--简单使用Echarts-->
+                                <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                                <div id="main" style="width: 100%;height:500px;"></div>
+                                <script type="text/javascript">
+
+									//使用方法,从从官网粘贴实例,并设置变量 var option即可
+
+                                    // 基于准备好的dom，初始化echarts实例
+                                    var myChart = echarts.init(document.getElementById('main'));
+
+									//此处贴入实例代码
+
+                                    option = {
+                                        title: {
+                                            text: ''
+                                        },
+                                        tooltip: {},
+                                        animationDurationUpdate: 1500,
+                                        animationEasingUpdate: 'quinticInOut',
+                                        label: {
+                                            normal: {
+                                                show: true,
+                                                textStyle: {
+                                                    fontSize: 12
+                                                },
+                                            }
+                                        },
+                                        legend: {
+                                            x: "center",
+                                            show: false,
+                                            data: ["同事", "同学", '合作']
+                                        },
+                                        series: [
+
+                                            {
+                                                type: 'graph',
+                                                layout: 'force',
+                                                symbolSize: 45,
+                                                focusNodeAdjacency: true,
+                                                roam: true,
+                                                categories: [{
+                                                    name: '同事',
+                                                    itemStyle: {
+                                                        normal: {
+                                                            color: "#009800",
+                                                        }
+                                                    }
+                                                }, {
+                                                    name: '朋友',
+                                                    itemStyle: {
+                                                        normal: {
+                                                            color: "#4592FF",
+                                                        }
+                                                    }
+                                                }, {
+                                                    name: '合作',
+                                                    itemStyle: {
+                                                        normal: {
+                                                            color: "#359",
+                                                        }
+                                                    }
+                                                }],
+                                                label: {
+                                                    normal: {
+                                                        show: true,
+                                                        textStyle: {
+                                                            fontSize: 12
+                                                        },
+                                                    }
+                                                },
+                                                force: {
+                                                    repulsion: 1000
+                                                },
+                                                edgeSymbolSize: [4, 50],
+                                                edgeLabel: {
+                                                    normal: {
+                                                        show: true,
+                                                        textStyle: {
+                                                            fontSize: 10
+                                                        },
+                                                        formatter: "{c}"
+                                                    }
+                                                },
+                                                data: [{
+                                                    name: '李亚坤',
+                                                    draggable: true,
+                                                }, {
+                                                    name: 'Kuture',
+                                                    category: 1,
+                                                    draggable: true,
+                                                }, {
+                                                    name: '杜洋',
+                                                    category: 1,
+                                                    draggable: true,
+                                                }, {
+                                                    name: '付燕妮',
+                                                    category: 1,
+                                                    draggable: true,
+                                                }, {
+                                                    name: '王彩云',
+                                                    category: 1,
+                                                    draggable: true,
+                                                }, {
+                                                    name: '杜亚玲',
+                                                    category: 1,
+                                                    draggable: true,
+                                                }, {
+                                                    name: '杨海超',
+                                                    category: 1,
+                                                    draggable: true,
+                                                }, {
+                                                    name: '郭奇',
+                                                    category: 1,
+                                                    draggable: true,
+                                                }, {
+                                                    name: '李菲',
+                                                    category: 1,
+                                                    draggable: true,
+                                                }, {
+                                                    name: '李月',
+                                                    category: 1,
+                                                    draggable: true,
+                                                }, {
+                                                    name: '刘莲',
+                                                    category: 1,
+                                                    draggable: true,
+                                                }, {
+                                                    name: '张海涛',
+                                                    category: 1,
+                                                    draggable: true,
+                                                }, {
+                                                    name: '李朋举',
+                                                    category: 1,
+                                                    draggable: true,
+                                                }],
+                                                links: [{
+                                                    source: 0,
+                                                    target: 1,
+                                                    category: 0,
+                                                    value: '英文名'
+                                                }, {
+                                                    source: 0,
+                                                    target: 2,
+                                                    value: '超越计划'
+                                                }, {
+                                                    source: 0,
+                                                    target: 3,
+                                                    value: 'IRPV8后台'
+                                                }, {
+                                                    source: 0,
+                                                    target: 4,
+                                                    value: '中医药'
+                                                }, {
+                                                    source: 0,
+                                                    target: 5,
+                                                    value: '同事'
+                                                }, {
+                                                    source: 0,
+                                                    target: 7,
+                                                    value: '同事'
+                                                }, {
+                                                    source: 0,
+                                                    target: 6,
+                                                    value: '提供UI'
+                                                }, {
+                                                    source: 2,
+                                                    target: 4,
+                                                    value: '中医药'
+                                                }, {
+                                                    source: 2,
+                                                    target: 9,
+                                                    value: '超越计划'
+                                                }, {
+                                                    source: 2,
+                                                    target: 11,
+                                                    value: 'CMS'
+                                                }, {
+                                                    source: 3,
+                                                    target: 9,
+                                                    value: '大学同学'
+                                                }, {
+                                                    source: 3,
+                                                    target: 5,
+                                                    value: '积分兑换'
+                                                }, {
+                                                    source: 4,
+                                                    target: 0,
+                                                    value: '超越计划'
+                                                }, {
+                                                    source: 4,
+                                                    target: 9,
+                                                    value: '超越计划'
+                                                }, {
+                                                    source: 6,
+                                                    target: 10,
+                                                    value: 'UI设计'
+                                                }, {
+                                                    source: 6,
+                                                    target: 9,
+                                                    value: 'UI设计'
+                                                }, {
+                                                    source: 7,
+                                                    target: 5,
+                                                    value: '同事'
+                                                }, {
+                                                    source: 7,
+                                                    target: 11,
+                                                    value: 'CMS'
+                                                }, {
+                                                    source: 8,
+                                                    target: 6,
+                                                    value: 'UI设计'
+                                                }, {
+                                                    source: 0,
+                                                    target: 12,
+                                                    value: '同事'
+                                                }],
+                                                lineStyle: {
+                                                    normal: {
+                                                        opacity: 0.9,
+                                                        width: 1,
+                                                        curveness: 0
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    };
+									//方法调用
+                                    myChart.setOption(option);
+
+
+
+								</script>
+
+						   </div>
+					   </div>
+				    </div>
+			    </div>
+		    </div>
+        </div>
 
 		<!-- END .fh5co-section -->
-
 
 		<div class="fh5co-section">
 			<div class="container">
