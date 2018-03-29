@@ -4,7 +4,7 @@
  <title>Abhishek Nagekar's Blog</title>
  <link href="https://www.nagekar.com/atom.xml" rel="self"/>
  <link href="https://www.nagekar.com"/>
- <updated>2018-03-29T12:18:07+08:00</updated>
+ <updated>2018-03-29T12:19:54+08:00</updated>
  <id>https://www.nagekar.com</id>
  <author>
    <name>Abhishek Nagekar</name>
@@ -17,8 +17,7 @@
    <link href="https://www.nagekar.com/2018/03/%E6%96%B0%E6%96%87%E7%AB%A0.html"/>
    <updated>2018-03-29T00:00:00+08:00</updated>
    <id>https://www.nagekar.com/2018/03/新文章</id>
-   <content type="html">&lt;p&gt;###Maybe is right&lt;/p&gt;
-</content>
+   <content type="html">###Maybe is right</content>
  </entry>
  
  <entry>
