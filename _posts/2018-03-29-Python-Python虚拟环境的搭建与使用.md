@@ -1,8 +1,8 @@
 ---
-layout: categories
-title: Categories
-description: 哈哈，你找到了我的文章基因库
-keywords: 分类
+layout: post
+title: Python虚拟环境的配置与使用
+description: 在linux系统下创建虚拟环境
+keywords: 虚拟环境
 ---
 # 一、安装和配置虚拟环境
 
