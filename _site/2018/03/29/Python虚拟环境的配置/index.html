@@ -1,0 +1,96 @@
+<p># 一、安装和配置虚拟环境</p>
+
+<p>#### 安装虚拟环境</p>
+
+<p>```</p>
+
+<p>sudo pip install virtualenv</p>
+
+<p>sudo pip install virtualenvwrapper</p>
+
+<p>```</p>
+
+<p>virtualenvwrapper 是virtualenv的扩展管理包，可以将所有的虚拟环境整合在一个目录下</p>
+
+<p>#### 配置虚拟环境</p>
+
+<p>1.创建虚拟环境管理目录</p>
+
+<p>```</p>
+
+<p>mkdir ~/.virtrualenv</p>
+
+<p>```</p>
+
+<p>2.打开.bashrc</p>
+
+<p>```</p>
+
+<p>sudo gedit ~/.bashrc</p>
+
+<p>```</p>
+
+<p>3.在.bashrc末尾增加下面内容</p>
+
+<p>```</p>
+
+<p>export WORKON_HOME=$HOME/.virtualenvs  # 所有虚拟环境存储的目录</p>
+
+<p>source /usr/local/bin/virtualenvwrapper.sh</p>
+
+<p>```</p>
+
+<p>3.启用配置文件</p>
+
+<p>```</p>
+
+<p>source ~/.bashrc</p>
+
+<p>```</p>
+
+<p># 二、虚拟环境的操作</p>
+
+<p>1.创建虚拟环境</p>
+
+<p>```</p>
+
+<p>mkvirtualenv env_name#env_name为你要创建的虚拟环境的名字，创建虚拟环境需要联网</p>
+
+<p>```</p>
+
+<p>2.创建指定python版本的虚拟环境</p>
+
+<p>```</p>
+
+<p>mkvirtualenv -p /usr/bin/python3 env_name</p>
+
+<p>mkvirtualenv -p /usr/bin/python2 env_name</p>
+
+<p>```</p>
+
+<p>3.运行环境</p>
+
+<p>```</p>
+
+<p>workon env_name</p>
+
+<p>workon + 两次tab键可以显示所有的虚拟环境</p>
+
+<p>```</p>
+
+<p>4.退出虚拟环境</p>
+
+<p>```</p>
+
+<p>deactivate</p>
+
+<p>```</p>
+
+<p>5.删除虚拟环境</p>
+
+<p>```</p>
+
+<p>rmvirtualenv env_name</p>
+
+<p>```</p>
+
