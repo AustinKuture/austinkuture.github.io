@@ -7,4 +7,5 @@ https://www.nagekar.com/rss.xml
 https://www.nagekar.com/sitemap.txt
 https://www.nagekar.com/tags
 
+https://www.nagekar.com/2018/03/%E6%96%B0%E6%96%87%E7%AB%A0.html
 https://www.nagekar.com/2017/04/Lorem-Ipsum.html
