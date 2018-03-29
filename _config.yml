@@ -2,10 +2,10 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: https://zuoandroid.github.io/
+url: https://austinkuture.github.io/
 date_format: "ordinal"
-title: Sasuke
-subtitle: "不忘初心 方得始终"
+title: Kuture
+subtitle: "汲众言者博识，阅众家者博学。"
 description: "Kuture的个人博客"
 keywords: Kuture, yakun, Python, Spider, austinkuture, iOS, Objective-C, Swift
 timezone: Asia/Shanghai
