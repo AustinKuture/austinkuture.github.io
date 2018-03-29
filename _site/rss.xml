@@ -5,16 +5,31 @@
         <description>Abhishek Nagekar's Blog - Abhishek Nagekar</description>
         <link>https://www.nagekar.com</link>
         <atom:link href="https://www.nagekar.com/rss.xml" rel="self" type="application/rss+xml" />
-        <lastBuildDate>Thu, 29 Mar 2018 12:21:24 +0800</lastBuildDate>
-        <pubDate>Thu, 29 Mar 2018 12:21:24 +0800</pubDate>
+        <lastBuildDate>Thu, 29 Mar 2018 12:22:33 +0800</lastBuildDate>
+        <pubDate>Thu, 29 Mar 2018 12:22:33 +0800</pubDate>
         <ttl>60</ttl>
 
 
         <item>
                 <title>新文章</title>
-                <description>&lt;h1&gt;Maybe is right&lt;/h1&gt;
+                <description>&lt;hr /&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;author: kresnikwang
+comments: true
+date: 2015-04-28 17:42:32+00:00
+layout: post
+title: PHP, Angular JS Development|My Export Quote|农产品出口工具开发
+categories:
+- Works
+- Tech
+tags:
+- bootstrap
+- javascript
+- php
+- AngularJS
+---
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;#Some&lt;/p&gt;
+&lt;p&gt;####some&lt;/p&gt;
 </description>
                 <link>https://www.nagekar.com/2018/03/%E6%96%B0%E6%96%87%E7%AB%A0.html</link>
                 <guid>https://www.nagekar.com/2018/03/新文章</guid>
