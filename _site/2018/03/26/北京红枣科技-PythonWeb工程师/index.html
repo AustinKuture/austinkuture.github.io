@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans" prefix="og: http://ogp.me/ns#" class="han-init">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>北京红枣科技-PythonWeb工程师 &mdash; Kuture</title>
+    <link rel="stylesheet" href="http://localhost:4000/assets/vendor/primer-css/css/primer.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/vendor/primer-markdown/dist/user-content.min.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/vendor/octicons/octicons/octicons.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/components/collection.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/components/repo-card.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/sections/repo-list.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/sections/mini-repo-list.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/components/boxed-group.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/globals/common.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/vendor/share.js/dist/css/share.min.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/globals/responsive.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/posts/index.css">
+    <!-- Latest compiled and minified CSS -->
+    
+
+    
+    <link rel="canonical" href="http://localhost:4000/2018/03/26/%E5%8C%97%E4%BA%AC%E7%BA%A2%E6%9E%A3%E7%A7%91%E6%8A%80-PythonWeb%E5%B7%A5%E7%A8%8B%E5%B8%88/">
+    <link rel="alternate" type="application/atom+xml" title="Kuture" href="http://localhost:4000/feed.xml">
+    <link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+    
+    <meta property="og:title" content="北京红枣科技-PythonWeb工程师">
+      
+    <meta name="keywords" content="面试题">
+    <meta name="og:keywords" content="面试题">
+      
+    <meta name="description" content="1.__new__和__init__的区别？  __new__是一个静态方法,而__init__是一个实例方法.  __new__方法会返回一个创建的实例,而__init__什么都不返回.  只有在__new__返回一个cls的实例时后面的__init__才能被调用.  当创建一个新实例时调用__new__,初始化一个实例时用__init__.">
+    <meta name="og:description" content="1.__new__和__init__的区别？  __new__是一个静态方法,而__init__是一个实例方法.  __new__方法会返回一个创建的实例,而__init__什么都不返回.  只有在__new__返回一个cls的实例时后面的__init__才能被调用.  当创建一个新实例时调用__new__,初始化一个实例时用__init__.">
+      
+    
+    
+        
+    
+    <meta property="og:url" content="http://localhost:4000/2018/03/26/%E5%8C%97%E4%BA%AC%E7%BA%A2%E6%9E%A3%E7%A7%91%E6%8A%80-PythonWeb%E5%B7%A5%E7%A8%8B%E5%B8%88/">
+    <meta property="og:site_name" content="Kuture">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN" />
+    
+    <meta property="article:published_time" content="2018-03-26">
+    
+    <script src="http://localhost:4000/assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="http://localhost:4000/assets/js/jquery-ui.js"></script>
+    <script type="text/javascript">
+    function toggleMenu() {
+        var nav = document.getElementsByClassName("site-header-nav")[0];
+        if (nav.style.display == "inline-flex") {
+          nav.style.display = "none";
+        } else {
+          nav.style.display = "inline-flex";
+        }
+    }
+    </script>
+</head>
+<body class="" data-mz="">
+    <header class="site-header">
+        <div class="container">
+            <h1><a href="http://localhost:4000/" title="Kuture"><span class="octicon octicon-mark-github"></span> Kuture</a></h1>
+            <button class="collapsed mobile-visible" type="button" onclick="toggleMenu();">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <nav class="site-header-nav" role="navigation">
+                
+                <a href="http://localhost:4000/" class=" site-header-nav-item" target="" title="首页">首页</a>
+                
+                <a href="http://localhost:4000/categories/" class=" site-header-nav-item" target="" title="分类">分类</a>
+                
+                <a href="http://localhost:4000/wiki/" class=" site-header-nav-item" target="" title="维基">维基</a>
+                
+                <a href="http://localhost:4000/links/" class=" site-header-nav-item" target="" title="链接">链接</a>
+                
+                <a href="http://localhost:4000/about/" class=" site-header-nav-item" target="" title="关于">关于</a>
+                
+            </nav>
+        </div>
+    </header>
+    <!-- / header -->
+
+    <section class="collection-head small geopattern" data-pattern-id="北京红枣科技-PythonWe">
+<div class="container">
+  <div class="columns">
+    <div class="column three-fourths">
+      <div class="collection-title">
+        <h1 class="collection-header">北京红枣科技-PythonWeb工程师</h1>
+        <div class="collection-info">
+          
+          <span class="meta-info">
+            <span class="octicon octicon-calendar"></span> 2018/03/26
+          </span>
+          
+          
+          <span class="meta-info">
+            <span class="octicon octicon-file-directory"></span>
+            <a href="http://localhost:4000/categories/#面试题" title="面试题">面试题</a>
+          </span>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<!-- / .banner -->
+<section class="container content">
+<div class="columns">
+  <div class="column three-fourths" >
+    <article class="article-content markdown-body">
+    <h4 id="1__new__和__init__的区别">1.<code class="highlighter-rouge">__new__</code>和<code class="highlighter-rouge">__init__</code>的区别？</h4>
+<ul>
+  <li><code class="highlighter-rouge">__new__</code>是一个静态方法,而<code class="highlighter-rouge">__init__</code>是一个实例方法.</li>
+  <li><code class="highlighter-rouge">__new__</code>方法会返回一个创建的实例,而<code class="highlighter-rouge">__init__</code>什么都不返回.</li>
+  <li>只有在<code class="highlighter-rouge">__new__</code>返回一个cls的实例时后面的<code class="highlighter-rouge">__init__</code>才能被调用.</li>
+  <li>当创建一个新实例时调用<code class="highlighter-rouge">__new__</code>,初始化一个实例时用<code class="highlighter-rouge">__init__</code>.</li>
+</ul>
+
+<h4 id="2-read和readline以及readlines的区别">2. read和readline以及readlines的区别？</h4>
+<ul>
+  <li>read:读取整个文件</li>
+  <li>readline： 读取下一行， 使用生成器方法</li>
+  <li>readlines： 读取整个文件到一个迭代器以供我们遍历</li>
+</ul>
+
+<h4 id="3写一个函数计算一个给定的日期是该年的第几天">3.写一个函数，计算一个给定的日期是该年的第几天</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">count</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">):</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="c"># 判断该年是平年还是闰年</span>
+    <span class="k">if</span> <span class="n">year</span> <span class="o">%</span> <span class="mi">400</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="p">(</span><span class="n">year</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">year</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'</span><span class="si">%</span><span class="s">d年是闰年，2月份有29天！'</span> <span class="o">%</span> <span class="n">year</span><span class="p">)</span>
+        <span class="n">li1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">31</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">month</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="n">count</span> <span class="o">+=</span> <span class="n">li1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">count</span> <span class="o">+</span> <span class="n">day</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'</span><span class="si">%</span><span class="s">d年是平年，2月份有29天！'</span> <span class="o">%</span> <span class="n">year</span><span class="p">)</span>
+        <span class="n">li2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">31</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">month</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="n">count</span> <span class="o">+=</span> <span class="n">li2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">count</span> <span class="o">+</span> <span class="n">day</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
+    <span class="n">year</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">'请输入年份：'</span><span class="p">))</span>
+    <span class="n">month</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">'请输入月份：'</span><span class="p">))</span>
+    <span class="n">day</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">'请输入日期：'</span><span class="p">))</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="n">count</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'</span><span class="si">%</span><span class="s">d年</span><span class="si">%</span><span class="s">d月</span><span class="si">%</span><span class="s">d日是今年的第</span><span class="si">%</span><span class="s">d天！'</span> <span class="o">%</span> <span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">count</span><span class="p">))</span>
+
+</code></pre></div></div>
+<h4 id="4字典有那些常用的内置方法">4.字典有那些常用的内置方法？</h4>
+<ul>
+  <li>cmp(dict1, dict2):比较两个字典元素。</li>
+  <li>len(dict): 计算字典元素的个数，即键的总数。</li>
+  <li>str(dict)：输出字典可打印的字符串表示。</li>
+  <li>dict.clear(): 删除字典内所有的元素。</li>
+  <li>dict.copy(): 返回一个字典的浅复制。</li>
+  <li>dict.fromkeys(seq[,val]): 创建一个新字典，以序列seq中元素做字典的键，val为字典所有键对应的初始值。</li>
+  <li>dict.get(key, default=None): 返回指定键的值，如果值不在字典中返回default值。</li>
+  <li>dict.has_key(key): 如果键再字典dict中返回true，否则返回false。</li>
+  <li>dict.items(): 以列表返回可遍历的(键、值)元祖数组。</li>
+  <li>dict.keys(): 以列表返回一个字典所有的键。</li>
+  <li>dict.setdefault(key, default=None): 和get()类似, 但如果键不存在于字典中，将会添加键并将值设为default。</li>
+  <li>dict.update(dict2): 把字典dict2的键/值对更新到dict里。</li>
+  <li>dict.values(): 以列表返回字典中所有的值。</li>
+  <li>pop(key[,default]): 删除字典给定键key所对应的值，返回值为被删除的值，key值必须给出，否则，返回default的值。</li>
+  <li>popitem(): 随机返回并删除字典中的一对键和值。</li>
+</ul>
+
+<h4 id="5-有两个磁盘文件a和b各存放一行字母要求把这两个文件中的信息合并按字母顺序排列输出到一个新文件c中">5. 有两个磁盘文件A和B，各存放一行字母，要求把这两个文件中的信息合并(按字母顺序排列)，输出到一个新文件C中。</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">f1</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">"A.txt"</span><span class="p">)</span>
+<span class="n">f1_txt</span> <span class="o">=</span> <span class="n">f1</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+<span class="n">f2</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">"B.txt"</span><span class="p">)</span>
+<span class="n">f2_txt</span> <span class="o">=</span> <span class="n">f2</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+<span class="n">f3_txt</span> <span class="o">=</span> <span class="n">f1_txt</span> <span class="o">+</span> <span class="n">f2_txt</span>
+
+<span class="n">f3_list</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">f3_txt</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">f3</span> <span class="ow">in</span> <span class="n">f3_list</span><span class="p">:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">"C.txt"</span><span class="p">,</span> <span class="s">"a+"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">f3</span><span class="p">)</span>
+</code></pre></div></div>
+<h4 id="6实现用户登录要求输错第一次则提醒输错三次账户将被锁定输错第二次则提醒已错误输入两次输错第三次则提示当日拒绝再次登录">6.实现用户登录，要求输错第一次则提醒“输错三次账户将被锁定”，输错第二次则提醒“已错误输入两次！”输错第三次则提示“当日拒绝再次登录！”</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>    <span class="c">#计数器</span>
+<span class="n">username</span> <span class="o">=</span> <span class="s">"aaa"</span>  <span class="c">#登录用户名</span>
+<span class="n">userpassword</span> <span class="o">=</span> <span class="s">"asd"</span>   <span class="c">#登录密码</span>
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">"aaa.txt"</span><span class="p">,</span><span class="s">"r"</span><span class="p">)</span>
+<span class="n">file_list</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">lock</span><span class="o">=</span> <span class="p">[]</span>
+<span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"登录用户名："</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">file_list</span><span class="p">:</span><span class="mi">1</span>
+    <span class="n">line</span> <span class="o">=</span> <span class="n">i</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
+    <span class="n">lock</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">lock</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"你的账户已锁定，请联系管理员。"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="n">username</span><span class="p">:</span>
+    <span class="c">#如果密码连续输错了三次，锁定账号</span>
+        <span class="k">while</span> <span class="n">count</span> <span class="o">&lt;</span><span class="mi">3</span><span class="p">:</span>
+            <span class="n">password</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"登录密码："</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="n">username</span> <span class="ow">and</span> <span class="n">password</span> <span class="o">==</span> <span class="n">userpassword</span><span class="p">:</span>
+                <span class="k">print</span><span class="p">(</span><span class="s">"欢迎</span><span class="si">%</span><span class="s">s!"</span><span class="o">%</span><span class="n">name</span><span class="p">)</span>
+                <span class="k">break</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">print</span><span class="p">(</span><span class="s">"账号和密码不匹配"</span><span class="p">)</span>
+                <span class="n">count</span> <span class="o">+=</span><span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">"对不起，您的账号连续输错三次密码已被锁定，请联系管理员。"</span><span class="p">)</span>
+            <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">"aaa.txt"</span><span class="p">,</span><span class="s">"w+"</span><span class="p">)</span>
+            <span class="n">li</span> <span class="o">=</span> <span class="p">[</span><span class="s">'</span><span class="si">%</span><span class="s">s'</span><span class="o">%</span><span class="n">username</span><span class="p">]</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">writelines</span><span class="p">(</span><span class="n">li</span><span class="p">)</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"用户名不存在，请输入正确的用户名。"</span><span class="p">)</span>
+</code></pre></div></div>
+<h4 id="7有一个字符串开头和末尾都有空格比如---adabdw---要求写一个函数把这个字符串的前后空格都去掉">7.有一个字符串开头和末尾都有空格，比如“   adabdw   ”,要求写一个函数把这个字符串的前后空格都去掉。</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">romve_spce</span><span class="p">(</span><span class="nb">str</span><span class="p">):</span>
+    <span class="n">new_str</span> <span class="o">=</span> <span class="nb">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">new_str</span>
+
+ <span class="n">new_str</span> <span class="o">=</span> <span class="n">romve_spce</span><span class="p">(</span><span class="s">"    adanadnd   "</span><span class="p">)</span>
+ <span class="k">print</span><span class="p">(</span><span class="n">new_str</span><span class="p">)</span>
+</code></pre></div></div>
+<h4 id="8-如果当前的日期为20170130要求写一个函数输出n天后的日期比如n为2则输出20170201">8. 如果当前的日期为20170130，要求写一个函数输出N天后的日期，(比如N为2，则输出20170201)。</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kn">import</span> <span class="nn">datetime</span>
+
+
+<span class="k">def</span> <span class="nf">get_day</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">the_date</span> <span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">d</span><span class="p">)</span>
+    <span class="n">result_date</span> <span class="o">=</span> <span class="n">the_date</span> <span class="o">+</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">result_date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s">"</span><span class="si">%</span><span class="s">Y-</span><span class="si">%</span><span class="s">m-</span><span class="si">%</span><span class="s">d"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">d</span>
+
+
+<span class="k">print</span><span class="p">(</span><span class="n">get_day</span><span class="p">(</span><span class="mi">2018</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+</code></pre></div></div>
+
+<h4 id="9数据库表a中有姓名fname的数据类型为varchar20要求使用sql语句修改改字段的数据类型为nvarchar250">9.数据库表A中有姓名fname的数据类型为varchar(20),要求使用SQL语句修改改字段的数据类型为nvarchar2(50)。</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ALERT TABLE A MODIFY COLUMN fname nvarchar(50);  
+</code></pre></div></div>
+<h4 id="10数据库表a中有姓名fname年龄fage两个字段要求使用sql语句查出姓名重复的人的姓名和重复条数">10.数据库表A中有姓名fname、年龄fage两个字段，要求使用SQL语句查出姓名重复的人的姓名和重复条数。</h4>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>select name, count(*) from A group by fname;
+</code></pre></div></div>
+
+
+    </article>
+    <div class="share">
+      <div class="share-component"></div>
+    </div>
+    <div class="comment">
+      
+
+  
+
+  
+
+
+    </div>
+  </div>
+  <div class="column one-fourth">
+    
+<h3>Search</h3>
+<div id="site_search">
+    <input type="text" id="search_box" placeholder="Search">
+</div>
+
+<ul id="search_results"></ul>
+
+<link rel="stylesheet" type="text/css" href="http://localhost:4000/assets/css/modules/sidebar-search.css">
+<script src="http://localhost:4000/assets/js/simple-jekyll-search.min.js"></script>
+<script src="http://localhost:4000/assets/js/search.js"></script>
+
+<script type="text/javascript">
+SimpleJekyllSearch({
+    searchInput: document.getElementById('search_box'),
+    resultsContainer: document.getElementById('search_results'),
+    json: 'http://localhost:4000/assets/search_data.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+    noResultsText: 'No results found',
+    limit: 10,
+    fuzzy: false,
+    exclude: ['Welcome']
+})
+</script>
+
+    
+
+    
+<h3 class="post-directory-title mobile-hidden">Table of Contents</h3>
+<div id="post-directory-module" class="mobile-hidden">
+  <section class="post-directory">
+  <!-- Links that trigger the jumping -->
+  <!-- Added by javascript below -->
+  <dl></dl>
+  </section>
+</div>
+
+<script src="http://localhost:4000/assets/js/jquery.toc.js"></script>
+
+  </div>
+</div>
+</section>
+<!-- /section.content -->
+
+    <footer class="container">
+        <div class="site-footer" role="contentinfo">
+            <div class="copyright left mobile-block">
+                    © 2015
+                    <span title="Yakun">Yakun</span>
+                    <a href="javascript:window.scrollTo(0,0)" class="right mobile-visible">TOP</a>
+            </div>
+
+            <ul class="site-footer-links right mobile-hidden">
+                <li>
+                    <a href="javascript:window.scrollTo(0,0)" >TOP</a>
+                </li>
+            </ul>
+            <a href="http://github.com/AustinKuture/austinkuture.github.io" target="_blank" aria-label="view source code">
+                <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+            </a>
+            <ul class="site-footer-links mobile-hidden">
+                
+                <li>
+                    <a href="http://localhost:4000/" title="首页" target="">首页</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:4000/categories/" title="分类" target="">分类</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:4000/wiki/" title="维基" target="">维基</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:4000/links/" title="链接" target="">链接</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:4000/about/" title="关于" target="">关于</a>
+                </li>
+                
+                <li><a href="http://localhost:4000/feed.xml"><span class="octicon octicon-rss" style="color:orange;"></span></a></li>
+            </ul>
+
+        </div>
+    </footer>
+    <!-- / footer -->
+    <script src="http://localhost:4000/assets/vendor/share.js/dist/js/share.min.js"></script>
+    <script src="http://localhost:4000/assets/js/geopattern.js"></script>
+    <script src="http://localhost:4000/assets/js/prism.js"></script>
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/globals/prism.css">
+    <script>
+      jQuery(document).ready(function($) {
+        // geopattern
+        $('.geopattern').each(function(){
+          $(this).geopattern($(this).data('pattern-id'));
+        });
+       // hljs.initHighlightingOnLoad();
+      });
+    </script>
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div style="display:none">
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-80669434-1', 'auto');
+        ga('send', 'pageview');
+
+      </script>
+    </div>
+    
+</body>
+</html>

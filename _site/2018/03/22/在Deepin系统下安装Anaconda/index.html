@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans" prefix="og: http://ogp.me/ns#" class="han-init">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>在Deepin系统中安装Anaconda &mdash; Kuture</title>
+    <link rel="stylesheet" href="http://localhost:4000/assets/vendor/primer-css/css/primer.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/vendor/primer-markdown/dist/user-content.min.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/vendor/octicons/octicons/octicons.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/components/collection.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/components/repo-card.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/sections/repo-list.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/sections/mini-repo-list.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/components/boxed-group.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/globals/common.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/vendor/share.js/dist/css/share.min.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/globals/responsive.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/posts/index.css">
+    <!-- Latest compiled and minified CSS -->
+    
+
+    
+    <link rel="canonical" href="http://localhost:4000/2018/03/22/%E5%9C%A8Deepin%E7%B3%BB%E7%BB%9F%E4%B8%8B%E5%AE%89%E8%A3%85Anaconda/">
+    <link rel="alternate" type="application/atom+xml" title="Kuture" href="http://localhost:4000/feed.xml">
+    <link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+    
+    <meta property="og:title" content="在Deepin系统中安装Anaconda">
+      
+    <meta name="keywords" content="Deepin, Anaconda">
+    <meta name="og:keywords" content="Deepin, Anaconda">
+      
+    <meta name="description" content="在Deepin系统中安装Anaconda运行安装Anacondabash Anaconda3-4.3.1-Linux-x86_64.sh安装具体步骤在执行上一步骤之后会出现以下：```Welcome to Anaconda3 5.0.1">
+    <meta name="og:description" content="在Deepin系统中安装Anaconda运行安装Anacondabash Anaconda3-4.3.1-Linux-x86_64.sh安装具体步骤在执行上一步骤之后会出现以下：```Welcome to Anaconda3 5.0.1">
+      
+    
+    
+        
+    
+    <meta property="og:url" content="http://localhost:4000/2018/03/22/%E5%9C%A8Deepin%E7%B3%BB%E7%BB%9F%E4%B8%8B%E5%AE%89%E8%A3%85Anaconda/">
+    <meta property="og:site_name" content="Kuture">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN" />
+    
+    <meta property="article:published_time" content="2018-03-22">
+    
+    <script src="http://localhost:4000/assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="http://localhost:4000/assets/js/jquery-ui.js"></script>
+    <script type="text/javascript">
+    function toggleMenu() {
+        var nav = document.getElementsByClassName("site-header-nav")[0];
+        if (nav.style.display == "inline-flex") {
+          nav.style.display = "none";
+        } else {
+          nav.style.display = "inline-flex";
+        }
+    }
+    </script>
+</head>
+<body class="" data-mz="">
+    <header class="site-header">
+        <div class="container">
+            <h1><a href="http://localhost:4000/" title="Kuture"><span class="octicon octicon-mark-github"></span> Kuture</a></h1>
+            <button class="collapsed mobile-visible" type="button" onclick="toggleMenu();">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <nav class="site-header-nav" role="navigation">
+                
+                <a href="http://localhost:4000/" class=" site-header-nav-item" target="" title="首页">首页</a>
+                
+                <a href="http://localhost:4000/categories/" class=" site-header-nav-item" target="" title="分类">分类</a>
+                
+                <a href="http://localhost:4000/wiki/" class=" site-header-nav-item" target="" title="维基">维基</a>
+                
+                <a href="http://localhost:4000/links/" class=" site-header-nav-item" target="" title="链接">链接</a>
+                
+                <a href="http://localhost:4000/about/" class=" site-header-nav-item" target="" title="关于">关于</a>
+                
+            </nav>
+        </div>
+    </header>
+    <!-- / header -->
+
+    <section class="collection-head small geopattern" data-pattern-id="在Deepin系统中安装Ana">
+<div class="container">
+  <div class="columns">
+    <div class="column three-fourths">
+      <div class="collection-title">
+        <h1 class="collection-header">在Deepin系统中安装Anaconda</h1>
+        <div class="collection-info">
+          
+          <span class="meta-info">
+            <span class="octicon octicon-calendar"></span> 2018/03/22
+          </span>
+          
+          
+          <span class="meta-info">
+            <span class="octicon octicon-file-directory"></span>
+            <a href="http://localhost:4000/categories/#Deepin" title="Deepin">Deepin</a>
+          </span>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<!-- / .banner -->
+<section class="container content">
+<div class="columns">
+  <div class="column three-fourths" >
+    <article class="article-content markdown-body">
+    <h1 id="在deepin系统中安装anaconda">在Deepin系统中安装Anaconda</h1>
+<h2 id="运行安装anaconda">运行安装Anaconda</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bash Anaconda3-4.3.1-Linux-x86_64.sh
+</code></pre></div></div>
+<h2 id="安装具体步骤">安装具体步骤</h2>
+<p>在执行上一步骤之后会出现以下：</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Welcome to Anaconda3 5.0.1
+
+In order to continue the installation process, please review the license
+agreement.
+Please, press ENTER to continue
+&gt;&gt;&gt; 
+</code></pre></div></div>
+<p>按ENTER继续，然后按ENTER读取许可证。读完许可证后，系统会提示您批准许可条款：</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Do you accept the license terms? [yes|no]
+</code></pre></div></div>
+<p>选择yes继续安装
+此时，系统将提示您选择安装的位置。您可以按ENTER接受默认位置，或指定其他位置以进行修改。
+在这里我选择了其它路径的安装，安装过程需要一些时间</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[/root/anaconda3] &gt;&gt;&gt; /home/wenbin/anaconda3
+PREFIX=/home/wenbin/anaconda3
+
+installing: python-3.6.3-hc9025b9_1 ...
+Python 3.6.3 :: Anaconda, Inc.
+installing: ca-certificates-2017.08.26-h1d4fec5_0 ...
+installing: conda-env-2.6.0-h36134e3_1 ...
+installing: intel-openmp-2018.0.0-h15fc484_7 ...
+installing: libgcc-ng-7.2.0-h7cc24e2_2 ...
+installing: libgfortran-ng-7.2.0-h9f7466a_2 ...
+installing: libstdcxx-ng-7.2.0-h7a57d05_2 ...
+installing: bzip2-1.0.6-h0376d23_1 ...
+installing: expat-2.2.4-hc00ebd1_1 ...
+installing: gmp-6.1.2-hb3b607b_0 ...
+.......................
+</code></pre></div></div>
+<p>完成后，您将收到以下输出：</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>installation finished.
+Do you wish the installer to prepend the Anaconda3 install location
+to PATH in your /root/.bashrc ? [yes|no]
+[no] &gt;&gt;&gt; yes
+</code></pre></div></div>
+<p>键入yes ，以便可以使用conda命令。接下来将看到以下输出：</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Appending source /home/wenbin/anaconda3/bin/activate to /root/.bashrc
+A backup will be made to: /root/.bashrc-anaconda3.bak
+
+
+For this change to become active, you have to open a new terminal.
+
+Thank you for installing Anaconda3!
+</code></pre></div></div>
+<p>如果你选择了no，那么你就需要手动的将Anaconda3添加的环境变量当中
+请打开文本编辑器并从主目录打开文件.bashrc或.bash_profile。添加该行。</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export PATH="/&lt;path to anaconda&gt;/bin:$PATH"
+</code></pre></div></div>
+<p>注意：将<code class="highlighter-rouge">&lt;path-to-anaconda&gt;</code>替换为安装的anaconda文件的实际路径。
+保存文件。如果您打开任何终端窗口，请关闭它们，然后打开一个新窗口。您可能需要重新启动计算机才能使PATH更改生效。</p>
+
+<p>为了激活安装，你应该来源~/.bashrc文件：</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>source ~/.bashrc
+</code></pre></div></div>
+<p>之后你可以验证你的安装通过使用conda命令，例如与list ：</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wenbin@wenbin:~$ conda list
+# packages in environment at /home/wenbin/anaconda3:
+#
+_ipyw_jlab_nb_ext_conf    0.1.0            py36he11e457_0  
+alabaster                 0.7.10           py36h306e16b_0  
+anaconda                  5.0.1            py36hd30a520_1  
+anaconda-client           1.6.5            py36h19c0dcd_0  
+anaconda-navigator        1.6.9            py36h11ddaaa_0 
+..............
+</code></pre></div></div>
+<h2 id="设置anaconda环境">设置Anaconda环境</h2>
+<p>查看可用的Python解释器版本：</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda search "^python$"
+</code></pre></div></div>
+<p>使用最新版本的Python 3创建一个环境。我们可以通过将版本3分配给python参数来实现。 我们将调用环境my_python ，但是您可能希望为您的环境使用更具描述性的名称，特别是如果您使用环境来访问多个版本的Python。</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda create --name my_python python=3
+</code></pre></div></div>
+<p>通过一下命令来激活环境</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>source activate my_python
+</code></pre></div></div>
+<p>通过一下命令添加其他包，比如requests</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda install --name my_python requests
+</code></pre></div></div>
+
+    </article>
+    <div class="share">
+      <div class="share-component"></div>
+    </div>
+    <div class="comment">
+      
+
+  
+
+  
+
+
+    </div>
+  </div>
+  <div class="column one-fourth">
+    
+<h3>Search</h3>
+<div id="site_search">
+    <input type="text" id="search_box" placeholder="Search">
+</div>
+
+<ul id="search_results"></ul>
+
+<link rel="stylesheet" type="text/css" href="http://localhost:4000/assets/css/modules/sidebar-search.css">
+<script src="http://localhost:4000/assets/js/simple-jekyll-search.min.js"></script>
+<script src="http://localhost:4000/assets/js/search.js"></script>
+
+<script type="text/javascript">
+SimpleJekyllSearch({
+    searchInput: document.getElementById('search_box'),
+    resultsContainer: document.getElementById('search_results'),
+    json: 'http://localhost:4000/assets/search_data.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+    noResultsText: 'No results found',
+    limit: 10,
+    fuzzy: false,
+    exclude: ['Welcome']
+})
+</script>
+
+    
+
+    
+<h3 class="post-directory-title mobile-hidden">Table of Contents</h3>
+<div id="post-directory-module" class="mobile-hidden">
+  <section class="post-directory">
+  <!-- Links that trigger the jumping -->
+  <!-- Added by javascript below -->
+  <dl></dl>
+  </section>
+</div>
+
+<script src="http://localhost:4000/assets/js/jquery.toc.js"></script>
+
+  </div>
+</div>
+</section>
+<!-- /section.content -->
+
+    <footer class="container">
+        <div class="site-footer" role="contentinfo">
+            <div class="copyright left mobile-block">
+                    © 2015
+                    <span title="Yakun">Yakun</span>
+                    <a href="javascript:window.scrollTo(0,0)" class="right mobile-visible">TOP</a>
+            </div>
+
+            <ul class="site-footer-links right mobile-hidden">
+                <li>
+                    <a href="javascript:window.scrollTo(0,0)" >TOP</a>
+                </li>
+            </ul>
+            <a href="http://github.com/AustinKuture/austinkuture.github.io" target="_blank" aria-label="view source code">
+                <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+            </a>
+            <ul class="site-footer-links mobile-hidden">
+                
+                <li>
+                    <a href="http://localhost:4000/" title="首页" target="">首页</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:4000/categories/" title="分类" target="">分类</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:4000/wiki/" title="维基" target="">维基</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:4000/links/" title="链接" target="">链接</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:4000/about/" title="关于" target="">关于</a>
+                </li>
+                
+                <li><a href="http://localhost:4000/feed.xml"><span class="octicon octicon-rss" style="color:orange;"></span></a></li>
+            </ul>
+
+        </div>
+    </footer>
+    <!-- / footer -->
+    <script src="http://localhost:4000/assets/vendor/share.js/dist/js/share.min.js"></script>
+    <script src="http://localhost:4000/assets/js/geopattern.js"></script>
+    <script src="http://localhost:4000/assets/js/prism.js"></script>
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/globals/prism.css">
+    <script>
+      jQuery(document).ready(function($) {
+        // geopattern
+        $('.geopattern').each(function(){
+          $(this).geopattern($(this).data('pattern-id'));
+        });
+       // hljs.initHighlightingOnLoad();
+      });
+    </script>
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div style="display:none">
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-80669434-1', 'auto');
+        ga('send', 'pageview');
+
+      </script>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans" prefix="og: http://ogp.me/ns#" class="han-init">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Mysql-数据库常问知识点总结(三) &mdash; Kuture</title>
+    <link rel="stylesheet" href="http://localhost:4000/assets/vendor/primer-css/css/primer.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/vendor/primer-markdown/dist/user-content.min.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/vendor/octicons/octicons/octicons.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/components/collection.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/components/repo-card.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/sections/repo-list.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/sections/mini-repo-list.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/components/boxed-group.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/globals/common.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/vendor/share.js/dist/css/share.min.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/globals/responsive.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/posts/index.css">
+    <!-- Latest compiled and minified CSS -->
+    
+
+    
+    <link rel="canonical" href="http://localhost:4000/2017/05/03/Mysql-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B8%B8%E9%97%AE%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93(%E4%B8%89)/">
+    <link rel="alternate" type="application/atom+xml" title="Kuture" href="http://localhost:4000/feed.xml">
+    <link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+    
+    <meta property="og:title" content="Mysql-数据库常问知识点总结(三)">
+      
+    <meta name="keywords" content="数据库">
+    <meta name="og:keywords" content="数据库">
+      
+    <meta name="description" content="Mysql 和 redis 高可用性">
+    <meta name="og:description" content="Mysql 和 redis 高可用性">
+      
+    
+    
+        
+    
+    <meta property="og:url" content="http://localhost:4000/2017/05/03/Mysql-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B8%B8%E9%97%AE%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93(%E4%B8%89)/">
+    <meta property="og:site_name" content="Kuture">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN" />
+    
+    <meta property="article:published_time" content="2017-05-03">
+    
+    <script src="http://localhost:4000/assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="http://localhost:4000/assets/js/jquery-ui.js"></script>
+    <script type="text/javascript">
+    function toggleMenu() {
+        var nav = document.getElementsByClassName("site-header-nav")[0];
+        if (nav.style.display == "inline-flex") {
+          nav.style.display = "none";
+        } else {
+          nav.style.display = "inline-flex";
+        }
+    }
+    </script>
+</head>
+<body class="" data-mz="">
+    <header class="site-header">
+        <div class="container">
+            <h1><a href="http://localhost:4000/" title="Kuture"><span class="octicon octicon-mark-github"></span> Kuture</a></h1>
+            <button class="collapsed mobile-visible" type="button" onclick="toggleMenu();">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <nav class="site-header-nav" role="navigation">
+                
+                <a href="http://localhost:4000/" class=" site-header-nav-item" target="" title="首页">首页</a>
+                
+                <a href="http://localhost:4000/categories/" class=" site-header-nav-item" target="" title="分类">分类</a>
+                
+                <a href="http://localhost:4000/wiki/" class=" site-header-nav-item" target="" title="维基">维基</a>
+                
+                <a href="http://localhost:4000/links/" class=" site-header-nav-item" target="" title="链接">链接</a>
+                
+                <a href="http://localhost:4000/about/" class=" site-header-nav-item" target="" title="关于">关于</a>
+                
+            </nav>
+        </div>
+    </header>
+    <!-- / header -->
+
+    <section class="collection-head small geopattern" data-pattern-id="Mysql-数据库常问知识点总">
+<div class="container">
+  <div class="columns">
+    <div class="column three-fourths">
+      <div class="collection-title">
+        <h1 class="collection-header">Mysql-数据库常问知识点总结(三)</h1>
+        <div class="collection-info">
+          
+          <span class="meta-info">
+            <span class="octicon octicon-calendar"></span> 2017/05/03
+          </span>
+          
+          
+          <span class="meta-info">
+            <span class="octicon octicon-file-directory"></span>
+            <a href="http://localhost:4000/categories/#数据库相关" title="数据库相关">数据库相关</a>
+          </span>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<!-- / .banner -->
+<section class="container content">
+<div class="columns">
+  <div class="column three-fourths" >
+    <article class="article-content markdown-body">
+    <h3 id="mysql-和-redis-高可用性">Mysql 和 redis 高可用性</h3>
+
+<ul>
+  <li>MySQL Replication 是 MySQL 官方提供的主从同步方案， 用于将一个 MySQL 实例的数据， 同步到另一个实例中。 Replication 为保证数据安全做了重要的保证， 也是现在运用最广的 MySQL 容灾方案。Replication 用两个或以上的实例搭建了 MySQL 主从复制集群， 提供单点写入， 多点读取的服务， 实现了读的 scale out.</li>
+  <li>Sentinel 是 Redis 官方为集群提供的高可用解决方案。 在实际项目中可以使用 sentinel 去做 redis 自动故障转移， 减少人工介入的工作量。 另外 sentinel 也给客户端提供了监控消息的通知， 这样客户端就可根据消息类型去判断服务器的状态， 去做对应的适配操作。</li>
+</ul>
+
+<p><strong>下面是 Sentinel 主要功能列表：</strong></p>
+
+<ul>
+  <li>Monitoring： Sentinel 持续检查集群中的 master、 slave 状态，判断是否存活。</li>
+  <li>Notification： 在发现某个 redis 实例死的情况下， Sentinel能通过 API 通知系统管理员或其他程序脚本。Automatic failover： 如果一个 master 挂掉后， sentinel 立马启动故障转移， 把某个 slave 提升为 master。 其他的 slave 重新配置指向新 master。</li>
+  <li>Configuration provider： 对于客户端来说 sentinel 通知是有效可信赖的。 客户端会连接 sentinel 去请求当前 master 的地址， 一旦发生故障 sentinel 会提供新地址给客户端。</li>
+</ul>
+
+<h3 id="redis和mongodb的优缺点">Redis和MongoDB的优缺点</h3>
+
+<p>MongoDB 和 Redis 都是 NoSQL， 采用结构型数据存储。 二者在使用场景中， 存在一定的区别， 这也主要由于二者在内存映射的处理过程， 持久化的处理方法不同。 MongoDB 建议集群部署， 更多的考虑到集群方案，Redis 更偏重于进程顺序写入， 虽然支持集群， 也仅限于主-从模式.
+<strong>Redis 优点：</strong></p>
+
+<ul>
+  <li>读写性能优异</li>
+  <li>支持数据持久化， 支持 AOF 和 RDB 两种持久化方式</li>
+  <li>支持主从复制， 主机会自动将数据同步到从机， 可以进行读写分离。</li>
+  <li>数据结构丰富： 除了支持 string 类型的 value 外还支持string、 hash、 set、 sortedset、 list 等数据结构。</li>
+</ul>
+
+<p><strong>Redis缺点：</strong></p>
+
+<ul>
+  <li>Redis 不具备自动容错和恢复功能， 主机从机的宕机都会导致前端部分读写请求失败， 需要等待机器重启或者手动切换前端的 IP才能恢复。</li>
+  <li>主机宕机， 宕机前有部分数据未能及时同步到从机， 切换 IP后还会引入数据不一致的问题， 降低了系统的可用性。</li>
+  <li>Redis 的主从复制采用全量复制， 复制过程中主机会 fork 出一个子进程对内存做一份快照， 并将子进程的内存快照保存为文件发送给从机， 这一过程需要确保主机有足够多的空余内存。 若快照文件较大， 对集群的服务能力会产生较大的影响， 而且复制过程是在从机新加入集群或者从机和主机网络断开重连时都会进行， 也就是网络波动都会造成主机和从机间的一次全量的数据复制， 这对实际的系统运营造成了不小的麻烦。</li>
+  <li>Redis 较难支持在线扩容， 在集群容量达到上限时在线扩容会变得很复杂。 为避免这一问题， 运维人员在系统上线时必须确保有足够的空间， 这对资源造成了很大的浪费。</li>
+</ul>
+
+<p><strong>MongoDB优点:</strong></p>
+
+<ul>
+  <li>弱一致性（最终一致） ， 更能保证用户的访问速度文档结构的存储方式， 能够更便捷的获取数内置 GridFS， 高效存储二进制大对象 (比如照片和视频)</li>
+  <li>支持复制集、 主备、 互为主备、 自动分片等特性</li>
+  <li>动态查询</li>
+  <li>全索引支持,扩展到内部对象和内嵌数组</li>
+</ul>
+
+<p><strong>MongoDB缺点：</strong></p>
+
+<ul>
+  <li>不支持事务</li>
+  <li>MongoDB 占用空间过大</li>
+  <li>维护工具不够成熟</li>
+</ul>
+
+<h3 id="数据库负载均衡">数据库负载均衡</h3>
+
+<p>负载均衡集群是由一组相互独立的计算机系统构成，通过常规网络或专用网络进行连接， 由路由器衔接在一起， 各节点相互协作、 共同负载、 均衡压力， 对客户端来说， 整个群集可以视为一台具有超高性能的独立服务器。</p>
+
+<h4 id="1-实现原理">1、 实现原理</h4>
+
+<p>实现数据库的负载均衡技术，首先要有一个可以控制连接数据库的控制端。 在这里， 它截断了数据库和程序的直接连接， 由所有的程序来访问这个中间层， 然后再由中间层来访问数据库。 这样， 我们就可以具体控制访问某个数据库了，然后还可以根据数据库的当前负载采取有效的均衡策略， 来调整每次连接到哪个数据库。</p>
+
+<h4 id="2-实现多据库数据同步">2、 实现多据库数据同步</h4>
+
+<p>对于负载均衡，最重要的就是所有服务器的数据都是实时同步的。这是一个集群所必需的， 因为， 如果数不据实时、 不同步， 那么用户从一台服务器读出的数据， 就有别于从另一台服务器读出的数据， 这是不能允许的。 所以必须实现数据库的数据同步。 这样， 在查询的时候就可以有多个资源， 实现均衡。比较常用的方法是 Moebius for SQL Server 集群， Moebius for SQL Server 集群采用将核心程序驻留在每个机器的数据库中的办法， 这个核心程序称为 Moebius for SQL Server 中间件， 主要作用是监测数据库内数据的变化并将变化的数据同步到其他数据库中。 数据同步完成后客户端才会得到响应， 同步过程是并发完成的，所以同步到多个数据库和同步到一个数据库的时间基本相等； 另外同步的过程是在事务的环境下完成的， 保证了多份数据在任何时刻数据的一致性。 正因为 Moebius 中间件宿主在数据库中的创新， 让中间件不但能知道数据的变化， 而且知道引起数据变化的 SQL 语句，根据 SQL 语句的类型智能的采取不同的数据同步的策略以保证数据同步成本的最小化。数据条数很少， 数据内容也不大， 则直接同步数据数据条数很少， 但是里面包含大数据类型， 比如文本， 二进制数
+据等， 则先对数据进行压缩然后再同步， 从而减少网络带宽的占用和传输所用的时间。数据条数很多，此时中间件会拿到造成数据变化的 SQL 语句， 然后对 SQL 语句进行解析， 分析其执行计划和执行成本， 并选择是同步数据还是同步 SQL 语句到其他的数据库中。此种情况应用在对表结构进行调整或者批量更改数据的时候非常有用。</p>
+
+<h4 id="3-优缺点优点">3、 优缺点优点：</h4>
+
+<p><strong>优点：</strong></p>
+
+<ul>
+  <li>(1) 扩展性强： 当系统要更高数据库处理速度时， 只要简单地增加数据库服务器就 可以得到扩展。</li>
+  <li>(2) 可维护性： 当某节点发生故障时， 系统会自动检测故障并转移故障节点的应用， 保证数据库的持续工作。</li>
+  <li>(3) 安全性： 因为数据会同步的多台服务器上， 可以实现数据集的冗余， 通过多份数据来保证安全性。 另外它成功地将数据库放到了内网之中， 更好地保护了数据库的安全性。</li>
+  <li>(4) 易用性： 对应用来说完全透明， 集群暴露出来的就是一个IP</li>
+</ul>
+
+<p><strong>缺点：</strong></p>
+
+<ul>
+  <li>(1) 不能够按照 Web 服务器的处理能力分配负载。</li>
+  <li>(2) 负载均衡器(控制端)故障， 会导致整个数据库系统瘫痪。</li>
+</ul>
+
+
+    </article>
+    <div class="share">
+      <div class="share-component"></div>
+    </div>
+    <div class="comment">
+      
+
+  
+
+  
+
+
+    </div>
+  </div>
+  <div class="column one-fourth">
+    
+<h3>Search</h3>
+<div id="site_search">
+    <input type="text" id="search_box" placeholder="Search">
+</div>
+
+<ul id="search_results"></ul>
+
+<link rel="stylesheet" type="text/css" href="http://localhost:4000/assets/css/modules/sidebar-search.css">
+<script src="http://localhost:4000/assets/js/simple-jekyll-search.min.js"></script>
+<script src="http://localhost:4000/assets/js/search.js"></script>
+
+<script type="text/javascript">
+SimpleJekyllSearch({
+    searchInput: document.getElementById('search_box'),
+    resultsContainer: document.getElementById('search_results'),
+    json: 'http://localhost:4000/assets/search_data.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+    noResultsText: 'No results found',
+    limit: 10,
+    fuzzy: false,
+    exclude: ['Welcome']
+})
+</script>
+
+    
+
+    
+<h3 class="post-directory-title mobile-hidden">Table of Contents</h3>
+<div id="post-directory-module" class="mobile-hidden">
+  <section class="post-directory">
+  <!-- Links that trigger the jumping -->
+  <!-- Added by javascript below -->
+  <dl></dl>
+  </section>
+</div>
+
+<script src="http://localhost:4000/assets/js/jquery.toc.js"></script>
+
+  </div>
+</div>
+</section>
+<!-- /section.content -->
+
+    <footer class="container">
+        <div class="site-footer" role="contentinfo">
+            <div class="copyright left mobile-block">
+                    © 2015
+                    <span title="Yakun">Yakun</span>
+                    <a href="javascript:window.scrollTo(0,0)" class="right mobile-visible">TOP</a>
+            </div>
+
+            <ul class="site-footer-links right mobile-hidden">
+                <li>
+                    <a href="javascript:window.scrollTo(0,0)" >TOP</a>
+                </li>
+            </ul>
+            <a href="http://github.com/AustinKuture/austinkuture.github.io" target="_blank" aria-label="view source code">
+                <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+            </a>
+            <ul class="site-footer-links mobile-hidden">
+                
+                <li>
+                    <a href="http://localhost:4000/" title="首页" target="">首页</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:4000/categories/" title="分类" target="">分类</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:4000/wiki/" title="维基" target="">维基</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:4000/links/" title="链接" target="">链接</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:4000/about/" title="关于" target="">关于</a>
+                </li>
+                
+                <li><a href="http://localhost:4000/feed.xml"><span class="octicon octicon-rss" style="color:orange;"></span></a></li>
+            </ul>
+
+        </div>
+    </footer>
+    <!-- / footer -->
+    <script src="http://localhost:4000/assets/vendor/share.js/dist/js/share.min.js"></script>
+    <script src="http://localhost:4000/assets/js/geopattern.js"></script>
+    <script src="http://localhost:4000/assets/js/prism.js"></script>
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/globals/prism.css">
+    <script>
+      jQuery(document).ready(function($) {
+        // geopattern
+        $('.geopattern').each(function(){
+          $(this).geopattern($(this).data('pattern-id'));
+        });
+       // hljs.initHighlightingOnLoad();
+      });
+    </script>
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div style="display:none">
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-80669434-1', 'auto');
+        ga('send', 'pageview');
+
+      </script>
+    </div>
+    
+</body>
+</html>
