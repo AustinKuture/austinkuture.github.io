@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_8v3czwksspqlg14i.css">
     <link rel="stylesheet" href="/css/main.css ">
-    <link rel="canonical" href="http://localhost:4000/">
+    <link rel="canonical" href="http://localhost:4000/page3/">
     <link rel="alternate" type="application/rss+xml" title="HyG" href="http://localhost:4000/feed.xml ">
 
 
@@ -58,8 +58,8 @@
             <ul>
                 <li>
                     
-                    <a class="active" href="/">
-                        
+                    <a href="/">
+                    
                         <i class="fa fa-home"></i>Home
                     </a>
                 </li>
@@ -154,14 +154,13 @@
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2016/11/25/how-to-write-a-count-down/">前端如何写一个精确的倒计时</a>
+                  <a class="post-link" href="/2015/07/09/JavaScript-Net/">JavaScript 阶段总结</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2016-11-25
+                        <i class="fa fa-calendar"></i>2015-07-09
                     </div>
                     <div class="label-card">
-                        <i class="fa fa-user"></i>HyG
                         
                     </div>
                     <div class="label-card">
@@ -194,9 +193,15 @@
   <i class="fa fa-tags"></i>
   
     
-        <a href="/tag/#countdown" title="Tag: countdown" rel="tag">countdown</a>&nbsp;
+        <a href="/tag/#JavaScript" title="Tag: JavaScript" rel="tag">JavaScript</a>&nbsp;
     
-        <a href="/tag/#JavaScript" title="Tag: JavaScript" rel="tag">JavaScript</a>
+        <a href="/tag/#HTML" title="Tag: HTML" rel="tag">HTML</a>&nbsp;
+    
+        <a href="/tag/#CSS" title="Tag: CSS" rel="tag">CSS</a>&nbsp;
+    
+        <a href="/tag/#思维导图" title="Tag: 思维导图" rel="tag">思维导图</a>&nbsp;
+    
+        <a href="/tag/#技能树" title="Tag: 技能树" rel="tag">技能树</a>
     
   
 
@@ -205,29 +210,25 @@
                     </div>
                 </div>
                 <div class="excerpt">
-                    
-<p>关于写倒计时大家可能都都比较熟悉，使用 setTimeout 或 setInterval 就可以搞定。几秒钟或者几分钟的倒计时这样写没有问题，但是如果是长时间的倒计时，这样写就会不准确。如果用户修改了他的设备时间，这样的倒计时就没有意义了。今天就说说写一个精确的倒计时的方法。</p>
-
-<p><img src="https://img.alicdn.com/tfs/TB18QnlOpXXXXcVXpXXXXXXXXXX-388-256.png" alt="" /></p>
+                    <p>做了一张思维导图。总结这几个月对 JavaScript 的学习吧，也是一个复习。也是我目前的技能树。</p>
 
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2016/11/25/how-to-write-a-count-down/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2015/07/09/JavaScript-Net/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2016/11/22/js-create-file-and-download/">使用 JavaScript 创建并下载文件</a>
+                  <a class="post-link" href="/2015/06/18/weinre/">Weinre --WebApp 调试工具</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2016-11-22
+                        <i class="fa fa-calendar"></i>2015-06-18
                     </div>
                     <div class="label-card">
-                        <i class="fa fa-user"></i>HyG
                         
                     </div>
                     <div class="label-card">
@@ -260,11 +261,17 @@
   <i class="fa fa-tags"></i>
   
     
-        <a href="/tag/#文件" title="Tag: 文件" rel="tag">文件</a>&nbsp;
+        <a href="/tag/#Weinre" title="Tag: Weinre" rel="tag">Weinre</a>&nbsp;
     
-        <a href="/tag/#下载" title="Tag: 下载" rel="tag">下载</a>&nbsp;
+        <a href="/tag/#WebApp" title="Tag: WebApp" rel="tag">WebApp</a>&nbsp;
     
-        <a href="/tag/#JavaScript" title="Tag: JavaScript" rel="tag">JavaScript</a>
+        <a href="/tag/#调试工具" title="Tag: 调试工具" rel="tag">调试工具</a>&nbsp;
+    
+        <a href="/tag/#JavaScript" title="Tag: JavaScript" rel="tag">JavaScript</a>&nbsp;
+    
+        <a href="/tag/#HTML" title="Tag: HTML" rel="tag">HTML</a>&nbsp;
+    
+        <a href="/tag/#CSS" title="Tag: CSS" rel="tag">CSS</a>
     
   
 
@@ -274,192 +281,34 @@
                 </div>
                 <div class="excerpt">
                     <ul id="markdown-toc">
-  <li><a href="#先上代码" id="markdown-toc-先上代码">先上代码</a></li>
+  <li><a href="#什么是-weinre" id="markdown-toc-什么是-weinre">什么是 weinre？</a></li>
 </ul>
 
-<p>本文将介绍如何使用 JavaScript 创建文件，并自动/手动将文件下载。这在导出原始数据时会比较方便。</p>
+<h2 id="什么是-weinre">什么是 weinre？</h2>
 
-<h2 id="先上代码">先上代码</h2>
+<p><a href="http://people.apache.org/~pmuellr/weinre/docs/latest/Home.html">weinre官网</a> 上有两句有意思的介绍：</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/**
- * 创建并下载文件
- * @param  {String} fileName 文件名
- * @param  {String} content  文件内容
- */</span>
-<span class="kd">function</span> <span class="nx">createAndDownloadFile</span><span class="p">(</span><span class="nx">fileName</span><span class="p">,</span> <span class="nx">content</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kd">var</span> <span class="nx">aTag</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'a'</span><span class="p">);</span>
-    <span class="kd">var</span> <span class="nx">blob</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Blob</span><span class="p">([</span><span class="nx">content</span><span class="p">]);</span>
-    <span class="nx">aTag</span><span class="p">.</span><span class="nx">download</span> <span class="o">=</span> <span class="nx">fileName</span><span class="p">;</span>
-    <span class="nx">aTag</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="nx">URL</span><span class="p">.</span><span class="nx">createObjectURL</span><span class="p">(</span><span class="nx">blob</span><span class="p">);</span>
-    <span class="nx">aTag</span><span class="p">.</span><span class="nx">click</span><span class="p">();</span>
-    <span class="nx">URL</span><span class="p">.</span><span class="nx">revokeObjectURL</span><span class="p">(</span><span class="nx">blob</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div></div>
+<blockquote>
+  <p><strong>weinre</strong> is <strong>WE</strong>b <strong>IN</strong>spector <strong>RE</strong>mote. Pronounced like the word “winery”. Or maybe like the word “weiner”. Who knows, really.</p>
 
-<p>很简单对吧，直接调用这个方法，传入文件名和文件内容，程序新建 a 标签，新建 Blob 对象，将文件名赋给 a 标签，同时将 Blob 对象作为 Url 也赋给 a 标签，模拟点击事件，自动下载成功，最后再回收内存。下面我们来看看具体是怎么操作的。</p>
+  <p><strong>weinre</strong> is a debugger for web pages, like FireBug (for FireFox) and Web Inspector (for WebKit-based browsers), except it’s designed to work remotely, and in particular, to allow you debug web pages on a mobile device such as a phone.</p>
+</blockquote>
 
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2016/11/22/js-create-file-and-download/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2015/06/18/weinre/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2016/10/16/shuffle-algorithm/">Fisher–Yates shuffle 洗牌算法</a>
+                  <a class="post-link" href="/2015/06/17/web-app/">Web App 相关技术</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2016-10-16
-                    </div>
-                    <div class="label-card">
-                        <i class="fa fa-user"></i>HyG
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#JavaScript" title="Category: JavaScript" rel="category">JavaScript</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#算法" title="Tag: 算法" rel="tag">算法</a>&nbsp;
-    
-        <a href="/tag/#shuffle" title="Tag: shuffle" rel="tag">shuffle</a>&nbsp;
-    
-        <a href="/tag/#乱序" title="Tag: 乱序" rel="tag">乱序</a>&nbsp;
-    
-        <a href="/tag/#洗牌" title="Tag: 洗牌" rel="tag">洗牌</a>
-    
-  
-
-</span>
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    
-<p>简单来说 Fisher–Yates shuffle 算法是一个用来将一个有限集合生成一个随机排列的算法（数组随机排序）。这个算法生成的随机排列是等概率的。同时这个算法非常高效。</p>
-
-<p>本文主要介绍这个算法的来源、演变、原理。并举出一个例子为大家清晰的描述每次迭代过程。最后使用 JavaScript 代码将算法实现。</p>
-
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Riffle_shuffle.jpg/320px-Riffle_shuffle.jpg" alt="" /></p>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2016/10/16/shuffle-algorithm/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2016/07/07/git-clone-not-master-branch/">Git 如何 clone 非 master 分支的代码</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2016-07-07
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#GitHub" title="Category: GitHub" rel="category">GitHub</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#Git" title="Tag: Git" rel="tag">Git</a>&nbsp;
-    
-        <a href="/tag/#GitHub" title="Tag: GitHub" rel="tag">GitHub</a>&nbsp;
-    
-        <a href="/tag/#分支" title="Tag: 分支" rel="tag">分支</a>
-    
-  
-
-</span>
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <ul id="markdown-toc">
-  <li><a href="#问题描述" id="markdown-toc-问题描述">问题描述</a></li>
-</ul>
-
-<h2 id="问题描述">问题描述</h2>
-
-<p>我们每次使用命令</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone git@gitlab.xxx.com:xxxxx.git
-</code></pre></div></div>
-
-<p>默认 clone 的是这个仓库的 master 分支。如果最新的代码不在 master 分支上，该如何拿到呢？如下图所示，最新的代码可能在<code class="highlighter-rouge">daily/1.4.1</code>分支上，我们希望拿到这个分支上的代码。</p>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2016/07/07/git-clone-not-master-branch/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2016/06/14/how-to-use-babel/">如何使用 babel</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2016-06-14
+                        <i class="fa fa-calendar"></i>2015-06-17
                     </div>
                     <div class="label-card">
                         
@@ -494,13 +343,27 @@
   <i class="fa fa-tags"></i>
   
     
-        <a href="/tag/#ES2015" title="Tag: ES2015" rel="tag">ES2015</a>&nbsp;
+        <a href="/tag/#JavaScript" title="Tag: JavaScript" rel="tag">JavaScript</a>&nbsp;
     
-        <a href="/tag/#ES6" title="Tag: ES6" rel="tag">ES6</a>&nbsp;
+        <a href="/tag/#HTML" title="Tag: HTML" rel="tag">HTML</a>&nbsp;
     
-        <a href="/tag/#ES5" title="Tag: ES5" rel="tag">ES5</a>&nbsp;
+        <a href="/tag/#CSS" title="Tag: CSS" rel="tag">CSS</a>&nbsp;
     
-        <a href="/tag/#babel" title="Tag: babel" rel="tag">babel</a>
+        <a href="/tag/#Sass" title="Tag: Sass" rel="tag">Sass</a>&nbsp;
+    
+        <a href="/tag/#移动端" title="Tag: 移动端" rel="tag">移动端</a>&nbsp;
+    
+        <a href="/tag/#XSS" title="Tag: XSS" rel="tag">XSS</a>&nbsp;
+    
+        <a href="/tag/#AMD" title="Tag: AMD" rel="tag">AMD</a>&nbsp;
+    
+        <a href="/tag/#requireJS" title="Tag: requireJS" rel="tag">requireJS</a>&nbsp;
+    
+        <a href="/tag/#CommonJS" title="Tag: CommonJS" rel="tag">CommonJS</a>&nbsp;
+    
+        <a href="/tag/#性能优化" title="Tag: 性能优化" rel="tag">性能优化</a>&nbsp;
+    
+        <a href="/tag/#WebApp" title="Tag: WebApp" rel="tag">WebApp</a>
     
   
 
@@ -510,23 +373,25 @@
                 </div>
                 <div class="excerpt">
                     
-<p><a href="https://babeljs.io/">Babel</a> 用于将 ES6 的代码转化为 ES5，使得 ES6 可以在目前的浏览器环境下使用。学习使用 babel 是为了使用 ES2015 做准备。本文将介绍如何使用 babel，以及一些相关的配置。</p>
+<blockquote>
+  <p>往前推2到3年，前端工程师还在忧心忡忡地想，移动互联网时代下，前端是不是没有生存空间了。但今天一看，在我们团队，前端工程师超过一半的工作都是在做移动端的Web或者APP的开发。移动Web或者APP在技术本质上是和做桌面端Web没有本质区别，但是移动端的坑那是非常的多，通过学习这部分内容，让你成为一名桌面移动通吃的前端开发工程师。</p>
+</blockquote>
 
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2016/06/14/how-to-use-babel/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2015/06/17/web-app/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2016/06/10/JavaScript-good-parts-note3/">JavaScript 语言精粹笔记3-方法、毒瘤等</a>
+                  <a class="post-link" href="/2015/06/15/JavaScript-Object-Oriented/">JavaScript 面向对象</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2016-06-10
+                        <i class="fa fa-calendar"></i>2015-06-15
                     </div>
                     <div class="label-card">
                         
@@ -561,9 +426,13 @@
   <i class="fa fa-tags"></i>
   
     
-        <a href="/tag/#函数" title="Tag: 函数" rel="tag">函数</a>&nbsp;
+        <a href="/tag/#JavaScript" title="Tag: JavaScript" rel="tag">JavaScript</a>&nbsp;
     
-        <a href="/tag/#JavaScript" title="Tag: JavaScript" rel="tag">JavaScript</a>
+        <a href="/tag/#面向对象" title="Tag: 面向对象" rel="tag">面向对象</a>&nbsp;
+    
+        <a href="/tag/#慕课网" title="Tag: 慕课网" rel="tag">慕课网</a>&nbsp;
+    
+        <a href="/tag/#ife" title="Tag: ife" rel="tag">ife</a>
     
   
 
@@ -573,12 +442,146 @@
                 </div>
                 <div class="excerpt">
                     
-<p>记录一下阅读蝴蝶书的笔记，本篇为书中最后一部分：方法、代码风格、优美的特性、毒瘤、糟粕等。</p>
+<p>本文为慕课网 <a href="http://www.imooc.com/learn/277">JavaScript深入浅出</a>  JavaScript 面向对象笔记。</p>
 
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2016/06/10/JavaScript-good-parts-note3/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2015/06/15/JavaScript-Object-Oriented/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2015/06/14/JavaScript-closure/">JavaScript 中的闭包</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2015-06-14
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#JavaScript" title="Category: JavaScript" rel="category">JavaScript</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#JavaScript" title="Tag: JavaScript" rel="tag">JavaScript</a>&nbsp;
+    
+        <a href="/tag/#闭包" title="Tag: 闭包" rel="tag">闭包</a>&nbsp;
+    
+        <a href="/tag/#慕课网" title="Tag: 慕课网" rel="tag">慕课网</a>&nbsp;
+    
+        <a href="/tag/#ife" title="Tag: ife" rel="tag">ife</a>
+    
+  
+
+</span>
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    
+<p>本文为慕课网 <a href="http://www.imooc.com/learn/277">JavaScript深入浅出</a> JavaScript 中的闭包笔记。</p>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2015/06/14/JavaScript-closure/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2015/06/12/JavaScript-this/">JavaScript 中的 this</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2015-06-12
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#JavaScript" title="Category: JavaScript" rel="category">JavaScript</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#JavaScript" title="Tag: JavaScript" rel="tag">JavaScript</a>&nbsp;
+    
+        <a href="/tag/#慕课网" title="Tag: 慕课网" rel="tag">慕课网</a>&nbsp;
+    
+        <a href="/tag/#this" title="Tag: this" rel="tag">this</a>&nbsp;
+    
+        <a href="/tag/#ife" title="Tag: ife" rel="tag">ife</a>
+    
+  
+
+</span>
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    
+<p>本文为慕课网 <a href="http://www.imooc.com/learn/277">JavaScript深入浅出</a> JavaScript 中的 this笔记。</p>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2015/06/12/JavaScript-this/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
@@ -590,12 +593,12 @@
         <!-- Pagination links -->
         <div class="pagination">
           
-            <span class="previous disable"><i class="fa fa-angle-double-left"></i></span>
-            <span class="previous disable"><i class="fa fa-angle-left"></i></span>
+            <a href="/index.html" class="previous"><i class="fa fa-angle-double-left"></i></a>
+            <a href="/page2" class="previous"><i class="fa fa-angle-left"></i></a>
           
-          <span class="page_number ">1/5</span>
+          <span class="page_number ">3/5</span>
           
-            <a href="/page2" class="next"><i class="fa fa-angle-right"></i></a>
+            <a href="/page4" class="next"><i class="fa fa-angle-right"></i></a>
             <a href="/page5" class="next"><i class="fa fa-angle-double-right"></i></a>
           
         </div>
