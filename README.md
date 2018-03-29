@@ -1,4 +1,4 @@
-# 码志
+# AustinKuture
 
 我的个人博客：<http://www.kuture.com.cn>，欢迎 Star 和 Fork。
 
@@ -18,7 +18,7 @@
 
 **[在线预览 &rarr;](http://mazhuang.org)**
 
-![screenshot home](http://mazhuang.org/assets/images/screenshots/home.png)
+![screenshot home](/images/home_pic.png)
 
 ## Fork 指南
 
