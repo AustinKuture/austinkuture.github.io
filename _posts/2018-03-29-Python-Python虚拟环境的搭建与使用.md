@@ -1,4 +1,10 @@
-
+---
+layout: categories
+title: Python虚拟环境
+description: linux中配置虚拟环境
+keywords: Python
+categories:Python
+---
 # 一、安装和配置虚拟环境
 
 #### 安装虚拟环境
