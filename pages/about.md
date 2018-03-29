@@ -1,18 +1,17 @@
 ---
 layout: page
 title: About
-description: 不忘初心，方得始终
-keywords: Wen Bin, Sasuke
+description: 汲众言者博识，阅众家者博学
+keywords: Kuture,AutinKuture,yakun,李亚坤
 comments: true
 menu: 关于
 permalink: /about/
 ---
 
-Python程序员。
+汲众言者博识，
 
-业精于勤荒于嬉。
+阅众家者博学。
 
-「朴树」「李志」忠实粉丝。
 
 ## 联系
 
