@@ -1,1 +1,2 @@
-# austinkuture.github.io
+
+##Kuture.com.cn Blogs
