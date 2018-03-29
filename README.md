@@ -75,5 +75,5 @@ Fork 本项目之后，还需要做一些事情才能让你的页面「正确」
 
 ## 致谢
 
-本博客外观基于 [ZuoAndroid](http://zuoandroid.github.io) 修改，感谢！
+本博客外观基于 [ZuoAndroid](http://github.com/ZuoAndroid/zuoandroid.github.io) 修改，感谢！
 
