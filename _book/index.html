@@ -1,0 +1,298 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Introduction · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter active" data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Introduction</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="hyde">Hyde</h1>
+<p>Hyde is a brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. It&apos;s based on <a href="http://getpoole.com" target="_blank">Poole</a>, the Jekyll butler.</p>
+<p><img src="https://f.cloud.github.com/assets/98681/1831228/42af6c6a-7384-11e3-98fb-e0b923ee0468.png" alt="Hyde screenshot"></p>
+<h2 id="contents">Contents</h2>
+<ul>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#options">Options</a><ul>
+<li><a href="#sidebar-menu">Sidebar menu</a></li>
+<li><a href="#sticky-sidebar-content">Sticky sidebar content</a></li>
+<li><a href="#themes">Themes</a></li>
+<li><a href="#reverse-layout">Reverse layout</a></li>
+</ul>
+</li>
+<li><a href="#development">Development</a></li>
+<li><a href="#author">Author</a></li>
+<li><a href="#license">License</a></li>
+</ul>
+<h2 id="usage">Usage</h2>
+<p>Hyde is a theme built on top of <a href="https://github.com/poole/poole" target="_blank">Poole</a>, which provides a fully furnished Jekyll setup&#x2014;just download and start the Jekyll server. See <a href="https://github.com/poole/poole#usage" target="_blank">the Poole usage guidelines</a> for how to install and use Jekyll.</p>
+<h2 id="options">Options</h2>
+<p>Hyde includes some customizable options, typically applied via classes on the <code>&lt;body&gt;</code> element.</p>
+<h3 id="sidebar-menu">Sidebar menu</h3>
+<p>Create a list of nav links in the sidebar by assigning each Jekyll page the correct layout in the page&apos;s <a href="http://jekyllrb.com/docs/frontmatter/" target="_blank">front-matter</a>.</p>
+<pre><code>---
+layout: page
+title: About
+---
+</code></pre><p><strong>Why require a specific layout?</strong> Jekyll will return <em>all</em> pages, including the <code>atom.xml</code>, and with an alphabetical sort order. To ensure the first link is <em>Home</em>, we exclude the <code>index.html</code> page from this list by specifying the <code>page</code> layout.</p>
+<h3 id="sticky-sidebar-content">Sticky sidebar content</h3>
+<p>By default Hyde ships with a sidebar that affixes it&apos;s content to the bottom of the sidebar. You can optionally disable this by removing the <code>.sidebar-sticky</code> class from the sidebar&apos;s <code>.container</code>. Sidebar content will then normally flow from top to bottom.</p>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- Default sidebar --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;sidebar&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;container sidebar-sticky&quot;</span>&gt;</span>
+    ...
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Modified sidebar --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;sidebar&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;container&quot;</span>&gt;</span>
+    ...
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<h3 id="themes">Themes</h3>
+<p>Hyde ships with eight optional themes based on the <a href="https://github.com/chriskempson/base16" target="_blank">base16 color scheme</a>. Apply a theme to change the color scheme (mostly applies to sidebar and links).</p>
+<p><img src="https://f.cloud.github.com/assets/98681/1831229/42b0b354-7384-11e3-8462-31b8df193fe5.png" alt="Hyde in red"></p>
+<p>There are eight themes available at this time.</p>
+<p><img src="https://f.cloud.github.com/assets/98681/1817044/e5b0ec06-6f68-11e3-83d7-acd1942797a1.png" alt="Hyde theme classes"></p>
+<p>To use a theme, add anyone of the available theme classes to the <code>&lt;body&gt;</code> element in the <code>default.html</code> layout, like so:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">body</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;theme-base-08&quot;</span>&gt;</span>
+  ...
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+</code></pre>
+<p>To create your own theme, look to the Themes section of <a href="https://github.com/poole/hyde/blob/master/public/css/hyde.css" target="_blank">included CSS file</a>. Copy any existing theme (they&apos;re only a few lines of CSS), rename it, and change the provided colors.</p>
+<h3 id="reverse-layout">Reverse layout</h3>
+<p><img src="https://f.cloud.github.com/assets/98681/1831230/42b0d3ac-7384-11e3-8d54-2065afd03f9e.png" alt="Hyde with reverse layout"></p>
+<p>Hyde&apos;s page orientation can be reversed with a single class.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">body</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;layout-reverse&quot;</span>&gt;</span>
+  ...
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+</code></pre>
+<h2 id="development">Development</h2>
+<p>Hyde has two branches, but only one is used for active development.</p>
+<ul>
+<li><code>master</code> for development.  <strong>All pull requests should be submitted against <code>master</code>.</strong></li>
+<li><code>gh-pages</code> for our hosted site, which includes our analytics tracking code. <strong>Please avoid using this branch.</strong></li>
+</ul>
+<h2 id="author">Author</h2>
+<p><strong>Mark Otto</strong></p>
+<ul>
+<li><a href="https://github.com/mdo" target="_blank">https://github.com/mdo</a></li>
+<li><a href="https://twitter.com/mdo" target="_blank">https://twitter.com/mdo</a></li>
+</ul>
+<h2 id="license">License</h2>
+<p>Open sourced under the <a href="LICENSE.md">MIT license</a>.</p>
+<p>&lt;3</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2018-03-29T08:19:53.314Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-29T08:21:49.178Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
