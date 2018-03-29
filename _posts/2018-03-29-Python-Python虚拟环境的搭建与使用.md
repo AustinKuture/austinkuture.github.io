@@ -1,10 +1,4 @@
----
-layout: post
-title: Python虚拟环境的配置与使用
-categories:Python
-description: 在linux系统下创建虚拟环境
-keywords: 虚拟环境
----
+
 # 一、安装和配置虚拟环境
 
 #### 安装虚拟环境
