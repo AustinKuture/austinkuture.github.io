@@ -1,3 +1,9 @@
+---
+layout: categories
+title: Categories
+description: 哈哈，你找到了我的文章基因库
+keywords: 分类
+---
 # 一、安装和配置虚拟环境
 
 #### 安装虚拟环境
