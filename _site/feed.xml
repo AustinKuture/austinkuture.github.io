@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-03-29T19:02:29+08:00</updated><id>http://localhost:4000/</id><title type="html">Kuture</title><subtitle>Kuture的个人博客</subtitle><author><name>Yakun</name></author><entry><title type="html"></title><link href="http://localhost:4000/2018/03/29/2018-03-29-Python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E7%9A%84%E9%85%8D%E7%BD%AE/" rel="alternate" type="text/html" title="" /><published>2018-03-29T19:02:29+08:00</published><updated>2018-03-29T19:02:29+08:00</updated><id>http://localhost:4000/2018/03/29/2018-03-29-Python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E7%9A%84%E9%85%8D%E7%BD%AE</id><content type="html" xml:base="http://localhost:4000/2018/03/29/2018-03-29-Python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E7%9A%84%E9%85%8D%E7%BD%AE/">&lt;h1 id=&quot;一安装和配置虚拟环境&quot;&gt;一、安装和配置虚拟环境&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-03-29T19:17:44+08:00</updated><id>http://localhost:4000/</id><title type="html">Kuture</title><subtitle>Kuture的个人博客</subtitle><author><name>Yakun</name></author><entry><title type="html">Python虚拟环境配置</title><link href="http://localhost:4000/2018/03/29/Python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA%E4%B8%8E%E4%BD%BF%E7%94%A8/" rel="alternate" type="text/html" title="Python虚拟环境配置" /><published>2018-03-29T00:00:00+08:00</published><updated>2018-03-29T00:00:00+08:00</updated><id>http://localhost:4000/2018/03/29/Python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA%E4%B8%8E%E4%BD%BF%E7%94%A8</id><content type="html" xml:base="http://localhost:4000/2018/03/29/Python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA%E4%B8%8E%E4%BD%BF%E7%94%A8/">&lt;h1 id=&quot;一安装和配置虚拟环境&quot;&gt;一、安装和配置虚拟环境&lt;/h1&gt;
 
 &lt;h4 id=&quot;安装虚拟环境&quot;&gt;安装虚拟环境&lt;/h4&gt;
 
@@ -58,64 +58,4 @@ workon + 两次tab键可以显示所有的虚拟环境
 &lt;p&gt;5.删除虚拟环境&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rmvirtualenv env_name
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Yakun</name></author></entry><entry><title type="html"></title><link href="http://localhost:4000/2018/03/29/2018-03-29-Python-Python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA%E4%B8%8E%E4%BD%BF%E7%94%A8/" rel="alternate" type="text/html" title="" /><published>2018-03-29T19:02:29+08:00</published><updated>2018-03-29T19:02:29+08:00</updated><id>http://localhost:4000/2018/03/29/2018-03-29-Python-Python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA%E4%B8%8E%E4%BD%BF%E7%94%A8</id><content type="html" xml:base="http://localhost:4000/2018/03/29/2018-03-29-Python-Python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA%E4%B8%8E%E4%BD%BF%E7%94%A8/">&lt;h1 id=&quot;一安装和配置虚拟环境&quot;&gt;一、安装和配置虚拟环境&lt;/h1&gt;
-
-&lt;h4 id=&quot;安装虚拟环境&quot;&gt;安装虚拟环境&lt;/h4&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo pip install virtualenv
-sudo pip install virtualenvwrapper
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;virtualenvwrapper 是virtualenv的扩展管理包，可以将所有的虚拟环境整合在一个目录下&lt;/p&gt;
-
-&lt;h4 id=&quot;配置虚拟环境&quot;&gt;配置虚拟环境&lt;/h4&gt;
-
-&lt;p&gt;1.创建虚拟环境管理目录&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mkdir ~/.virtrualenv
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;2.打开.bashrc&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo gedit ~/.bashrc
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;3.在.bashrc末尾增加下面内容&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;export WORKON_HOME=$HOME/.virtualenvs  # 所有虚拟环境存储的目录
-source /usr/local/bin/virtualenvwrapper.sh
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;3.启用配置文件&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;source ~/.bashrc
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;二虚拟环境的操作&quot;&gt;二、虚拟环境的操作&lt;/h1&gt;
-
-&lt;p&gt;1.创建虚拟环境&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mkvirtualenv env_name#env_name为你要创建的虚拟环境的名字，创建虚拟环境需要联网
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;2.创建指定python版本的虚拟环境&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mkvirtualenv -p /usr/bin/python3 env_name
-mkvirtualenv -p /usr/bin/python2 env_name
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;3.运行环境&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;workon env_name
-workon + 两次tab键可以显示所有的虚拟环境
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;4.退出虚拟环境&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;deactivate
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;5.删除虚拟环境&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rmvirtualenv env_name
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Yakun</name></author></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Yakun</name></author><summary type="html">一、安装和配置虚拟环境</summary></entry></feed>
