@@ -1,11 +1,16 @@
 ---
 layout: post
-title:  Mac Generating Pods project Abort trap: 6
+title: Mac Generating Pods project Abort trap
 categories: Bug
-description: Mac Generating Pods project Abort trap: 6
-keywords: iOS,错误,Bug
+description: Mac Generating Pods project Abort trap
+keywords: mac,Pods
 comments: true
 ---
+
+
+
+
+
 
 
 
