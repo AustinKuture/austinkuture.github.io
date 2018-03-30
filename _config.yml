@@ -10,7 +10,7 @@ description: "Kuture的个人博客"
 keywords: Kuture, yakun, Python, Spider, austinkuture, iOS, Objective-C, Swift
 timezone: Asia/Shanghai
 encoding: "utf-8"
-side_bar_repo_limit: 2
+side_bar_repo_limit: 5
 
 # ---------------- #
 #      Author      #
@@ -83,6 +83,7 @@ repository: AustinKuture/austinkuture.github.io
 #      Comments    #
 # ---------------- #
 # support provider: disqus, gitment, gitalk
+support provider: gitalk
 
 # ---------------- #
 #      Search      #
