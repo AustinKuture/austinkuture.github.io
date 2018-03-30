@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <title>Categories &mdash; Kuture</title>
+    <title>iOS 监听网络连接状态之AFN &mdash; Kuture</title>
     <link rel="stylesheet" href="http://localhost:4000/assets/vendor/primer-css/css/primer.css">
     <link rel="stylesheet" href="http://localhost:4000/assets/vendor/primer-markdown/dist/user-content.min.css">
     <link rel="stylesheet" href="http://localhost:4000/assets/vendor/octicons/octicons/octicons.css">
@@ -21,26 +21,28 @@
     
 
     
-    <link rel="canonical" href="http://localhost:4000/categories/">
+    <link rel="canonical" href="http://localhost:4000/2016/11/12/iOS-%E7%9B%91%E5%90%AC%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5%E7%8A%B6%E6%80%81%E4%B9%8BAFN/">
     <link rel="alternate" type="application/atom+xml" title="Kuture" href="http://localhost:4000/feed.xml">
     <link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
     
-    <meta property="og:title" content="Categories">
+    <meta property="og:title" content="iOS 监听网络连接状态之AFN">
       
-    <meta name="keywords" content="分类">
-    <meta name="og:keywords" content="分类">
+    <meta name="keywords" content="["iOS", "AFN"]">
+    <meta name="og:keywords" content="["iOS", "AFN"]">
       
-    <meta name="description" content="哈哈，你找到了我的文章基因库">
-    <meta name="og:description" content="哈哈，你找到了我的文章基因库">
+    <meta name="description" content="iOS 监听网络连接状态之AFN">
+    <meta name="og:description" content="iOS 监听网络连接状态之AFN">
       
     
     
         
     
-    <meta property="og:url" content="http://localhost:4000/categories/">
+    <meta property="og:url" content="http://localhost:4000/2016/11/12/iOS-%E7%9B%91%E5%90%AC%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5%E7%8A%B6%E6%80%81%E4%B9%8BAFN/">
     <meta property="og:site_name" content="Kuture">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="zh_CN" />
+    
+    <meta property="article:published_time" content="2016-11-12">
     
     <script src="http://localhost:4000/assets/vendor/jquery/dist/jquery.min.js"></script>
     <script src="http://localhost:4000/assets/js/jquery-ui.js"></script>
@@ -68,7 +70,7 @@
                 
                 <a href="http://localhost:4000/" class=" site-header-nav-item" target="" title="首页">首页</a>
                 
-                <a href="http://localhost:4000/categories/" class=" selected  site-header-nav-item" target="" title="分类">分类</a>
+                <a href="http://localhost:4000/categories/" class=" site-header-nav-item" target="" title="分类">分类</a>
                 
                 <a href="http://localhost:4000/wiki/" class=" site-header-nav-item" target="" title="维基">维基</a>
                 
@@ -81,69 +83,105 @@
     </header>
     <!-- / header -->
 
-    <section class="collection-head small geopattern" data-pattern-id="Categories">
-    <div class="container">
-        <div class="columns">
-            <div class="column three-fourths">
-                <div class="collection-title">
-                    <h1 class="collection-header">Categories</h1>
-                </div>
-            </div>
+    <section class="collection-head small geopattern" data-pattern-id="iOS 监听网络连接状态之AF">
+<div class="container">
+  <div class="columns">
+    <div class="column three-fourths">
+      <div class="collection-title">
+        <h1 class="collection-header">iOS 监听网络连接状态之AFN</h1>
+        <div class="collection-info">
+          
+          <span class="meta-info">
+            <span class="octicon octicon-calendar"></span> 2016/11/12
+          </span>
+          
+          
+          <span class="meta-info">
+            <span class="octicon octicon-file-directory"></span>
+            <a href="http://localhost:4000/categories/#iOS" title="iOS">iOS</a>
+          </span>
+          
         </div>
+      </div>
     </div>
+  </div>
+</div>
 </section>
 <!-- / .banner -->
 <section class="container content">
-    <div class="columns">
-        <div class="column three-fourths" >
-            <article class="article-content markdown-body">
-                <section class="container posts-content">
+<div class="columns">
+  <div class="column three-fourths" >
+    <article class="article-content markdown-body">
+    <h1 id="ios-监听网络连接状态之afn">iOS 监听网络连接状态之AFN</h1>
+
+<p>作者:<strong>AustinKuture</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>摘要: “在网络访问失败的时候，应用没有做出适当的提示”是苹果的iOS审核团队拒绝一个
+     应用的常见理由。苹果要求你必须先检测网络连接状态，当网络不可用的时候以某种方式
+     告知用户，或者用其他优雅的方式进行处理。
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>iOS平台是按照一直有网络连接的思路来设计的，开发者利用这一特点创造了很多优秀的第三方应用。大多数的iOS应用都需要联网，甚至有些应用严重依赖网络，没有网络就无法正常工作。在你的应用尝试通过网络获取数据之前，你需要知道当前设备是否知道连接上了网络，甚至有时候你可能还需要知道当前网路是由wifi还是由移动蜂窝网络提供的。</p>
+  </li>
+  <li>
+    <p>为了更好的入手和快速的开发需求，本篇主要使用AFN自带方法进行监听网络连接状态，如果想使用原生框架也可以根据苹果官方文档结合自己需求进行开发，苹果官方示例：<a href="https://developer.apple.com/library/ios/samplecode/Reachability/Reachability.zip">https://developer.apple.com/library/ios/samplecode/Reachability/Reachability.zip</a></p>
+  </li>
+  <li>
+    <p>项目中倒入AFNetworking，引入头文件，并在控制器中加入以下方法即可：</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- (void)reachability{
+
+    AFNetworkReachabilityManager *mgr = [AFNetworkReachabilityManager sharedManager];
+    [mgr setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+
+        switch (status) {
+            case AFNetworkReachabilityStatusUnknown: // 未知网络
+
+                NSLog(@"未知网络");
+                break;
+
+            case AFNetworkReachabilityStatusNotReachable: // 没有网络(断网)
+
+                NSLog(@"没有网络(断网)");
+                [self alertView];
+                break;
+
+            case AFNetworkReachabilityStatusReachableViaWWAN: // 手机自带网络
+
+                NSLog(@"手机自带网络");
+                break;
+
+            case AFNetworkReachabilityStatusReachableViaWiFi: // WIFI
+
+                NSLog(@"WIFI");
+                break;
+        }
+    }];
+
+    [mgr startMonitoring];
+}
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+    </article>
+    <div class="share">
+      <div class="share-component"></div>
+    </div>
+    <div class="comment">
+      
+
+  
+
+  
 
 
-<h3>Django</h3>
-<ol class="posts-list" id="Django">
-
-<li class="posts-list-item">
-<span class="posts-list-meta">2018-03-30</span>
-<a class="posts-list-name" href="http://localhost:4000/2018/03/30/Django%E9%A1%B9%E7%9B%AE%E5%85%A5%E9%97%A8(%E4%B8%80)/">Django项目入门(一)</a>
-</li>
-
-</ol>
-
-<h3>Liunx</h3>
-<ol class="posts-list" id="Liunx">
-
-<li class="posts-list-item">
-<span class="posts-list-meta">2018-03-29</span>
-<a class="posts-list-name" href="http://localhost:4000/2018/03/29/Python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA%E4%B8%8E%E4%BD%BF%E7%94%A8/">Python虚拟环境配置</a>
-</li>
-
-</ol>
-
-<h3>iOS</h3>
-<ol class="posts-list" id="iOS">
-
-<li class="posts-list-item">
-<span class="posts-list-meta">2016-11-12</span>
-<a class="posts-list-name" href="http://localhost:4000/2016/11/12/iOS-%E7%9B%91%E5%90%AC%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5%E7%8A%B6%E6%80%81%E4%B9%8BAFN/">iOS 监听网络连接状态之AFN</a>
-</li>
-
-</ol>
-
-</section>
-<!-- /section.content -->
-
-            </article>
-            <div class="share">
-                <div class="share-component"></div>
-            </div>
-            <div class="comment">
-                
-
-            </div>
-        </div>
-        <div class="column one-fourth">
-            
+    </div>
+  </div>
+  <div class="column one-fourth">
+    
 <h3>Search</h3>
 <div id="site_search">
     <input type="text" id="search_box" placeholder="Search">
@@ -168,41 +206,22 @@ SimpleJekyllSearch({
 })
 </script>
 
-            
-<h3>Blog Categories</h3>
-<div id="blog-categories">
-  <ul class="list-group">
     
+
     
-    <li class="list-group-item">
-    <a href="#Django">Django</a>
-    <span class="badge">1</span>
-    </li>
-    
-    <li class="list-group-item">
-    <a href="#Liunx">Liunx</a>
-    <span class="badge">1</span>
-    </li>
-    
-    <li class="list-group-item">
-    <a href="#iOS">iOS</a>
-    <span class="badge">1</span>
-    </li>
-    
-  </ul>
+<h3 class="post-directory-title mobile-hidden">Table of Contents</h3>
+<div id="post-directory-module" class="mobile-hidden">
+  <section class="post-directory">
+  <!-- Links that trigger the jumping -->
+  <!-- Added by javascript below -->
+  <dl></dl>
+  </section>
 </div>
 
-<script type="text/javascript">
+<script src="http://localhost:4000/assets/js/jquery.toc.js"></script>
 
-  $(document).ready(function(){
-    $("#blog-categories li").css('text-transform','capitalize')
-  });
-
-</script>
-
-
-        </div>
-    </div>
+  </div>
+</div>
 </section>
 <!-- /section.content -->
 

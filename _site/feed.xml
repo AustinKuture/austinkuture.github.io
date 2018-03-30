@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-03-30T09:26:53+08:00</updated><id>http://localhost:4000/</id><title type="html">Kuture</title><subtitle>Kuture的个人博客</subtitle><author><name>Yakun</name></author><entry><title type="html">Django项目入门(一)</title><link href="http://localhost:4000/2018/03/30/Django%E9%A1%B9%E7%9B%AE%E5%85%A5%E9%97%A8(%E4%B8%80)/" rel="alternate" type="text/html" title="Django项目入门(一)" /><published>2018-03-30T00:00:00+08:00</published><updated>2018-03-30T00:00:00+08:00</updated><id>http://localhost:4000/2018/03/30/Django%E9%A1%B9%E7%9B%AE%E5%85%A5%E9%97%A8(%E4%B8%80)</id><content type="html" xml:base="http://localhost:4000/2018/03/30/Django%E9%A1%B9%E7%9B%AE%E5%85%A5%E9%97%A8(%E4%B8%80)/">&lt;h1 id=&quot;django项目入门一&quot;&gt;Django项目入门(一)&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-03-30T09:48:47+08:00</updated><id>http://localhost:4000/</id><title type="html">Kuture</title><subtitle>Kuture的个人博客</subtitle><author><name>Yakun</name></author><entry><title type="html">Django项目入门(一)</title><link href="http://localhost:4000/2018/03/30/Django%E9%A1%B9%E7%9B%AE%E5%85%A5%E9%97%A8(%E4%B8%80)/" rel="alternate" type="text/html" title="Django项目入门(一)" /><published>2018-03-30T00:00:00+08:00</published><updated>2018-03-30T00:00:00+08:00</updated><id>http://localhost:4000/2018/03/30/Django%E9%A1%B9%E7%9B%AE%E5%85%A5%E9%97%A8(%E4%B8%80)</id><content type="html" xml:base="http://localhost:4000/2018/03/30/Django%E9%A1%B9%E7%9B%AE%E5%85%A5%E9%97%A8(%E4%B8%80)/">&lt;h1 id=&quot;django项目入门一&quot;&gt;Django项目入门(一)&lt;/h1&gt;
 
 &lt;h3 id=&quot;11创建项目&quot;&gt;1.1创建项目&lt;/h3&gt;
 
@@ -108,4 +108,282 @@ workon + 两次tab键可以显示所有的虚拟环境
 &lt;p&gt;5.删除虚拟环境&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rmvirtualenv env_name
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Yakun</name></author><summary type="html">一、安装和配置虚拟环境</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Yakun</name></author><summary type="html">一、安装和配置虚拟环境</summary></entry><entry><title type="html">Ios 之https自签名证书认证及数据请求的封装</title><link href="http://localhost:4000/2016/12/12/iOS-%E4%B9%8BHttps%E8%87%AA%E7%AD%BE%E5%90%8D%E8%AF%81%E4%B9%A6%E8%AE%A4%E8%AF%81%E5%8F%8A%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82%E7%9A%84%E5%B0%81%E8%A3%85/" rel="alternate" type="text/html" title="Ios 之https自签名证书认证及数据请求的封装" /><published>2016-12-12T00:00:00+08:00</published><updated>2016-12-12T00:00:00+08:00</updated><id>http://localhost:4000/2016/12/12/iOS%20%E4%B9%8BHttps%E8%87%AA%E7%AD%BE%E5%90%8D%E8%AF%81%E4%B9%A6%E8%AE%A4%E8%AF%81%E5%8F%8A%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82%E7%9A%84%E5%B0%81%E8%A3%85</id><content type="html" xml:base="http://localhost:4000/2016/12/12/iOS-%E4%B9%8BHttps%E8%87%AA%E7%AD%BE%E5%90%8D%E8%AF%81%E4%B9%A6%E8%AE%A4%E8%AF%81%E5%8F%8A%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82%E7%9A%84%E5%B0%81%E8%A3%85/">&lt;p&gt;iOS 之Https自签名证书认证及数据请求的封装&lt;/p&gt;
+
+&lt;p&gt;作者:AustinKuture&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;摘要: 在WWDC 2016开发者大会上，苹果宣布了一个最后期限：到2017年1月1日 
+ App Store中的所有应用都必须启用 App Transport Security安全功能。
+ App Transport Security（ATS）是苹果在iOS 9中引入的一项隐私保护功能，
+ 屏蔽明文HTTP资源加载，连接必须经过更安全的HTTPS。苹果目前允许开发者暂时
+ 关闭ATS，可以继续使用HTTP连接，但到年底所有官方商店的应用都必须强制性使用ATS。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;项目中使用的框架是AFNetworking 3.0及以上版本，由于ATS的原因，iOS只允许使用Https开头的链接，在2016年12月30日以前苹果允许绕开ATS，如下图所示：&lt;/strong&gt;
+&lt;img src=&quot;https://static.oschina.net/uploads/space/2017/0301/171132_eQRq_2728740.png&quot; alt=&quot;ATS&quot; /&gt;
+但是从2017年1月1日开始将不再接受使用http加载资源的应用，因此本篇文章主要讲解如何使用AFN进行自签名证书的通过认证（注：对于使用CA机构认证的证书不需要进行认证，直接使用Https开头的链接进行数据访问和加载页面即可）项目已经上传至GitHub（需要参考源码的话请点击链接）：https://github.com/AustinKuture/HttpsSignatureCertificate&lt;/p&gt;
+
+&lt;h3 id=&quot;1建立一个根类-此处命名为aknetpackegeafn&quot;&gt;1，建立一个根类 此处命名为AKNetPackegeAFN&lt;/h3&gt;
+
+&lt;h4 id=&quot;1-h文件-创建所需要的get-与-post-方法&quot;&gt;1&amp;gt; .h文件 ,创建所需要的Get 与 Post 方法&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Foundation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Foundation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+
+
+&lt;span class=&quot;k&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;enum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;AKNetWorkGET&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;   &lt;span class=&quot;cm&quot;&gt;/**&amp;lt; GET请求 */&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;AKNetWorkPOST&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;/**&amp;lt; POST请求 */&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;AKNetWorkType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HttpSuccess&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HttpErro&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSError&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;@interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AKNetPackegeAFN&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;NSObject&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;instancetype&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shareHttpManager&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;cm&quot;&gt;/*
+ *
+ netWorkType:请求方式 GET 或 POST
+ signature:是否使用签名证书，是的话直接写入证书名字，否的话填nil
+ api:请求的URL接口
+ parameters:请求参数
+ sucess:请求成功时的返回值
+ fail:请求失败时的返回值
+ *
+ */&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;netWorkType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;AKNetWorkType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;netWorkType&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Signature&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;signature&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;API&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;api&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Parameters&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSDictionary&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;parameters&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Success&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HttpSuccess&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;sucess&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Fail&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HttpErro&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;fail&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;@end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;####2&amp;gt; .m文件，导入头文件AFNetworking.h 新建Manager 属性并实现shareHttpManager类方法&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#import &quot;AKNetPackegeAFN.h&quot;
+#import &quot;AFNetworking.h&quot;
+&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;@interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AKNetPackegeAFN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;@property&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nonatomic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strong&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AFHTTPSessionManager&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;manager&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;@end&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;@implementation&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AKNetPackegeAFN&lt;/span&gt;
+
+
+&lt;span class=&quot;k&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;instancetype&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shareHttpManager&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dispatch_once_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;onece&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AKNetPackegeAFN&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;httpManager&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;dispatch_once&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;onece&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;httpManager&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;self&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;alloc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;httpManager&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;###2，Get 与Post 方法的实现&lt;/p&gt;
+
+&lt;p&gt;使用时将后台所给的证书转换为 .cer格式 拖入项目根目录中，在方法中进行绑定即可例如后台给的证书名为：Kuture.crt 收到证书后双击进行安装，然后打开钥匙串，将名为Kuture的证书右击导出，选择后缀为.cer 然后确定即可 如下图所示：
+&lt;img src=&quot;https://static.oschina.net/uploads/space/2016/1212/150519_EWHB_2728740.png&quot; alt=&quot;证书1&quot; /&gt;
+&lt;img src=&quot;https://static.oschina.net/uploads/space/2016/1212/150736_GvZ4_2728740.png&quot; alt=&quot;证书2&quot; /&gt;
+&lt;img src=&quot;https://static.oschina.net/uploads/space/2016/1212/150817_zVDP_2728740.png&quot; alt=&quot;证书3&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;GET 与 POST 实现方法的封装
+
+- (void)netWorkType:(AKNetWorkType)netWorkType Signature:(NSString *)signature API:(NSString *)api Parameters:(NSDictionary *)parameters Success:(HttpSuccess)sucess Fail:(HttpErro)fail{
+
+    //开启证书验证模式
+    AFSecurityPolicy *securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate];
+
+    //是否允许使用自签名证书
+    signature == nil ? (void)(securityPolicy.allowInvalidCertificates = NO):(securityPolicy.allowInvalidCertificates = YES);
+
+    //是否需要验证域名
+    securityPolicy.validatesDomainName = NO;
+
+    _manager = [[AFHTTPSessionManager alloc]initWithBaseURL:[NSURL URLWithString:api]];
+    _manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    _manager.securityPolicy = securityPolicy;
+    _manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@&quot;application/json&quot;,@&quot;application/xml&quot;,@&quot;text/xml&quot;,@&quot;text/json&quot;,@&quot;text/plain&quot;,@&quot;text/javascript&quot;,@&quot;text/html&quot;, nil];
+
+    if (signature != nil){
+
+        __weak typeof(self) weakSelf = self;
+        [_manager setSessionDidReceiveAuthenticationChallengeBlock:^NSURLSessionAuthChallengeDisposition(NSURLSession *session, NSURLAuthenticationChallenge *challenge, NSURLCredential *__autoreleasing *_credential) {
+
+            //获取服务器的 trust object
+            SecTrustRef serverTrust = [[challenge protectionSpace] serverTrust];
+
+            //导入自签名证书
+            NSString *cerPath = [[NSBundle mainBundle] pathForResource:@&quot;你的证书名字&quot; ofType:@&quot;cer&quot;];
+            NSData *cerData = [NSData dataWithContentsOfFile:cerPath];
+
+            if (!cerData) {
+
+                NSLog(@&quot;==== .cer file is nil ====&quot;);
+
+                return 0;
+            }
+
+            NSArray *cerArray = @[cerData];
+            weakSelf.manager.securityPolicy.pinnedCertificates = cerArray;
+            SecCertificateRef caRef = SecCertificateCreateWithData(NULL, (__bridge CFDataRef)cerData);
+            NSCAssert(caRef != nil, @&quot;caRef is nil&quot;);
+
+            NSArray *caArray = @[(__bridge id)(caRef)];
+            NSCAssert(caArray != nil, @&quot;caArray is nil&quot;);
+
+            //将读取到的证书设置为serverTrust的根证书
+            OSStatus status = SecTrustSetAnchorCertificates(serverTrust, (__bridge CFArrayRef)caArray);
+            SecTrustSetAnchorCertificatesOnly(serverTrust, NO);
+            NSCAssert(errSecSuccess == status, @&quot;SectrustSetAnchorCertificates failed&quot;);
+
+            //选择质询认证的处理方式
+            NSURLSessionAuthChallengeDisposition disposition = NSURLSessionAuthChallengePerformDefaultHandling;
+            __autoreleasing NSURLCredential *credential = nil;
+
+            //NSURLAuthenTicationMethodServerTrust质询认证方式
+            if ([challenge.protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust]) {
+                //基于客户端的安全策略来决定是否信任该服务器，不信任则不响应质询
+                if ([weakSelf.manager.securityPolicy evaluateServerTrust:challenge.protectionSpace.serverTrust forDomain:challenge.protectionSpace.host]) {
+
+                    //创建质询证书
+                    credential = [NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust];
+
+                    //确认质询方式
+                    if (credential) {
+                        disposition = NSURLSessionAuthChallengeUseCredential;
+
+                    } else {
+
+                        disposition = NSURLSessionAuthChallengePerformDefaultHandling;
+                    }
+
+                } else {
+
+                    //取消挑战
+                    disposition = NSURLSessionAuthChallengeCancelAuthenticationChallenge;
+                }
+
+            } else {
+
+                disposition = NSURLSessionAuthChallengePerformDefaultHandling;
+            }
+
+            return disposition;
+        }];
+    }
+
+    if (netWorkType == 0){
+
+        [_manager GET:api parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
+        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+
+            if (sucess){
+
+                sucess(responseObject);
+            }else{
+
+                NSLog(@&quot;链接异常或网络不存在&quot;);
+            }
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+
+            fail(error);
+        }];
+
+    }else if (netWorkType == 1){
+
+        [_manager POST:api parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
+        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+
+            if (sucess){
+
+                sucess(responseObject);
+            }else{
+
+                NSLog(@&quot;链接异常或网络不存在&quot;);
+            }
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+
+            fail(error);
+        }];
+
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;###3,使用方法，在需要进行数据获取或传递的类里面，直接导入头文件 AKNetPackegeAFN.h ，并实现方法即可，如下所示：&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//创建对象
+    //如果是自签名证书，使用前先到AKNetPackegeAFN相应的方法里进行证书的绑定（证书直接拖入项目中）即可
+    /*
+     *
+     netWorkType:请求方式 GET 或 POST
+     signature:是否使用签名证书，是的话直接写入证书名字，否的话填nil
+     api:请求的URL接口
+     parameters:请求参数
+     sucess:请求成功时的返回值
+     fail:请求失败时的返回值
+     *
+     */
+
+    AKNetPackegeAFN *netHttps = [AKNetPackegeAFN shareHttpManager];
+    [netHttps netWorkType:请求类型 Signature:证书名称 API:请求URL Parameters:参数 Success:^(id json) {
+
+        NSLog(@&quot;Json:%@&quot;,json);
+    } Fail:^(NSError *error) {
+
+        NSLog(@&quot;Error:%@&quot;,error);
+    }];
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Yakun</name></author><summary type="html">iOS 之Https自签名证书认证及数据请求的封装</summary></entry><entry><title type="html">iOS 监听网络连接状态之AFN</title><link href="http://localhost:4000/2016/11/12/iOS-%E7%9B%91%E5%90%AC%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5%E7%8A%B6%E6%80%81%E4%B9%8BAFN/" rel="alternate" type="text/html" title="iOS 监听网络连接状态之AFN" /><published>2016-11-12T00:00:00+08:00</published><updated>2016-11-12T00:00:00+08:00</updated><id>http://localhost:4000/2016/11/12/iOS%20%E7%9B%91%E5%90%AC%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5%E7%8A%B6%E6%80%81%E4%B9%8BAFN</id><content type="html" xml:base="http://localhost:4000/2016/11/12/iOS-%E7%9B%91%E5%90%AC%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5%E7%8A%B6%E6%80%81%E4%B9%8BAFN/">&lt;h1 id=&quot;ios-监听网络连接状态之afn&quot;&gt;iOS 监听网络连接状态之AFN&lt;/h1&gt;
+
+&lt;p&gt;作者:&lt;strong&gt;AustinKuture&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;摘要: “在网络访问失败的时候，应用没有做出适当的提示”是苹果的iOS审核团队拒绝一个
+     应用的常见理由。苹果要求你必须先检测网络连接状态，当网络不可用的时候以某种方式
+     告知用户，或者用其他优雅的方式进行处理。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;iOS平台是按照一直有网络连接的思路来设计的，开发者利用这一特点创造了很多优秀的第三方应用。大多数的iOS应用都需要联网，甚至有些应用严重依赖网络，没有网络就无法正常工作。在你的应用尝试通过网络获取数据之前，你需要知道当前设备是否知道连接上了网络，甚至有时候你可能还需要知道当前网路是由wifi还是由移动蜂窝网络提供的。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;为了更好的入手和快速的开发需求，本篇主要使用AFN自带方法进行监听网络连接状态，如果想使用原生框架也可以根据苹果官方文档结合自己需求进行开发，苹果官方示例：&lt;a href=&quot;https://developer.apple.com/library/ios/samplecode/Reachability/Reachability.zip&quot;&gt;https://developer.apple.com/library/ios/samplecode/Reachability/Reachability.zip&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;项目中倒入AFNetworking，引入头文件，并在控制器中加入以下方法即可：&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- (void)reachability{
+
+    AFNetworkReachabilityManager *mgr = [AFNetworkReachabilityManager sharedManager];
+    [mgr setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+
+        switch (status) {
+            case AFNetworkReachabilityStatusUnknown: // 未知网络
+
+                NSLog(@&quot;未知网络&quot;);
+                break;
+
+            case AFNetworkReachabilityStatusNotReachable: // 没有网络(断网)
+
+                NSLog(@&quot;没有网络(断网)&quot;);
+                [self alertView];
+                break;
+
+            case AFNetworkReachabilityStatusReachableViaWWAN: // 手机自带网络
+
+                NSLog(@&quot;手机自带网络&quot;);
+                break;
+
+            case AFNetworkReachabilityStatusReachableViaWiFi: // WIFI
+
+                NSLog(@&quot;WIFI&quot;);
+                break;
+        }
+    }];
+
+    [mgr startMonitoring];
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Yakun</name></author><summary type="html">iOS 监听网络连接状态之AFN</summary></entry></feed>
