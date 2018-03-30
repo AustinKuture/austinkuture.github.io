@@ -1,12 +1,12 @@
-- sitename: GitHub
-  name: Kuture
+- sitename: 
+  name: MyGitHub
   url: https://github.com/AustinKuture
   
-- sitename: 个人空间
-  name: Kuture
+- sitename: 
+  name: 我的空间
   url: http://www.kuture.com.cn/myspace/Person/person.html
 
-- sitename: 博客-开源中国
-  name: Kuture
+- sitename: 
+  name: 博客-开源中国
   url: https://my.oschina.net/Kuture/blog
 
