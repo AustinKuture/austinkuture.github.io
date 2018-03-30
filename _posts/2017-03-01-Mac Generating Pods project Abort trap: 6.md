@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  The operation couldn’t be completed. Unable to log in with
+title:  Mac Generating Pods project Abort trap: 6
 categories: Bug
-description: The operation couldn’t be completed. Unable to log in with
+description: Mac Generating Pods project Abort trap: 6
 keywords: iOS,错误,Bug
 comments: true
 ---
