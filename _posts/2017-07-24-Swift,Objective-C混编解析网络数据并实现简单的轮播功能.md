@@ -201,6 +201,6 @@ extension AKHomeController{
 
 4,网络加载方法详见另一篇博客
 
-<http://www.kuture.com.cn/Blogs/Sinature_Https_LoadData.html>
+<http://www.kuture.com.cn//2016/12/12/iOS-%E4%B9%8BHttps%E8%87%AA%E7%AD%BE%E5%90%8D%E8%AF%81%E4%B9%A6%E8%AE%A4%E8%AF%81%E5%8F%8A%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82%E7%9A%84%E5%B0%81%E8%A3%85/>
 
 5,整体图层![img](https://static.oschina.net/uploads/space/2017/0724/133707_SImn_2728740.png)
