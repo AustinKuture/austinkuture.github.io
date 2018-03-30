@@ -124,6 +124,39 @@
 </code></pre></div></div>
 <p>以项目名称为DjangoSpider，应用名称为CrawlSpiders为例，当前目录结构如下图所示：
 <img src="/images/posts/Django/django-目录结构.png" alt="Django_Menu" /></p>
+<blockquote>
+  <p>注意:应用创建完成后需要手动配置到项目中才能被使用，在settings.py中INSTALLED_APPS配置项下添加应用的名称就可以完成安装</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Application definition
+
+INSTALLED_APPS = (
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'CrawlSpiders',
+)
+</code></pre></div></div>
+
+<h3 id="12开发服务器">1.2开发服务器</h3>
+
+<p>在开发阶段， 为了能够快速预览到开发的效果， django提供了⼀个纯python编写的轻量级web服务
+器， 仅在开发阶段使⽤. 运⾏服务器命令如下：</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python manage.py runserver ip地址:端口
+</code></pre></div></div>
+<p>也可以不指定ip和端口，默认在127.0.0.1：8000监听：</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python manage.py runserver
+</code></pre></div></div>
+<blockquote>
+  <p>按ctrl + c停止服务器</p>
+</blockquote>
+
+<p>服务器启动后如下图所示：</p>
+
+<p><img src="" alt="" /></p>
 
 
     </article>

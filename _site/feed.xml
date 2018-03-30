@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-03-30T09:06:25+08:00</updated><id>http://localhost:4000/</id><title type="html">Kuture</title><subtitle>Kuture的个人博客</subtitle><author><name>Yakun</name></author><entry><title type="html">Django项目入门(一)</title><link href="http://localhost:4000/2018/03/30/Django%E9%A1%B9%E7%9B%AE%E5%85%A5%E9%97%A8(%E4%B8%80)/" rel="alternate" type="text/html" title="Django项目入门(一)" /><published>2018-03-30T00:00:00+08:00</published><updated>2018-03-30T00:00:00+08:00</updated><id>http://localhost:4000/2018/03/30/Django%E9%A1%B9%E7%9B%AE%E5%85%A5%E9%97%A8(%E4%B8%80)</id><content type="html" xml:base="http://localhost:4000/2018/03/30/Django%E9%A1%B9%E7%9B%AE%E5%85%A5%E9%97%A8(%E4%B8%80)/">&lt;h1 id=&quot;django项目入门一&quot;&gt;Django项目入门(一)&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-03-30T09:16:53+08:00</updated><id>http://localhost:4000/</id><title type="html">Kuture</title><subtitle>Kuture的个人博客</subtitle><author><name>Yakun</name></author><entry><title type="html">Django项目入门(一)</title><link href="http://localhost:4000/2018/03/30/Django%E9%A1%B9%E7%9B%AE%E5%85%A5%E9%97%A8(%E4%B8%80)/" rel="alternate" type="text/html" title="Django项目入门(一)" /><published>2018-03-30T00:00:00+08:00</published><updated>2018-03-30T00:00:00+08:00</updated><id>http://localhost:4000/2018/03/30/Django%E9%A1%B9%E7%9B%AE%E5%85%A5%E9%97%A8(%E4%B8%80)</id><content type="html" xml:base="http://localhost:4000/2018/03/30/Django%E9%A1%B9%E7%9B%AE%E5%85%A5%E9%97%A8(%E4%B8%80)/">&lt;h1 id=&quot;django项目入门一&quot;&gt;Django项目入门(一)&lt;/h1&gt;
 
 &lt;h3 id=&quot;11创建项目&quot;&gt;1.1创建项目&lt;/h3&gt;
 
@@ -9,7 +9,40 @@
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;python manage.py startapp 应用名字
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;以项目名称为DjangoSpider，应用名称为CrawlSpiders为例，当前目录结构如下图所示：
-&lt;img src=&quot;/images/posts/Django/django-目录结构.png&quot; alt=&quot;Django_Menu&quot; /&gt;&lt;/p&gt;</content><author><name>Yakun</name></author><summary type="html">Django项目入门(一)</summary></entry><entry><title type="html">Python虚拟环境配置</title><link href="http://localhost:4000/2018/03/29/Python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA%E4%B8%8E%E4%BD%BF%E7%94%A8/" rel="alternate" type="text/html" title="Python虚拟环境配置" /><published>2018-03-29T00:00:00+08:00</published><updated>2018-03-29T00:00:00+08:00</updated><id>http://localhost:4000/2018/03/29/Python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA%E4%B8%8E%E4%BD%BF%E7%94%A8</id><content type="html" xml:base="http://localhost:4000/2018/03/29/Python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA%E4%B8%8E%E4%BD%BF%E7%94%A8/">&lt;h1 id=&quot;一安装和配置虚拟环境&quot;&gt;一、安装和配置虚拟环境&lt;/h1&gt;
+&lt;img src=&quot;/images/posts/Django/django-目录结构.png&quot; alt=&quot;Django_Menu&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;注意:应用创建完成后需要手动配置到项目中才能被使用，在settings.py中INSTALLED_APPS配置项下添加应用的名称就可以完成安装&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Application definition
+
+INSTALLED_APPS = (
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'CrawlSpiders',
+)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;12开发服务器&quot;&gt;1.2开发服务器&lt;/h3&gt;
+
+&lt;p&gt;在开发阶段， 为了能够快速预览到开发的效果， django提供了⼀个纯python编写的轻量级web服务
+器， 仅在开发阶段使⽤. 运⾏服务器命令如下：&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;python manage.py runserver ip地址:端口
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;也可以不指定ip和端口，默认在127.0.0.1：8000监听：&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;python manage.py runserver
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;按ctrl + c停止服务器&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;服务器启动后如下图所示：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Yakun</name></author><summary type="html">Django项目入门(一)</summary></entry><entry><title type="html">Python虚拟环境配置</title><link href="http://localhost:4000/2018/03/29/Python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA%E4%B8%8E%E4%BD%BF%E7%94%A8/" rel="alternate" type="text/html" title="Python虚拟环境配置" /><published>2018-03-29T00:00:00+08:00</published><updated>2018-03-29T00:00:00+08:00</updated><id>http://localhost:4000/2018/03/29/Python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA%E4%B8%8E%E4%BD%BF%E7%94%A8</id><content type="html" xml:base="http://localhost:4000/2018/03/29/Python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA%E4%B8%8E%E4%BD%BF%E7%94%A8/">&lt;h1 id=&quot;一安装和配置虚拟环境&quot;&gt;一、安装和配置虚拟环境&lt;/h1&gt;
 
 &lt;h4 id=&quot;安装虚拟环境&quot;&gt;安装虚拟环境&lt;/h4&gt;
 
