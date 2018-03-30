@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-03-30T09:51:57+08:00</updated><id>http://localhost:4000/</id><title type="html">Kuture</title><subtitle>Kuture的个人博客</subtitle><author><name>Yakun</name></author><entry><title type="html">Django项目入门(一)</title><link href="http://localhost:4000/2018/03/30/Django%E9%A1%B9%E7%9B%AE%E5%85%A5%E9%97%A8(%E4%B8%80)/" rel="alternate" type="text/html" title="Django项目入门(一)" /><published>2018-03-30T00:00:00+08:00</published><updated>2018-03-30T00:00:00+08:00</updated><id>http://localhost:4000/2018/03/30/Django%E9%A1%B9%E7%9B%AE%E5%85%A5%E9%97%A8(%E4%B8%80)</id><content type="html" xml:base="http://localhost:4000/2018/03/30/Django%E9%A1%B9%E7%9B%AE%E5%85%A5%E9%97%A8(%E4%B8%80)/">&lt;h1 id=&quot;django项目入门一&quot;&gt;Django项目入门(一)&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-03-30T10:04:16+08:00</updated><id>http://localhost:4000/</id><title type="html">Kuture</title><subtitle>Kuture的个人博客</subtitle><author><name>Yakun</name></author><entry><title type="html">Django项目入门(一)</title><link href="http://localhost:4000/2018/03/30/Django%E9%A1%B9%E7%9B%AE%E5%85%A5%E9%97%A8(%E4%B8%80)/" rel="alternate" type="text/html" title="Django项目入门(一)" /><published>2018-03-30T00:00:00+08:00</published><updated>2018-03-30T00:00:00+08:00</updated><id>http://localhost:4000/2018/03/30/Django%E9%A1%B9%E7%9B%AE%E5%85%A5%E9%97%A8(%E4%B8%80)</id><content type="html" xml:base="http://localhost:4000/2018/03/30/Django%E9%A1%B9%E7%9B%AE%E5%85%A5%E9%97%A8(%E4%B8%80)/">&lt;h1 id=&quot;django项目入门一&quot;&gt;Django项目入门(一)&lt;/h1&gt;
 
 &lt;h3 id=&quot;11创建项目&quot;&gt;1.1创建项目&lt;/h3&gt;
 
@@ -121,7 +121,7 @@ workon + 两次tab键可以显示所有的虚拟环境
 &lt;/blockquote&gt;
 
 &lt;p&gt;&lt;strong&gt;项目中使用的框架是AFNetworking 3.0及以上版本，由于ATS的原因，iOS只允许使用Https开头的链接，在2016年12月30日以前苹果允许绕开ATS，如下图所示：&lt;/strong&gt;
-&lt;img src=&quot;https://static.oschina.net/uploads/space/2017/0301/171132_eQRq_2728740.png&quot; alt=&quot;ATS&quot; /&gt;
+&lt;img src=&quot;/images/posts/iOS/自签名-ATS-01.png&quot; alt=&quot;ATS&quot; /&gt;
 但是从2017年1月1日开始将不再接受使用http加载资源的应用，因此本篇文章主要讲解如何使用AFN进行自签名证书的通过认证（注：对于使用CA机构认证的证书不需要进行认证，直接使用Https开头的链接进行数据访问和加载页面即可）项目已经上传至GitHub（需要参考源码的话请点击链接）：https://github.com/AustinKuture/HttpsSignatureCertificate&lt;/p&gt;
 
 &lt;h3 id=&quot;1建立一个根类-此处命名为aknetpackegeafn&quot;&gt;1，建立一个根类 此处命名为AKNetPackegeAFN&lt;/h3&gt;
@@ -183,10 +183,10 @@ workon + 两次tab键可以显示所有的虚拟环境
 
 &lt;h3 id=&quot;2get-与post-方法的实现&quot;&gt;2，Get 与Post 方法的实现&lt;/h3&gt;
 
-&lt;p&gt;使用时将后台所给的证书转换为 .cer格式 拖入项目根目录中，在方法中进行绑定即可例如后台给的证书名为：Kuture.crt 收到证书后双击进行安装，然后打开钥匙串，将名为Kuture的证书右击导出，选择后缀为.cer 然后确定即可 如下图所示：
-&lt;img src=&quot;https://static.oschina.net/uploads/space/2016/1212/150519_EWHB_2728740.png&quot; alt=&quot;证书1&quot; /&gt;
-&lt;img src=&quot;https://static.oschina.net/uploads/space/2016/1212/150736_GvZ4_2728740.png&quot; alt=&quot;证书2&quot; /&gt;
-&lt;img src=&quot;https://static.oschina.net/uploads/space/2016/1212/150817_zVDP_2728740.png&quot; alt=&quot;证书3&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;使用时将后台所给的证书转换为 .cer格式 拖入项目根目录中，在方法中进行绑定即可例如后台给的证书名为：Kuture.crt 收到证书后双击进行安装，然后打开钥匙串，将名为Kuture的证书右击导出，选择后缀为.cer 然后确定即可 如下图所示：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/iOS/自签名-sign-02.png&quot; alt=&quot;证书1&quot; /&gt;&lt;img src=&quot;/images/posts/iOS/自签名-sign-03.png&quot; alt=&quot;证书2&quot; /&gt;
+&lt;img src=&quot;/images/posts/iOS/自签名-sign-04.png&quot; alt=&quot;证书3&quot; /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;GET 与 POST 实现方法的封装
 
