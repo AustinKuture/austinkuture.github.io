@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans" prefix="og: http://ogp.me/ns#" class="han-init">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>iOS 友盟推送通知使用教程 &mdash; Kuture</title>
+    <link rel="stylesheet" href="http://localhost:4000/assets/vendor/primer-css/css/primer.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/vendor/primer-markdown/dist/user-content.min.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/vendor/octicons/octicons/octicons.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/components/collection.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/components/repo-card.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/sections/repo-list.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/sections/mini-repo-list.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/components/boxed-group.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/globals/common.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/vendor/share.js/dist/css/share.min.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/globals/responsive.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/posts/index.css">
+    <!-- Latest compiled and minified CSS -->
+    
+
+    
+    <link rel="canonical" href="http://localhost:4000/2016/12/27/iOS-%E5%8F%8B%E7%9B%9F%E6%8E%A8%E9%80%81%E9%80%9A%E7%9F%A5%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">
+    <link rel="alternate" type="application/atom+xml" title="Kuture" href="http://localhost:4000/feed.xml">
+    <link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+    
+    <meta property="og:title" content="iOS 友盟推送通知使用教程">
+      
+    <meta name="keywords" content="iOS,友盟,推送,通知">
+    <meta name="og:keywords" content="iOS,友盟,推送,通知">
+      
+    <meta name="description" content="iOS 友盟推送通知使用教程">
+    <meta name="og:description" content="iOS 友盟推送通知使用教程">
+      
+    
+    
+        
+    
+    <meta property="og:url" content="http://localhost:4000/2016/12/27/iOS-%E5%8F%8B%E7%9B%9F%E6%8E%A8%E9%80%81%E9%80%9A%E7%9F%A5%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">
+    <meta property="og:site_name" content="Kuture">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN" />
+    
+    <meta property="article:published_time" content="2016-12-27">
+    
+    <script src="http://localhost:4000/assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="http://localhost:4000/assets/js/jquery-ui.js"></script>
+    <script type="text/javascript">
+    function toggleMenu() {
+        var nav = document.getElementsByClassName("site-header-nav")[0];
+        if (nav.style.display == "inline-flex") {
+          nav.style.display = "none";
+        } else {
+          nav.style.display = "inline-flex";
+        }
+    }
+    </script>
+</head>
+<body class="" data-mz="">
+    <header class="site-header">
+        <div class="container">
+            <h1><a href="http://localhost:4000/" title="Kuture"><span class="octicon octicon-mark-github"></span> Kuture</a></h1>
+            <button class="collapsed mobile-visible" type="button" onclick="toggleMenu();">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <nav class="site-header-nav" role="navigation">
+                
+                <a href="http://localhost:4000/" class=" site-header-nav-item" target="" title="首页">首页</a>
+                
+                <a href="http://localhost:4000/categories/" class=" site-header-nav-item" target="" title="分类">分类</a>
+                
+                <a href="http://localhost:4000/wiki/" class=" site-header-nav-item" target="" title="百科">百科</a>
+                
+                <a href="http://localhost:4000/links/" class=" site-header-nav-item" target="" title="链接">链接</a>
+                
+                <a href="http://localhost:4000/about/" class=" site-header-nav-item" target="" title="关于">关于</a>
+                
+            </nav>
+        </div>
+    </header>
+    <!-- / header -->
+
+    <section class="collection-head small geopattern" data-pattern-id="iOS 友盟推送通知使用教程">
+<div class="container">
+  <div class="columns">
+    <div class="column three-fourths">
+      <div class="collection-title">
+        <h1 class="collection-header">iOS 友盟推送通知使用教程</h1>
+        <div class="collection-info">
+          
+          <span class="meta-info">
+            <span class="octicon octicon-calendar"></span> 2016/12/27
+          </span>
+          
+          
+          <span class="meta-info">
+            <span class="octicon octicon-file-directory"></span>
+            <a href="http://localhost:4000/categories/#iOS" title="iOS">iOS</a>
+          </span>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<!-- / .banner -->
+<section class="container content">
+<div class="columns">
+  <div class="column three-fourths" >
+    <article class="article-content markdown-body">
+    <h1 id="ios-友盟推送通知使用教程">iOS 友盟推送通知使用教程</h1>
+
+<p>作者:<strong>AustinKuture</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>摘要: 应用中由于系统消息或者即时通讯等功能,经常会用到推送通知,
+     本篇文章主要讲解如何使用友盟第三方配置到项目中,
+     最终实现从后台服务器或者友盟服务端进行消息的推送通知.
+</code></pre></div></div>
+
+<p>iOS项目中如果要加入推送通知的功能，首先得在开发者中心创建App IDs的时候勾选Push Notifications 的Development 与 Distribution 两个选项开通推送通知的功能，目前网络上有很多关于在开发者中心创建项目证书的博文，对于证书的申请及配置本篇文章不再做过多的介绍。</p>
+
+<p><img src="https://static.oschina.net/uploads/space/2017/0120/140526_tDbf_2728740.png" alt="证书配置" /></p>
+
+<h2 id="一友盟上创建项目并导入开发证书与生产证书">一，友盟上创建项目并导入开发证书与生产证书</h2>
+
+<p>进入友盟官网<a href="http://push.umeng.com">http://push.umeng.com</a>申请账号并登陆，进入消息推送模块创建应用，根据需要填入相应信息。开发者证书与生产证书创建完成后，需要下载到本地并双击打开，进入钥匙串，找到开发证书与生产证书分别右击导出，输入密码后保存起来。在友盟已经创建的项目中分别上传之前保存的开发证书与生产证书，并输入密码，两个顺序不要弄错，完成后点保存即可。如下图所示：   <img src="https://static.oschina.net/uploads/space/2017/0120/140327_svjX_2728740.png" alt="上传证书到友盟" /></p>
+
+<h2 id="二下载并导入sdk">二，下载并导入SDK</h2>
+
+<h3 id="1下载友盟最新的sdkhttpdevumengcompushiossdk-download找到sdk文件夹umessagesdkxx导入到项目中导入完成后添加库文件usernotificationframwork">1，下载友盟最新的SDK<a href="http://dev.umeng.com/push/ios/sdk-download">http://dev.umeng.com/push/ios/sdk-download</a>找到SDK文件夹UMessage<em>sdk</em>xx导入到项目中，导入完成后添加库文件UserNotification.framwork</h3>
+
+<h3 id="2打开推送开关">2，打开推送开关：</h3>
+
+<p>target-&gt;Capbilities-&gt;Push Notifications   <img src="https://static.oschina.net/uploads/space/2017/0120/144254_O8za_2728740.png" alt="推送开关" /></p>
+
+<p>需要后台静默通知的话，可以打开以下运程推送：   <img src="https://static.oschina.net/uploads/space/2017/0120/165009_0PyK_2728740.png" alt="静默推送" /></p>
+
+<h3 id="3添加代码">3，添加代码</h3>
+
+<p>打开AppDelegate.m导入以下头文件：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #import "UMessage.h"
+    #import "UserNotifications/UserNotifications.h"
+</code></pre></div></div>
+
+<p>在didFinishLaunchingWithOptions方法中添加以下方法：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
+    [UMessage startWithAppkey:@"5850f2d0310c9364a80018a8" launchOptions:launchOptions httpsenable:YES ];
+
+        //注册通知
+        [UMessage registerForRemoteNotifications];
+
+        //iOS10必须加下面这段代码。
+        UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+        center.delegate=self;
+        UNAuthorizationOptions types10=UNAuthorizationOptionBadge|  UNAuthorizationOptionAlert|UNAuthorizationOptionSound;
+        [center requestAuthorizationWithOptions:types10     completionHandler:^(BOOL granted, NSError * _Nullable error) {
+            if (granted) {
+                //点击允许
+                //这里可以添加一些自己的逻辑
+
+                MyLog(@"One");
+            } else {
+                //点击不允许
+                //这里可以添加一些自己的逻辑
+                MyLog(@"Two");
+            }
+        }];
+
+        //打开日志，方便调试
+        [UMessage setLogEnabled:YES];
+    }
+</code></pre></div></div>
+
+<h3 id="4处理运程前台及后台通知的方法">4，处理运程，前台及后台通知的方法：</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>//远程推送通知的接收
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler{
+
+    MyLog(@"后台远程推送通知:%@",userInfo);
+
+//iOS10新增：处理前台收到通知的代理方法
+-(void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler{
+
+    NSDictionary * userInfo = notification.request.content.userInfo;
+    if([notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
+        //应用处于前台时的远程推送接受
+        //关闭友盟自带的弹出框
+        [UMessage setAutoAlert:NO];
+        //必须加这句代码
+        [UMessage didReceiveRemoteNotification:userInfo];
+
+        MyLog(@"前台远程推送通知:%@",userInfo);
+
+    }else{
+        //应用处于前台时的本地推送接受
+        MyLog(@"Four");
+    }
+    //当应用处于前台时提示设置，需要哪个可以设置哪一个
+    completionHandler(UNNotificationPresentationOptionSound|UNNotificationPresentationOptionBadge|UNNotificationPresentationOptionAlert);
+}
+
+//iOS10新增：处理后台点击通知的代理方法
+-(void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)())completionHandler{
+
+    NSDictionary * userInfo = response.notification.request.content.userInfo;
+    if([response.notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
+        //应用处于后台时的远程推送接受
+        //必须加这句代码
+        [UMessage didReceiveRemoteNotification:userInfo];
+
+        MyLog(@"后台推送通知:%@",userInfo);
+
+        MyLog(@"Six");
+    }
+
+}
+</code></pre></div></div>
+
+<h2 id="三测试模式下通知信息的发送">三，测试模式下通知信息的发送</h2>
+
+<h3 id="1进入友盟管理平台点击测试模式">1，进入友盟管理平台，点击测试模式：</h3>
+
+<p><img src="https://static.oschina.net/uploads/space/2017/0120/165428_V2Ui_2728740.png" alt="点击测试" /></p>
+
+<h3 id="2添加测试设备其中device-token为真机调试时产生的">2，添加测试设备，其中Device Token为真机调试时产生的。</h3>
+
+<p><img src="https://static.oschina.net/uploads/space/2017/0120/165618_k0yC_2728740.png" alt="添加测试设备" /></p>
+
+<h3 id="3创建并发送测试消息">3，创建并发送测试消息：</h3>
+
+<p><img src="https://static.oschina.net/uploads/space/2017/0120/165902_VIL2_2728740.png" alt="创建测试消息" /><img src="https://static.oschina.net/uploads/space/2017/0120/170017_btii_2728740.png" alt="发送测试消息" /></p>
+
+<h3 id="4完成后点击发送按钮即可">4，完成后点击发送按钮即可</h3>
+
+    </article>
+    <div class="share">
+      <div class="share-component"></div>
+    </div>
+    <div class="comment">
+      
+
+  
+
+  
+
+
+    </div>
+  </div>
+  <div class="column one-fourth">
+    
+<h3>Search</h3>
+<div id="site_search">
+    <input type="text" id="search_box" placeholder="Search">
+</div>
+
+<ul id="search_results"></ul>
+
+<link rel="stylesheet" type="text/css" href="http://localhost:4000/assets/css/modules/sidebar-search.css">
+<script src="http://localhost:4000/assets/js/simple-jekyll-search.min.js"></script>
+<script src="http://localhost:4000/assets/js/search.js"></script>
+
+<script type="text/javascript">
+SimpleJekyllSearch({
+    searchInput: document.getElementById('search_box'),
+    resultsContainer: document.getElementById('search_results'),
+    json: 'http://localhost:4000/assets/search_data.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+    noResultsText: 'No results found',
+    limit: 10,
+    fuzzy: false,
+    exclude: ['Welcome']
+})
+</script>
+
+    
+
+    
+<h3 class="post-directory-title mobile-hidden">Table of Contents</h3>
+<div id="post-directory-module" class="mobile-hidden">
+  <section class="post-directory">
+  <!-- Links that trigger the jumping -->
+  <!-- Added by javascript below -->
+  <dl></dl>
+  </section>
+</div>
+
+<script src="http://localhost:4000/assets/js/jquery.toc.js"></script>
+
+  </div>
+</div>
+</section>
+<!-- /section.content -->
+
+    <footer class="container">
+        <div class="site-footer" role="contentinfo">
+            <div class="copyright left mobile-block">
+                    © 2015
+                    <span title="Yakun">Yakun</span>
+                    <a href="javascript:window.scrollTo(0,0)" class="right mobile-visible">TOP</a>
+            </div>
+
+            <ul class="site-footer-links right mobile-hidden">
+                <li>
+                    <a href="javascript:window.scrollTo(0,0)" >TOP</a>
+                </li>
+            </ul>
+            <a href="http://github.com/AustinKuture/austinkuture.github.io" target="_blank" aria-label="view source code">
+                <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+            </a>
+            <ul class="site-footer-links mobile-hidden">
+                
+                <li>
+                    <a href="http://localhost:4000/" title="首页" target="">首页</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:4000/categories/" title="分类" target="">分类</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:4000/wiki/" title="百科" target="">百科</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:4000/links/" title="链接" target="">链接</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:4000/about/" title="关于" target="">关于</a>
+                </li>
+                
+                <li><a href="http://localhost:4000/feed.xml"><span class="octicon octicon-rss" style="color:orange;"></span></a></li>
+            </ul>
+
+        </div>
+    </footer>
+    <!-- / footer -->
+    <script src="http://localhost:4000/assets/vendor/share.js/dist/js/share.min.js"></script>
+    <script src="http://localhost:4000/assets/js/geopattern.js"></script>
+    <script src="http://localhost:4000/assets/js/prism.js"></script>
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/globals/prism.css">
+    <script>
+      jQuery(document).ready(function($) {
+        // geopattern
+        $('.geopattern').each(function(){
+          $(this).geopattern($(this).data('pattern-id'));
+        });
+       // hljs.initHighlightingOnLoad();
+      });
+    </script>
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div style="display:none">
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-80669434-1', 'auto');
+        ga('send', 'pageview');
+
+      </script>
+    </div>
+    
+</body>
+</html>
