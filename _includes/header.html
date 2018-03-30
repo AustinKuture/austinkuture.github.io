@@ -82,8 +82,9 @@
 <body class="{{ page.class }}" data-mz="{{ page.class }}">
     <header class="site-header">
         <div class="container">
-            <!-- <span class="octicon octicon-mark-github"></span> -->
-            <h1><a href="{{ site.url }}/" title="{{ site.title }}"> <img src=/favicon.ico height='25' weight='25'></img>{{ site.title }}</a></h1>
+            <!-- <span class="octicon octicon-mark-github"></span> --> 
+            <!-- 使用img标签代替默认的图标 -->
+            <h1><a href="{{ site.url }}/" title="{{ site.title }}"> <img src=/favicon.ico height='25' weight='25'></img> {{ site.title }}</a></h1>
             <button class="collapsed mobile-visible" type="button" onclick="toggleMenu();">
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
