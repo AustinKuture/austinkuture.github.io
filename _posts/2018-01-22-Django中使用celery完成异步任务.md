@@ -20,7 +20,7 @@ comments: true
 
 2>进行TestCelery在终端输入指令：django-admin startapp testcelery 创建应用('testcelery为应用名称')
 
-####2， 为celery设置环境变量
+#### 2， 为celery设置环境变量
 
 1>项目中在TestCelery中创建celery.py文件(与setting.py同级)输入以下内容：          
 
@@ -50,9 +50,9 @@ app.autodiscover_tasks(settings.INSTALLED_APPS)
 
  
 
-###二,创建任务tasks,编写视图View及urls
+### 二,创建任务tasks,编写视图View及urls
 
-####1, 在testcelery应用中新建tasks.py文件，并写入要进行处理的任务：          
+#### 1, 在testcelery应用中新建tasks.py文件，并写入要进行处理的任务：          
 
 ```
 from TestCelery.celery import app
