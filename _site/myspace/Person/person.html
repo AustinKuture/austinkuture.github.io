@@ -1,0 +1,705 @@
+
+<!DOCTYPE html>
+ <html class="no-js"> 
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Kuture's空间</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Kuture'Blog" />
+		<meta name="keywords" content="Kuture,AustinKuture,Kuture'Blog,李亚坤,李亚坤的博客,Kuture的博客," />
+		<meta name="author" content="Kuture" />
+
+
+        <!--引入Echarts-->
+        <script src="../echarts.js"></script>
+
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+
+	<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<script src="js/modernizr-2.6.2.min.js"></script>
+
+	</head>
+	<body>
+	
+	<div id="fh5co-header" style="background-image: url(images/polygon.png);" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="bio-photo text-center">
+			<a href="http://www.kuture.com.cn"><img src="images/person_3.jpg" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
+		</div>
+	</div>
+
+	<div id="fh5co-main">
+
+		<div class="fh5co-section fh5co-works">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 col-sm-4 col-xs-12 section-heading">
+						<h2>01. For my hobbies</h2>
+					</div>
+					<div class="col-md-8 col-sm-8 col-xs-12">
+						<div class="row">
+							<div class="col-md-6 col-sm-6 col-xs-6 work animate-box">
+								<a href="images/img_1.jpg" class="image-popup" title="iOS 想你所想"><img src="images/img_1.jpg" alt="Free HTML5 Bootstrap Template by FreeHTML5.co" class="img-responsive"></a>
+							</div>
+							<div class="col-md-6 col-sm-6 col-xs-6 work animate-box">
+								<a href="images/img_2.jpg" class="image-popup" title="大自然创造了类,人类创造了机器"><img src="images/img_2.jpg" alt="Free HTML5 Bootstrap Template by FreeHTML5.co" class="img-responsive"></a>
+							</div>
+							<div class="col-md-6 col-sm-6 col-xs-6 work animate-box">
+								<a href="images/img_3.jpg" class="image-popup" title="随身而动,随心而行"><img src="images/img_3.jpg" alt="Free HTML5 Bootstrap Template by FreeHTML5.co" class="img-responsive"></a>
+							</div>
+							<div class="col-md-6 col-sm-6 col-xs-6 work animate-box">
+								<a href="images/img_4.jpg" class="image-popup" title="好读书,不求甚解"><img src="images/img_4.jpg" alt="Free HTML5 Bootstrap Template by FreeHTML5.co" class="img-responsive"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 加入Kuture的关系图谱 -->
+		<div class="fh5co-section">
+			<div class="container">
+				<div class="row">
+					<div  class="col-md-4 col-sm-4 col-xs-12 section-heading">
+						<h2>02. About Me</h2>
+					</div>
+					<div  class="col-md-24 col-sm-16 col-xs-24">
+						<div class="row">
+							<div class="col-md-24">
+							<!--<p>Hello I'm <strong>Austin Kuture</strong> An iOS Software Engineer</p>-->
+
+                                <!--简单使用Echarts-->
+                                <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                                <div id="main" style="width: 100%;height:800px;"></div>
+                                <script type="text/javascript">
+
+
+                                    // 基于准备好的dom，初始化echarts实例
+                                    var myChart = echarts.init(document.getElementById('main'));
+
+                                    option = {
+                                        title: {
+                                            text: ''
+                                        },
+                                        tooltip: {},
+                                        animationDurationUpdate: 1500,
+                                        animationEasingUpdate: 'quinticInOut',
+                                        label: {
+                                            normal: {
+                                                show: true,
+                                                textStyle: {
+                                                    fontSize: 12
+                                                },
+                                            }
+                                        },
+                                        legend: {
+                                            x: "center",
+                                            show: false,
+                                            data: ["同事", "同学", '合作']
+                                        },
+                                        series: [
+
+                                            {
+                                                type: 'graph',
+                                                layout: 'force',
+                                                symbolSize: 45,
+                                                focusNodeAdjacency: true,
+                                                roam: true,
+                                                categories: [{
+                                                    name: '同事',
+                                                    itemStyle: {
+                                                        normal: {
+                                                            color: "#009800",
+                                                        }
+                                                    }
+                                                }, {
+                                                    name: '朋友',
+                                                    itemStyle: {
+                                                        normal: {
+                                                            color: "#4592FF",
+                                                        }
+                                                    }
+                                                }, {
+                                                    name: '合作',
+                                                    itemStyle: {
+                                                        normal: {
+                                                            color: "#359",
+                                                        }
+                                                    }
+                                                }],
+                                                label: {
+                                                    normal: {
+                                                        show: true,
+                                                        textStyle: {
+                                                            fontSize: 12
+                                                        },
+                                                    }
+                                                },
+                                                force: {
+                                                    repulsion: 1000
+                                                },
+                                                edgeSymbolSize: [4, 50],
+                                                edgeLabel: {
+                                                    normal: {
+                                                        show: true,
+                                                        textStyle: {
+                                                            fontSize: 10
+                                                        },
+                                                        formatter: "{c}"
+                                                    }
+                                                },
+                                                data: [{
+                                                    name: '李亚坤',
+                                                    draggable: true,
+                                                }, {
+                                                    name: 'Kuture',
+                                                    category: 1,
+                                                    draggable: true,
+                                                }, {
+                                                    name: 'iOS',
+                                                    category: 1,
+                                                    draggable: true,
+                                                }, {
+                                                    name: 'Swift',
+                                                    category: 1,
+                                                    draggable: true,
+                                                }, {
+                                                    name: 'PHP',
+                                                    category: 1,
+                                                    draggable: true,
+                                                }, {
+                                                    name: 'Objective-C',
+                                                    category: 1,
+                                                    draggable: true,
+                                                }, {
+                                                    name: 'HTML',
+                                                    category: 1,
+                                                    draggable: true,
+                                                }, {
+                                                    name: 'C',
+                                                    category: 1,
+                                                    draggable: true,
+                                                }, {
+                                                    name: '自签名Https封装',
+                                                    category: 1,
+                                                    draggable: true,
+                                                }, {
+                                                    name: 'Basic',
+                                                    category: 1,
+                                                    draggable: true,
+                                                }, {
+                                                    name: 'Xcode',
+                                                    category: 1,
+                                                    draggable: true,
+                                                }, {
+                                                    name: 'PCB',
+                                                    category: 1,
+                                                    draggable: true,
+                                                }, {
+                                                    name: 'Ruby',
+                                                    category: 1,
+                                                    draggable: true,
+                                                },{
+                                                    name: 'CocoaPods',
+                                                    category: 1,
+                                                    draggable: true,
+                                                },{
+                                                    name: 'Github',
+                                                    category: 1,
+                                                    draggable: true,
+                                                },{
+                                                    name: 'Git',
+                                                    category: 1,
+                                                    draggable: true,
+                                                },{
+                                                    name: 'Sourcetree',
+                                                    category: 1,
+                                                    draggable: true,
+                                                },{
+                                                    name: 'OSChina',
+                                                    category: 1,
+                                                    draggable: true,
+                                                },{
+                                                    name: '码云',
+                                                    category: 1,
+                                                    draggable: true,
+                                                },{
+                                                    name: 'MacBook',
+                                                    category: 1,
+                                                    draggable: true,
+                                                },{
+                                                    name: 'iPhone',
+                                                    category: 1,
+                                                    draggable: true,
+                                                },{
+                                                    name: 'Linux',
+                                                    category: 1,
+                                                    draggable: true,
+                                                },{
+                                                    name: 'apache',
+                                                    category: 1,
+                                                    draggable: true,
+                                                },{
+                                                    name: 'Mysql',
+                                                    category: 1,
+                                                    draggable: true,
+                                                },{
+                                                    name: 'Terminal',
+                                                    category: 1,
+                                                    draggable: true,
+                                                },{
+                                                    name: 'PHPStorm',
+                                                    category: 1,
+                                                    draggable: true,
+                                                } ,{
+                                                    name: 'Python',
+                                                    category: 1,
+                                                    draggable: true,
+                                                    },{
+                                                    name: 'Spider',
+                                                    category: 1,
+                                                    draggable: true,
+                                                    },{
+                                                    name: 'Tensflow',
+                                                    category: 1,
+                                                    draggable: true,
+                                                    },{
+                                                    name: 'Django',
+                                                    category: 1,
+                                                    draggable: true,
+                                                    },{
+                                                    name: 'Flask',
+                                                    category: 1,
+                                                    draggable: true,
+                                                    },{
+                                                    name: 'Scrapy',
+                                                    category: 1,
+                                                    draggable: true,
+                                                    },{
+                                                    name: 'DeepLearning',
+                                                    category: 1,
+                                                    draggable: true,
+                                                    },{
+                                                    name: 'MachinLearning',
+                                                    category: 1,
+                                                    draggable: true,
+                                                    },{
+                                                    name: 'Pycharm',
+                                                    category: 1,
+                                                    draggable: true,
+                                                    },{
+                                                    name: 'python2',
+                                                    category: 1,
+                                                    draggable: true,
+                                                    },{
+                                                    name: 'python3',
+                                                    category: 1,
+                                                    draggable: true,
+                                                    },{
+                                                    name: 'Web后台',
+                                                    category: 1,
+                                                    draggable: true,
+                                                    },{
+                                                    name: 'Redis',
+                                                    category: 1,
+                                                    draggable: true,
+                                                    },{
+                                                    name: 'Mongodb',
+                                                    category: 1,
+                                                    draggable: true,
+                                                    },{
+                                                    name: 'Web前端',
+                                                    category: 1,
+                                                    draggable: true,
+                                                    },{
+                                                    name: 'Javascript',
+                                                    category: 1,
+                                                    draggable: true,
+                                                    },{
+                                                    name: 'VisualStudio',
+                                                    category: 1,
+                                                    draggable: true,
+                                                    },{
+                                                    name: '人工智能',
+                                                    category: 1,
+                                                    draggable: true,}
+												],
+                                                links: [{
+                                                    source: 0,
+                                                    target: 1,
+                                                    category: 0,
+                                                    value: '英文名'
+                                                }, {
+                                                    source: 0,
+                                                    target: 2,
+                                                    value: '开发'
+                                                }, {
+                                                    source: 0,
+                                                    target: 4,
+                                                    value: '网站,应用后台'
+                                                }, {
+                                                    source: 0,
+                                                    target: 8,
+                                                    value: '文章'
+                                                }, {
+                                                    source: 0,
+                                                    target: 11,
+                                                    value: '电路板'
+                                                }, {
+                                                    source: 0,
+                                                    target: 14,
+                                                    value: '开源网站'
+                                                }, {
+                                                    source: 0,
+                                                    target: 17,
+                                                    value: '开源网站'
+                                                }, {
+                                                    source: 0,
+                                                    target: 24,
+                                                    value: 'Mac终端'
+                                                }, {
+                                                    source: 2,
+                                                    target: 3,
+                                                    value: '开发语言'
+                                                }, {
+                                                    source: 2,
+                                                    target: 4,
+                                                    value: '接口后台'
+                                                }, {
+                                                    source: 2,
+                                                    target: 5,
+                                                    value: '开发语言'
+                                                }, {
+                                                    source: 2,
+                                                    target: 7,
+                                                    value: '开发语言'
+                                                }, {
+                                                    source: 2,
+                                                    target: 10,
+                                                    value: '开发工具'
+                                                }, {
+                                                    source: 2,
+                                                    target: 20,
+                                                    value: '系统硬件'
+                                                }, {
+                                                    source: 4,
+                                                    target: 7,
+                                                    value: '开发语言'
+                                                }, {
+                                                    source: 4,
+                                                    target: 21,
+                                                    value: '运行环境'
+                                                }, {
+                                                    source: 4,
+                                                    target: 22,
+                                                    value: 'WebServer'
+                                                }, {
+                                                    source: 4,
+                                                    target: 23,
+                                                    value: '数据库'
+                                                }, {
+                                                    source: 4,
+                                                    target: 25,
+                                                    value: '开发工具'
+                                                }, {
+                                                    source: 8,
+                                                    target: 14,
+                                                    value: '代码托管'
+                                                }, {
+                                                    source: 8,
+                                                    target: 18,
+                                                    value: '代码托管'
+                                                }, {
+                                                    source: 11,
+                                                    target: 7,
+                                                    value: '硬件开发语言'
+                                                }, {
+                                                    source: 11,
+                                                    target: 9,
+                                                    value: '硬件开发语言'
+                                                }, {
+                                                    source: 14,
+                                                    target: 15,
+                                                    value: '代码管理'
+                                                }, {
+                                                    source: 15,
+                                                    target: 16,
+                                                    value: '管理方式'
+                                                }, {
+                                                    source: 17,
+                                                    target: 18,
+                                                    value: '代码托管'
+                                                }, {
+                                                    source: 24,
+                                                    target: 12,
+                                                    value: '管理语言'
+                                                }, {
+                                                    source: 24,
+                                                    target: 13,
+                                                    value: '开发库'
+                                                }, {
+                                                    source: 10,
+                                                    target: 19,
+                                                    value: '硬件'
+                                                }, {
+                                                    source: 25,
+                                                    target: 6,
+                                                    value: '开发语言'
+                                                }, {
+                                                    source: 25,
+                                                    target: 19,
+                                                    value: '硬件'
+                                                }, {
+                                                    source: 16,
+                                                    target: 2,
+                                                    value: '管理工作'
+                                                }, {
+                                                    source: 16,
+                                                    target: 4,
+                                                    value: '管理工具'
+                                                }, {
+                                                    source: 15,
+                                                    target: 24,
+                                                    value: '开发窗口'
+                                                }, {
+                                                    source: 21,
+                                                    target: 19,
+                                                    value: '底层系统'
+                                                }, {
+                                                    source: 21,
+                                                    target: 24,
+                                                    value: '窗口指令系统'
+                                                },
+                                                    {
+                                                    source: 21,
+                                                    target: 26,
+                                                    value: '脚本语言'
+                                                    }, {
+                                                    source: 26,
+                                                    target: 27,
+                                                    value: '爬虫'
+                                                    }, {
+                                                    source: 26,
+                                                    target: 28,
+                                                    value: '人工智能开发框架'
+                                                    }, {
+                                                    source: 26,
+                                                    target: 29,
+                                                    value: 'web开发框架'
+                                                    }, {
+                                                    source: 26,
+                                                    target: 30,
+                                                    value: 'web开发框架'
+                                                    }, {
+                                                    source: 26,
+                                                    target: 31,
+                                                    value: '爬虫框架'
+                                                    }, {
+                                                    source: 26,
+                                                    target: 34,
+                                                    value: '开发工具'
+                                                    }, {
+                                                    source: 26,
+                                                    target: 35,
+                                                    value: '语言版本'
+                                                    }, {
+                                                    source: 26,
+                                                    target: 36,
+                                                    value: '语言版本'
+                                                    }, {
+                                                    source: 26,
+                                                    target: 43,
+                                                    value: '开发语言'
+                                                    }, {
+                                                    source: 28,
+                                                    target: 32,
+                                                    value: '开发框架'
+                                                    }, {
+                                                    source: 28,
+                                                    target: 33,
+                                                    value: '开发框架'
+                                                    }, {
+                                                    source: 29,
+                                                    target: 37,
+                                                    value: '开发框架'
+                                                    }, {
+                                                    source: 29,
+                                                    target: 38,
+                                                    value: '数据库'
+                                                    }, {
+                                                    source: 29,
+                                                    target: 39,
+                                                    value: '数据库'
+                                                    }, {
+                                                    source: 29,
+                                                    target: 23,
+                                                    value: '数据库'
+                                                    }, {
+                                                    source: 30,
+                                                    target: 38,
+                                                    value: '数据库'
+                                                    }, {
+                                                    source: 30,
+                                                    target: 39,
+                                                    value: '数据库'
+                                                    }, {
+                                                    source: 30,
+                                                    target: 23,
+                                                    value: '数据库'
+                                                    }, {
+                                                    source: 31,
+                                                    target: 38,
+                                                    value: '数据库'
+                                                    }, {
+                                                    source: 31,
+                                                    target: 39,
+                                                    value: '数据库'
+                                                    }, {
+                                                    source: 32,
+                                                    target: 33,
+                                                    value: '分支'
+                                                    }, {
+                                                    source: 33,
+                                                    target: 43,
+                                                    value: '分支'
+                                                    }, {
+                                                    source: 34,
+                                                    target: 37,
+                                                    value: '开发工具'
+                                                    }, {
+                                                    source: 34,
+                                                    target: 40,
+                                                    value: '开发工具'
+                                                    }, {
+                                                    source: 42,
+                                                    target: 40,
+                                                    value: '开发工具'
+                                                    }, {
+                                                    source: 42,
+                                                    target: 37,
+                                                    value: '开发工具'
+                                                    }, {
+                                                    source: 40,
+                                                    target: 41,
+                                                    value: '脚本语言'
+                                                    }, {
+                                                    source: 0,
+                                                    target: 26,
+                                                    value: '技能语言'
+                                                    }
+
+                                                ],
+                                                lineStyle: {
+                                                    normal: {
+                                                        opacity: 0.9,
+                                                        width: 1,
+                                                        curveness: 0
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    };
+									//方法调用
+                                    myChart.setOption(option);
+
+
+
+								</script>
+
+						   </div>
+					   </div>
+				    </div>
+			    </div>
+		    </div>
+        </div>
+
+<!-- 发送邮件 -->
+		<div class="fh5co-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 col-sm-4 col-xs-12 section-heading">
+						<h2>03. Contact</h2>
+					</div>
+					<div class="col-md-8 col-sm-8 col-xs-12">
+						<div class="col-md-12">
+
+							<div class="form-group">
+								<div class="row">
+									<div class="col-md-6">
+											<a  class="form-control" href="mailto:austinkuture@126.com">发送E-mail</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 版权,加不加都无所谓 -->
+
+		<div class="fh5co-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 col-sm-4 col-xs-12 section-heading">
+						<h2>04. Copyright</h2>
+					</div>
+					<div class="col-md-8 col-sm-8 col-xs-12">
+						<div class="col-md-12">
+							<p>&copy;2017 AustinKuture. All Rights Reserved. <br> More Templates <a href="https://my.oschina.net/Kuture/blog" target="_blank" title="Kuture">Oschina'Blog</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+
+	<!-- Stellar -->
+	<script src="js/jquery.stellar.min.js"></script>
+
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+	
+	<!-- MAIN JS -->
+	<script src="js/main.js"></script>
+	</div>
+	</div>
+
+	</body>
+</html>
