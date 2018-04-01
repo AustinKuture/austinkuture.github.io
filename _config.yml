@@ -82,15 +82,14 @@ repository: AustinKuture/austinkuture.github.io
 # ---------------- #
 #      Comments    #
 # ---------------- #
-# support provider: disqus, gitment, gitalk
-support provider: gitalk
+support provider: disqus, gitment, gitalk
 
 # ---------------- #
 #      Search      #
 # ---------------- #
 simple_jekyll_search:
     # 是否支持全文搜索
-    fulltext: true
+    fulltext: false
     # 最多显示多少条搜索结果
     limit: 10
 
