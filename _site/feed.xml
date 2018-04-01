@@ -1,4 +1,33 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-03-30T17:48:09+08:00</updated><id>http://localhost:4000/</id><title type="html">Kuture</title><subtitle>Kuture的个人博客</subtitle><author><name>Yakun</name></author><entry><title type="html">Django项目入门(一)</title><link href="http://localhost:4000/2018/03/30/Django%E9%A1%B9%E7%9B%AE%E5%85%A5%E9%97%A8(%E4%B8%80)/" rel="alternate" type="text/html" title="Django项目入门(一)" /><published>2018-03-30T00:00:00+08:00</published><updated>2018-03-30T00:00:00+08:00</updated><id>http://localhost:4000/2018/03/30/Django%E9%A1%B9%E7%9B%AE%E5%85%A5%E9%97%A8(%E4%B8%80)</id><content type="html" xml:base="http://localhost:4000/2018/03/30/Django%E9%A1%B9%E7%9B%AE%E5%85%A5%E9%97%A8(%E4%B8%80)/">&lt;h1 id=&quot;django项目入门一&quot;&gt;Django项目入门(一)&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-01T16:21:21+08:00</updated><id>http://localhost:4000/</id><title type="html">Kuture</title><subtitle>Kuture的个人博客</subtitle><author><name>Yakun</name></author><entry><title type="html">解决Jupyter绘图时出现中文乱码的情况</title><link href="http://localhost:4000/2018/04/01/%E8%A7%A3%E5%86%B3Jupyter%E7%BB%98%E5%9B%BE%E6%97%B6%E5%87%BA%E7%8E%B0%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E7%9A%84%E6%83%85%E5%86%B5/" rel="alternate" type="text/html" title="解决Jupyter绘图时出现中文乱码的情况" /><published>2018-04-01T00:00:00+08:00</published><updated>2018-04-01T00:00:00+08:00</updated><id>http://localhost:4000/2018/04/01/%E8%A7%A3%E5%86%B3Jupyter%E7%BB%98%E5%9B%BE%E6%97%B6%E5%87%BA%E7%8E%B0%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E7%9A%84%E6%83%85%E5%86%B5</id><content type="html" xml:base="http://localhost:4000/2018/04/01/%E8%A7%A3%E5%86%B3Jupyter%E7%BB%98%E5%9B%BE%E6%97%B6%E5%87%BA%E7%8E%B0%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E7%9A%84%E6%83%85%E5%86%B5/">&lt;h1 id=&quot;解决jupyter绘图时出现中文乱码的情况&quot;&gt;解决Jupyter绘图时出现中文乱码的情况&lt;/h1&gt;
+
+&lt;p&gt;系统：Deepin
+环境：Anaconda3&lt;/p&gt;
+
+&lt;h4 id=&quot;1-下载中文字体&quot;&gt;1 下载中文字体&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.font5.com.cn/ziti_xiazai.php?id=151&amp;amp;part=1237887120&amp;amp;address=0&quot;&gt;SimHei&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;2-将下载的字体放在matplotlib的字体目录下&quot;&gt;2 将下载的字体放在matplotlib的字体目录下&lt;/h4&gt;
+
+&lt;p&gt;当前电脑中的路径为&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;~/anaconda3/lib/python3.6/site-packages/matplotlib/mpl-data/fonts/ttf&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/Linux/Deepin-Anaconda-fonts.png&quot; alt=&quot;字体目录&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;3-修改matplotlib的配置文件&quot;&gt;3 修改matplotlib的配置文件&lt;/h4&gt;
+
+&lt;p&gt;打开matplotlib的配置文件&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;vim ~/anaconda3/lib/python3.6/site-packages/matplotlib/mpl-data/matplotlibrc
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;修改默认字体，有#号的去掉#号
+&lt;img src=&quot;/images/posts/Linux/Anaconda-matplotlib-settings.png&quot; alt=&quot;修改默认字体&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;注意：配置完成后需要重启jupyter
+&lt;img src=&quot;/images/posts/Linux/Matplotlib-age-graphe.png&quot; alt=&quot;graphe&quot; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name>Yakun</name></author><summary type="html">解决Jupyter绘图时出现中文乱码的情况</summary></entry><entry><title type="html">Django项目入门(一)</title><link href="http://localhost:4000/2018/03/30/Django%E9%A1%B9%E7%9B%AE%E5%85%A5%E9%97%A8(%E4%B8%80)/" rel="alternate" type="text/html" title="Django项目入门(一)" /><published>2018-03-30T00:00:00+08:00</published><updated>2018-03-30T00:00:00+08:00</updated><id>http://localhost:4000/2018/03/30/Django%E9%A1%B9%E7%9B%AE%E5%85%A5%E9%97%A8(%E4%B8%80)</id><content type="html" xml:base="http://localhost:4000/2018/03/30/Django%E9%A1%B9%E7%9B%AE%E5%85%A5%E9%97%A8(%E4%B8%80)/">&lt;h1 id=&quot;django项目入门一&quot;&gt;Django项目入门(一)&lt;/h1&gt;
 
 &lt;h3 id=&quot;11创建项目&quot;&gt;1.1创建项目&lt;/h3&gt;
 
@@ -108,7 +137,126 @@ workon + 两次tab键可以显示所有的虚拟环境
 &lt;p&gt;5.删除虚拟环境&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rmvirtualenv env_name
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Yakun</name></author><summary type="html">一、安装和配置虚拟环境</summary></entry><entry><title type="html">Swift,Objective-C混编解析网络数据并实现简单的轮播功能</title><link href="http://localhost:4000/2017/07/24/Swift,Objective-C%E6%B7%B7%E7%BC%96%E8%A7%A3%E6%9E%90%E7%BD%91%E7%BB%9C%E6%95%B0%E6%8D%AE%E5%B9%B6%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E7%9A%84%E8%BD%AE%E6%92%AD%E5%8A%9F%E8%83%BD/" rel="alternate" type="text/html" title="Swift,Objective-C混编解析网络数据并实现简单的轮播功能" /><published>2017-07-24T00:00:00+08:00</published><updated>2017-07-24T00:00:00+08:00</updated><id>http://localhost:4000/2017/07/24/Swift,Objective-C%E6%B7%B7%E7%BC%96%E8%A7%A3%E6%9E%90%E7%BD%91%E7%BB%9C%E6%95%B0%E6%8D%AE%E5%B9%B6%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E7%9A%84%E8%BD%AE%E6%92%AD%E5%8A%9F%E8%83%BD</id><content type="html" xml:base="http://localhost:4000/2017/07/24/Swift,Objective-C%E6%B7%B7%E7%BC%96%E8%A7%A3%E6%9E%90%E7%BD%91%E7%BB%9C%E6%95%B0%E6%8D%AE%E5%B9%B6%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E7%9A%84%E8%BD%AE%E6%92%AD%E5%8A%9F%E8%83%BD/">&lt;h1 id=&quot;swiftobjective-c混编解析网络数据并实现简单的轮播功能&quot;&gt;Swift,Objective-C混编解析网络数据并实现简单的轮播功能&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Yakun</name></author><summary type="html">一、安装和配置虚拟环境</summary></entry><entry><title type="html">Django中使用celery完成异步任务</title><link href="http://localhost:4000/2018/01/22/Django%E4%B8%AD%E4%BD%BF%E7%94%A8celery%E5%AE%8C%E6%88%90%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1/" rel="alternate" type="text/html" title="Django中使用celery完成异步任务" /><published>2018-01-22T00:00:00+08:00</published><updated>2018-01-22T00:00:00+08:00</updated><id>http://localhost:4000/2018/01/22/Django%E4%B8%AD%E4%BD%BF%E7%94%A8celery%E5%AE%8C%E6%88%90%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1</id><content type="html" xml:base="http://localhost:4000/2018/01/22/Django%E4%B8%AD%E4%BD%BF%E7%94%A8celery%E5%AE%8C%E6%88%90%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1/">&lt;h1 id=&quot;django中使用celery完成异步任务&quot;&gt;Django中使用celery完成异步任务&lt;/h1&gt;
+&lt;p&gt;​&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;摘要: 本文主要介绍如何在django中用celery完成异步任务，web项目中为了提高用户体验可以对一些耗时操作放到异步队列中去执行，例如激活邮件，后台计算操作等等 当前项目环境为：django==1.11.8   celery==3.1.25   redis==2.10.6  pip==9.0.1  python3==3.5.2django-celery==3.1.17&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;一创建django项目及celery配置&quot;&gt;一，创建Django项目及celery配置&lt;/h3&gt;
+
+&lt;h4 id=&quot;1创建django项目&quot;&gt;1，创建Django项目&lt;/h4&gt;
+
+&lt;p&gt;1&amp;gt;打开终端输入：django-admin startproject TestCelery 创建django项目(‘TestCelery’是项目名称)&lt;/p&gt;
+
+&lt;p&gt;2&amp;gt;进行TestCelery在终端输入指令：django-admin startapp testcelery 创建应用(‘testcelery为应用名称’)&lt;/p&gt;
+
+&lt;h4 id=&quot;2-为celery设置环境变量&quot;&gt;2， 为celery设置环境变量&lt;/h4&gt;
+
+&lt;p&gt;1&amp;gt;项目中在TestCelery中创建celery.py文件(与setting.py同级)输入以下内容：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;from celery import Celery
+from django.conf import settings
+import os
+
+# 为celery设置环境变量
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'TestCelery.settings')
+
+# 创建应用
+app = Celery('testcelery')
+
+# 酸配置应用
+app.conf.update(
+    
+    # 本地Redis服务器
+    BROKER_URL='redis://127.0.0.1:6379/2',
+)
+
+app.autodiscover_tasks(settings.INSTALLED_APPS)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;2&amp;gt;当前项目目录如下图所示：
+​                                  &lt;img src=&quot;https://static.oschina.net/uploads/space/2018/0122/175836_zWTN_2728740.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;二创建任务tasks编写视图view及urls&quot;&gt;二,创建任务tasks,编写视图View及urls&lt;/h3&gt;
+
+&lt;h4 id=&quot;1-在testcelery应用中新建taskspy文件并写入要进行处理的任务&quot;&gt;1, 在testcelery应用中新建tasks.py文件，并写入要进行处理的任务：&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;from TestCelery.celery import app
+from time import sleep
+
+
+@app.task
+def start_running(nums):
+
+    print('***&amp;gt;%s&amp;lt;***' %nums)
+    print('---&amp;gt;&amp;gt;开始执行任务&amp;lt;&amp;lt;---')
+    for i in range(10):
+
+        print('&amp;gt;&amp;gt;'*(i+1))
+        sleep(1)
+    print('&amp;gt;---任务结束---&amp;lt;')
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;2编写view视图并写入调用client的方法&quot;&gt;2，编写view视图，并写入调用client的方法&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;from django.views import View
+from django.http import HttpResponse
+from .tasks import start_running
+from time import sleep
+
+# Create your views here.
+
+
+class IdexView(View):
+
+    def get(self, request):
+
+        print('&amp;gt;=====开始发送请求=====&amp;lt;')
+        for i in range(10):
+
+            print('&amp;gt;&amp;gt;',end='')
+            sleep(0.1)
+
+        start_running.delay('》》》》》我是传送过来的《《《《《')
+        return HttpResponse('&amp;lt;h2&amp;gt; 请求已发送 &amp;lt;/h2&amp;gt;')
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;3编写testcelery应用的usrls&quot;&gt;3，编写testcelery应用的usrls&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;from django.conf.urls import url
+from .views import *
+
+urlpatterns = [
+
+    url(r'^$', IdexView.as_view()),
+]
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;4当前项目目录如下图所示&quot;&gt;4，当前项目目录如下图所示：&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://static.oschina.net/uploads/space/2018/0122/180557_BGnz_2728740.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;三运行项目开启worker&quot;&gt;三，运行项目，开启worker&lt;/h3&gt;
+
+&lt;h4 id=&quot;1-运行项目在当前项目下输入启动服务指令python-managerpy-runserver出现如下图所示即代表运行成功&quot;&gt;1, 运行项目在当前项目下输入启动服务指令：python manager.py runserver，出现如下图所示即代表运行成功：&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://static.oschina.net/uploads/space/2018/0122/191744_eRlF_2728740.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;2开启worker另在当前项目下另打开一个终端输入指令-celery--a-testcelery-worker-logleveldebug启动后如下如示&quot;&gt;2，开启worker另在当前项目下另打开一个终端，输入指令: celery -A TestCelery worker –loglevel=DEBUG,启动后如下如示：&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://static.oschina.net/uploads/space/2018/0122/192210_uG4I_2728740.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;3调用任务&quot;&gt;3，调用任务&lt;/h4&gt;
+
+&lt;p&gt;1&amp;gt;打开浏览器，输入http://127.0.0.1:8000/send/  进行访问&lt;img src=&quot;https://static.oschina.net/uploads/space/2018/0122/192503_0dWG_2728740.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;2&amp;gt; woker监听到任务请求时，就会执行耗时任务，如下图所示：&lt;/p&gt;
+
+&lt;p&gt;​        &lt;img src=&quot;https://static.oschina.net/uploads/space/2018/0122/192710_mRg1_2728740.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;</content><author><name>Yakun</name></author><summary type="html">Django中使用celery完成异步任务 ​ 摘要: 本文主要介绍如何在django中用celery完成异步任务，web项目中为了提高用户体验可以对一些耗时操作放到异步队列中去执行，例如激活邮件，后台计算操作等等 当前项目环境为：django==1.11.8 celery==3.1.25 redis==2.10.6 pip==9.0.1 python3==3.5.2django-celery==3.1.17</summary></entry><entry><title type="html">Swift,Objective-C混编解析网络数据并实现简单的轮播功能</title><link href="http://localhost:4000/2017/07/24/Swift,Objective-C%E6%B7%B7%E7%BC%96%E8%A7%A3%E6%9E%90%E7%BD%91%E7%BB%9C%E6%95%B0%E6%8D%AE%E5%B9%B6%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E7%9A%84%E8%BD%AE%E6%92%AD%E5%8A%9F%E8%83%BD/" rel="alternate" type="text/html" title="Swift,Objective-C混编解析网络数据并实现简单的轮播功能" /><published>2017-07-24T00:00:00+08:00</published><updated>2017-07-24T00:00:00+08:00</updated><id>http://localhost:4000/2017/07/24/Swift,Objective-C%E6%B7%B7%E7%BC%96%E8%A7%A3%E6%9E%90%E7%BD%91%E7%BB%9C%E6%95%B0%E6%8D%AE%E5%B9%B6%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E7%9A%84%E8%BD%AE%E6%92%AD%E5%8A%9F%E8%83%BD</id><content type="html" xml:base="http://localhost:4000/2017/07/24/Swift,Objective-C%E6%B7%B7%E7%BC%96%E8%A7%A3%E6%9E%90%E7%BD%91%E7%BB%9C%E6%95%B0%E6%8D%AE%E5%B9%B6%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E7%9A%84%E8%BD%AE%E6%92%AD%E5%8A%9F%E8%83%BD/">&lt;h1 id=&quot;swiftobjective-c混编解析网络数据并实现简单的轮播功能&quot;&gt;Swift,Objective-C混编解析网络数据并实现简单的轮播功能&lt;/h1&gt;
 
 &lt;p&gt;作者:AustinKuture&lt;/p&gt;
 
@@ -4437,180 +4585,4 @@ void GetHWAddresses(){
 &lt;/span&gt;        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Yakun</name></author><summary type="html">iOS 调用本地系统分享</summary></entry><entry><title type="html">iOS 改变字体行间距与字间距</title><link href="http://localhost:4000/2017/03/21/iOS-%E6%94%B9%E5%8F%98%E5%AD%97%E4%BD%93%E8%A1%8C%E9%97%B4%E8%B7%9D%E4%B8%8E%E5%AD%97%E9%97%B4%E8%B7%9D/" rel="alternate" type="text/html" title="iOS 改变字体行间距与字间距" /><published>2017-03-21T00:00:00+08:00</published><updated>2017-03-21T00:00:00+08:00</updated><id>http://localhost:4000/2017/03/21/iOS%20%E6%94%B9%E5%8F%98%E5%AD%97%E4%BD%93%E8%A1%8C%E9%97%B4%E8%B7%9D%E4%B8%8E%E5%AD%97%E9%97%B4%E8%B7%9D</id><content type="html" xml:base="http://localhost:4000/2017/03/21/iOS-%E6%94%B9%E5%8F%98%E5%AD%97%E4%BD%93%E8%A1%8C%E9%97%B4%E8%B7%9D%E4%B8%8E%E5%AD%97%E9%97%B4%E8%B7%9D/">&lt;h1 id=&quot;ios-改变字体行间距与字间距&quot;&gt;iOS 改变字体行间距与字间距&lt;/h1&gt;
-
-&lt;p&gt;作者:&lt;strong&gt;AustinKuture&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;摘要: UILabel上显示的文本内容,在默认情况下往往会显的非常的拥挤,
-     特别是存在大量文字的时候,缺少应有的美观,本篇文章主要是通过分类封
-     装一个类方法,在使用带有大量文字的UILabel时直接调用即可.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;1创建分类并声明所需的类方法-h文件&quot;&gt;1,创建分类并声明所需的类方法 .h文件&lt;/h2&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#import &amp;lt;UIKit/UIKit.h&amp;gt;
-&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;@interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;UILabel&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;AKSpace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;cm&quot;&gt;/**
- *  改变行间距
- */&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;changeLineSpaceForLabel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UILabel&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;label&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;WithSpace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;space&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;cm&quot;&gt;/**
- *  改变字间距
- */&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;changeWordSpaceForLabel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UILabel&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;label&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;WithSpace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;space&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;cm&quot;&gt;/**
- *  改变行间距和字间距
- */&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;changeSpaceForLabel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UILabel&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;label&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;withLineSpace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;lineSpace&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;WordSpace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;wordSpace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-
-&lt;span class=&quot;k&quot;&gt;@end&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;2实现类方法-m文件&quot;&gt;2,实现类方法 .m文件&lt;/h2&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#import &quot;UILabel+AKSpace.h&quot;
-&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;@implementation&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;UILabel&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;AKSpace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;//改变字体行间距
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;changeLineSpaceForLabel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UILabel&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;label&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;WithSpace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;space&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;labelText&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;NSMutableAttributedString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;attributedString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSMutableAttributedString&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;alloc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initWithString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;labelText&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;NSMutableParagraphStyle&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;paragraphStyle&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSMutableParagraphStyle&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;alloc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;paragraphStyle&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setLineSpacing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;space&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;attributedString&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;addAttribute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSParagraphStyleAttributeName&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;paragraphStyle&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSMakeRange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;labelText&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])];&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;attributedText&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;attributedString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;label&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sizeToFit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;//改变字体字间距
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;changeWordSpaceForLabel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UILabel&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;label&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;WithSpace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;space&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;labelText&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;NSMutableAttributedString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;attributedString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSMutableAttributedString&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;alloc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initWithString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;labelText&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;attributes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:@{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSKernAttributeName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;space&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)}];&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;NSMutableParagraphStyle&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;paragraphStyle&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSMutableParagraphStyle&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;alloc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;attributedString&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;addAttribute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSParagraphStyleAttributeName&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;paragraphStyle&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSMakeRange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;labelText&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])];&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;attributedText&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;attributedString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;label&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sizeToFit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;//改变字体行间距与间距
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;changeSpaceForLabel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UILabel&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;label&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;withLineSpace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;lineSpace&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;WordSpace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;wordSpace&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;labelText&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;NSMutableAttributedString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;attributedString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSMutableAttributedString&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;alloc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initWithString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;labelText&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;attributes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:@{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSKernAttributeName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wordSpace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)}];&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;NSMutableParagraphStyle&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;paragraphStyle&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSMutableParagraphStyle&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;alloc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;paragraphStyle&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setLineSpacing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lineSpace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;attributedString&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;addAttribute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSParagraphStyleAttributeName&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;paragraphStyle&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSMakeRange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;labelText&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])];&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;attributedText&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;attributedString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;label&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sizeToFit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;@end&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;3使用方法&quot;&gt;3,使用方法&lt;/h2&gt;
-
-&lt;p&gt;UILabel默认排版:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://static.oschina.net/uploads/space/2017/0321/105043_eQZQ_2728740.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;加入行间与字间距后的排版:&lt;img src=&quot;https://static.oschina.net/uploads/space/2017/0321/105213_VV2i_2728740.png&quot; alt=&quot;img&quot; /&gt;&lt;img src=&quot;https://static.oschina.net/uploads/space/2017/0321/105258_TNpI_2728740.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;</content><author><name>Yakun</name></author><summary type="html">iOS 改变字体行间距与字间距</summary></entry><entry><title type="html">iOS CGContextAddArcToPoint 绘制带圆角的image图片</title><link href="http://localhost:4000/2017/03/16/iOS-CGContextAddArcToPoint-%E7%BB%98%E5%88%B6%E5%B8%A6%E5%9C%86%E8%A7%92%E7%9A%84image%E5%9B%BE%E7%89%87/" rel="alternate" type="text/html" title="iOS CGContextAddArcToPoint 绘制带圆角的image图片" /><published>2017-03-16T00:00:00+08:00</published><updated>2017-03-16T00:00:00+08:00</updated><id>http://localhost:4000/2017/03/16/iOS%20CGContextAddArcToPoint%20%E7%BB%98%E5%88%B6%E5%B8%A6%E5%9C%86%E8%A7%92%E7%9A%84image%E5%9B%BE%E7%89%87</id><content type="html" xml:base="http://localhost:4000/2017/03/16/iOS-CGContextAddArcToPoint-%E7%BB%98%E5%88%B6%E5%B8%A6%E5%9C%86%E8%A7%92%E7%9A%84image%E5%9B%BE%E7%89%87/">&lt;h1 id=&quot;ios-cgcontextaddarctopoint-绘制带圆角的image图片&quot;&gt;iOS CGContextAddArcToPoint 绘制带圆角的image图片&lt;/h1&gt;
-
-&lt;p&gt;作者:&lt;strong&gt;AustinKuture&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;摘要: 在开发中有时需要为UIButton在Normal与Highlighted两种状态下设置不同
-     颜色的背景图片,这时又缺少现成的图片,则可以使用绘图方法绘制出所需要的图片,同
-     时使用可以使用CGContextAddArcToPoint绘制圆角.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;如果项目中经常需要使用该方法时可以新建一个UIimage的分类,并将方法封装到其分类中.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;绘制方法的封装:&lt;/p&gt;
-
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//绘制指定颜色图片
-+ (UIImage *)createImageWithColor:(UIColor *)color RectSize:(CGSize)rectSize 
-                                               CornerRadius:(float)cornerRadius{
-
-    //直接绘制图像方法
-//    CGRect rect=CGRectMake(0.0f, 0.0f, 50.0f, 50.0f);
-//    UIGraphicsBeginImageContext(rect.size);
-//    CGContextRef context = UIGraphicsGetCurrentContext();
-//    CGContextSetFillColorWithColor(context, [color CGColor]);
-//    CGContextFillRect(context, rect);
-//    UIImage *theImage = UIGraphicsGetImageFromCurrentImageContext();
-//    UIGraphicsEndImageContext();
-
-    //带圆角图像的绘制方法
-    UIImage *theImage;
-    CGRect rect = CGRectMake(0.0f, 0.0f, rectSize.width, rectSize.height);
-
-    UIGraphicsBeginImageContext(rect.size);   //开始画线
-    [theImage drawInRect:CGRectMake(0, 0, rect.size.width, rect.size.height)];
-    //获取上下文
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    //边框大小
-    CGContextSetLineWidth(context, 1);
-    //边框颜色
-    CGContextSetStrokeColorWithColor(context, COLORS_CLEAR.CGColor);
-    //矩形填充颜色
-    CGContextSetFillColorWithColor(context, [color CGColor]);
-
-    /*
-     *
-     将要绘制的图像大小,分割成8个点,每两个点可以可以确定一条射线,每两条射线相交处可以设置圆弧.
-     当前方法中先绘制的右下角,
-     例如,将要绘制的圆角图片大小为:宽100,高100 圆角5,则需要的点分别为:
-     A(100,10)
-     B(100,100)
-     C(90,100)
-     D(0,100)
-     E(0,90)
-     F(0,0)
-     G(10,0)
-     H(100,0)
-     *
-    */
-
-    //绘制图像及圆角
-    CGContextMoveToPoint(context, rectSize.width, cornerRadius * 2);  // 开始坐标右边开始
-    CGContextAddArcToPoint(context, rectSize.width, rectSize.height, rectSize.width - 10, rectSize.height, cornerRadius);  // 右下角
-    CGContextAddArcToPoint(context, 0, rectSize.height, 0, rectSize.height - 10, cornerRadius); // 左下角
-    CGContextAddArcToPoint(context, 0, 0, cornerRadius * 2, 0, cornerRadius); // 左上角
-    CGContextAddArcToPoint(context, rectSize.width, 0, rectSize.width, cornerRadius * 2, cornerRadius); // 右上角
-    CGContextDrawPath(context, kCGPathFillStroke); //根据当前坐标绘制路径
-    theImage = UIGraphicsGetImageFromCurrentImageContext();//获取绘图
-
-    //拉伸当前图像
-    CGFloat h = theImage.size.height * 0.5;
-    CGFloat w = theImage.size.width * 0.5;
-    UIImage *rsizeImg = [theImage resizableImageWithCapInsets:UIEdgeInsetsMake(h, w, h, w) resizingMode:UIImageResizingModeStretch];
-
-    return rsizeImg;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;使用时方法:&lt;/p&gt;
-
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;UIButton *testBtn = [[UIButton alloc]initWithFrame:CGRectMake(0,0, 85, 40)];
-[testBtn setImage:[UIImage createImageWithColor:[UIColor grarColor] RectSize:testBtn.size CornerRadius:5] forState:UIControlStateNormal];
-[testBtn setImage:[UIImage createImageWithColor:[UIColor yellowColor] RectSize:testBtn.size CornerRadius:5] forState:UIControlStateHighlighted]
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;在实际使用时的效果:&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://static.oschina.net/uploads/space/2017/0315/133004_UwmI_2728740.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;</content><author><name>Yakun</name></author><summary type="html">iOS CGContextAddArcToPoint 绘制带圆角的image图片</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Yakun</name></author><summary type="html">iOS 调用本地系统分享</summary></entry></feed>

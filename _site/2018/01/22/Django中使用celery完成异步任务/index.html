@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <title>Source Insight &mdash; Kuture</title>
+    <title>Django中使用celery完成异步任务 &mdash; Kuture</title>
     <link rel="stylesheet" href="http://localhost:4000/assets/vendor/primer-css/css/primer.css">
     <link rel="stylesheet" href="http://localhost:4000/assets/vendor/primer-markdown/dist/user-content.min.css">
     <link rel="stylesheet" href="http://localhost:4000/assets/vendor/octicons/octicons/octicons.css">
@@ -21,28 +21,28 @@
     
 
     
-    <link rel="canonical" href="http://localhost:4000/wiki/source-insight/">
+    <link rel="canonical" href="http://localhost:4000/2018/01/22/Django%E4%B8%AD%E4%BD%BF%E7%94%A8celery%E5%AE%8C%E6%88%90%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1/">
     <link rel="alternate" type="application/atom+xml" title="Kuture" href="http://localhost:4000/feed.xml">
     <link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
     
-    <meta property="og:title" content="Source Insight">
+    <meta property="og:title" content="Django中使用celery完成异步任务">
       
-    <meta name="keywords" content="Source Insight">
-    <meta name="og:keywords" content="Source Insight">
+    <meta name="keywords" content="Django, celery">
+    <meta name="og:keywords" content="Django, celery">
       
-    <meta name="description" content="快捷键">
-    <meta name="og:description" content="快捷键">
+    <meta name="description" content="Django中使用celery完成异步任务​  摘要: 本文主要介绍如何在django中用celery完成异步任务，web项目中为了提高用户体验可以对一些耗时操作放到异步队列中去执行，例如激活邮件，后台计算操作等等 当前项目环境为：django==1.11.8   celery==3.1.25   redis==2.10.6  pip==9.0.1  python3==3.5.2django-celery==3.1.17">
+    <meta name="og:description" content="Django中使用celery完成异步任务​  摘要: 本文主要介绍如何在django中用celery完成异步任务，web项目中为了提高用户体验可以对一些耗时操作放到异步队列中去执行，例如激活邮件，后台计算操作等等 当前项目环境为：django==1.11.8   celery==3.1.25   redis==2.10.6  pip==9.0.1  python3==3.5.2django-celery==3.1.17">
       
     
     
         
     
-    <meta property="og:url" content="http://localhost:4000/wiki/source-insight/">
+    <meta property="og:url" content="http://localhost:4000/2018/01/22/Django%E4%B8%AD%E4%BD%BF%E7%94%A8celery%E5%AE%8C%E6%88%90%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1/">
     <meta property="og:site_name" content="Kuture">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="zh_CN" />
     
-    <meta property="article:published_time" content="2018-04-01">
+    <meta property="article:published_time" content="2018-01-22">
     
     <script src="http://localhost:4000/assets/vendor/jquery/dist/jquery.min.js"></script>
     <script src="http://localhost:4000/assets/js/jquery-ui.js"></script>
@@ -85,12 +85,25 @@
     </header>
     <!-- / header -->
 
-    <section class="collection-head small geopattern" data-pattern-id="Source Insight">
+    <section class="collection-head small geopattern" data-pattern-id="Django中使用celery">
 <div class="container">
   <div class="columns">
     <div class="column three-fourths">
       <div class="collection-title">
-        <h1 class="collection-header">Source Insight</h1>
+        <h1 class="collection-header">Django中使用celery完成异步任务</h1>
+        <div class="collection-info">
+          
+          <span class="meta-info">
+            <span class="octicon octicon-calendar"></span> 2018/01/22
+          </span>
+          
+          
+          <span class="meta-info">
+            <span class="octicon octicon-file-directory"></span>
+            <a href="http://localhost:4000/categories/#Django" title="Django">Django</a>
+          </span>
+          
+        </div>
       </div>
     </div>
   </div>
@@ -101,71 +114,126 @@
 <div class="columns">
   <div class="column three-fourths" >
     <article class="article-content markdown-body">
-    <h3 id="快捷键">快捷键</h3>
+    <h1 id="django中使用celery完成异步任务">Django中使用celery完成异步任务</h1>
+<p>​</p>
+<blockquote>
+  <p>摘要: 本文主要介绍如何在django中用celery完成异步任务，web项目中为了提高用户体验可以对一些耗时操作放到异步队列中去执行，例如激活邮件，后台计算操作等等 当前项目环境为：django==1.11.8   celery==3.1.25   redis==2.10.6  pip==9.0.1  python3==3.5.2django-celery==3.1.17</p>
+</blockquote>
 
-<p>C –&gt; Ctrl</p>
+<h3 id="一创建django项目及celery配置">一，创建Django项目及celery配置</h3>
 
-<p>S –&gt; Shift</p>
+<h4 id="1创建django项目">1，创建Django项目</h4>
 
-<p>M –&gt; Alt</p>
+<p>1&gt;打开终端输入：django-admin startproject TestCelery 创建django项目(‘TestCelery’是项目名称)</p>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">功能</th>
-      <th style="text-align: left">快捷键</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">返回</td>
-      <td style="text-align: left">M-,</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">前进</td>
-      <td style="text-align: left">M-.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">跳到定义</td>
-      <td style="text-align: left">C-=</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">查找引用</td>
-      <td style="text-align: left">C-/</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">搜索</td>
-      <td style="text-align: left">C-f</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">向下搜索</td>
-      <td style="text-align: left">F4</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">向上搜索</td>
-      <td style="text-align: left">F3</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">高亮当前单词</td>
-      <td style="text-align: left">S-F8</td>
-    </tr>
-  </tbody>
-</table>
+<p>2&gt;进行TestCelery在终端输入指令：django-admin startapp testcelery 创建应用(‘testcelery为应用名称’)</p>
 
-<h3 id="qa">Q&amp;A</h3>
+<h4 id="2-为celery设置环境变量">2， 为celery设置环境变量</h4>
 
-<ol>
-  <li>
-    <p>新建工程后函数跳转等遇到 <code class="highlighter-rouge">symbol not found</code> 如何解决？</p>
+<p>1&gt;项目中在TestCelery中创建celery.py文件(与setting.py同级)输入以下内容：</p>
 
-    <p>打开菜单里的「Project」-「Synchronize Files」（快捷键 <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd>），勾选 <code class="highlighter-rouge">Force all files to be re-parsed</code> 后点击 <code class="highlighter-rouge">OK</code>，等待 Source Insight 重新解析工程里的文件完成即可。</p>
-  </li>
-  <li>
-    <p>如何在标题栏里显示文件全路径？</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>from celery import Celery
+from django.conf import settings
+import os
 
-    <p>打开菜单里的「Options」-「Preferences」-「Display」，取消勾选 <code class="highlighter-rouge">Trim long path names with ellipses</code>。</p>
-  </li>
-</ol>
+# 为celery设置环境变量
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'TestCelery.settings')
+
+# 创建应用
+app = Celery('testcelery')
+
+# 酸配置应用
+app.conf.update(
+    
+    # 本地Redis服务器
+    BROKER_URL='redis://127.0.0.1:6379/2',
+)
+
+app.autodiscover_tasks(settings.INSTALLED_APPS)
+</code></pre></div></div>
+
+<p>2&gt;当前项目目录如下图所示：
+​                                  <img src="https://static.oschina.net/uploads/space/2018/0122/175836_zWTN_2728740.png" alt="img" /></p>
+
+<h3 id="二创建任务tasks编写视图view及urls">二,创建任务tasks,编写视图View及urls</h3>
+
+<h4 id="1-在testcelery应用中新建taskspy文件并写入要进行处理的任务">1, 在testcelery应用中新建tasks.py文件，并写入要进行处理的任务：</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>from TestCelery.celery import app
+from time import sleep
+
+
+@app.task
+def start_running(nums):
+
+    print('***&gt;%s&lt;***' %nums)
+    print('---&gt;&gt;开始执行任务&lt;&lt;---')
+    for i in range(10):
+
+        print('&gt;&gt;'*(i+1))
+        sleep(1)
+    print('&gt;---任务结束---&lt;')
+</code></pre></div></div>
+
+<h4 id="2编写view视图并写入调用client的方法">2，编写view视图，并写入调用client的方法</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>from django.views import View
+from django.http import HttpResponse
+from .tasks import start_running
+from time import sleep
+
+# Create your views here.
+
+
+class IdexView(View):
+
+    def get(self, request):
+
+        print('&gt;=====开始发送请求=====&lt;')
+        for i in range(10):
+
+            print('&gt;&gt;',end='')
+            sleep(0.1)
+
+        start_running.delay('》》》》》我是传送过来的《《《《《')
+        return HttpResponse('&lt;h2&gt; 请求已发送 &lt;/h2&gt;')
+
+
+</code></pre></div></div>
+
+<h4 id="3编写testcelery应用的usrls">3，编写testcelery应用的usrls</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>from django.conf.urls import url
+from .views import *
+
+urlpatterns = [
+
+    url(r'^$', IdexView.as_view()),
+]
+
+</code></pre></div></div>
+
+<h4 id="4当前项目目录如下图所示">4，当前项目目录如下图所示：</h4>
+
+<p><img src="https://static.oschina.net/uploads/space/2018/0122/180557_BGnz_2728740.png" alt="img" /></p>
+
+<h3 id="三运行项目开启worker">三，运行项目，开启worker</h3>
+
+<h4 id="1-运行项目在当前项目下输入启动服务指令python-managerpy-runserver出现如下图所示即代表运行成功">1, 运行项目在当前项目下输入启动服务指令：python manager.py runserver，出现如下图所示即代表运行成功：</h4>
+
+<p><img src="https://static.oschina.net/uploads/space/2018/0122/191744_eRlF_2728740.png" alt="img" /></p>
+
+<h4 id="2开启worker另在当前项目下另打开一个终端输入指令-celery--a-testcelery-worker-logleveldebug启动后如下如示">2，开启worker另在当前项目下另打开一个终端，输入指令: celery -A TestCelery worker –loglevel=DEBUG,启动后如下如示：</h4>
+
+<p><img src="https://static.oschina.net/uploads/space/2018/0122/192210_uG4I_2728740.png" alt="img" /></p>
+
+<h4 id="3调用任务">3，调用任务</h4>
+
+<p>1&gt;打开浏览器，输入http://127.0.0.1:8000/send/  进行访问<img src="https://static.oschina.net/uploads/space/2018/0122/192503_0dWG_2728740.png" alt="img" /></p>
+
+<p>2&gt; woker监听到任务请求时，就会执行耗时任务，如下图所示：</p>
+
+<p>​        <img src="https://static.oschina.net/uploads/space/2018/0122/192710_mRg1_2728740.png" alt="img" /></p>
 
     </article>
     <div class="share">

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="zh-cmn-Hans" prefix="og: http://ogp.me/ns#" class="han-init">
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <title>Ios开发技巧(二) &mdash; Kuture</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Ios开发技巧(二) — Kuture</title>
     <link rel="stylesheet" href="http://localhost:4000/assets/vendor/primer-css/css/primer.css">
     <link rel="stylesheet" href="http://localhost:4000/assets/vendor/primer-markdown/dist/user-content.min.css">
     <link rel="stylesheet" href="http://localhost:4000/assets/vendor/octicons/octicons/octicons.css">
@@ -40,7 +41,7 @@
     <meta property="og:url" content="http://localhost:4000/2017/07/12/iOS%E5%BC%80%E5%8F%91%E6%8A%80%E5%B7%A7(%E4%BA%8C)/">
     <meta property="og:site_name" content="Kuture">
     <meta property="og:type" content="article">
-    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:locale" content="zh_CN">
     
     <meta property="article:published_time" content="2017-07-12">
     
@@ -62,7 +63,7 @@
         <div class="container">
             <!-- <span class="octicon octicon-mark-github"></span> --> 
             <!-- 使用img标签代替默认的图标 -->
-            <h1><a href="http://localhost:4000/" title="Kuture"> <img src=/favicon.ico height='25' weight='25'></img> Kuture</a></h1>
+            <h1><a href="http://localhost:4000/" title="Kuture"> <img src="/favicon.ico" height="25" weight="25"> Kuture</a></h1>
             <button class="collapsed mobile-visible" type="button" onclick="toggleMenu();">
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
@@ -107,7 +108,7 @@
 <!-- / .banner -->
 <section class="container content">
 <div class="columns">
-  <div class="column three-fourths" >
+  <div class="column three-fourths">
     <article class="article-content markdown-body">
     
 <h1 id="ios开发技巧二">iOS开发技巧(二)</h1>
@@ -127,7 +128,7 @@ label.attributedText = attrString;
   <p>或者使用xib，看下gif图</p>
 </blockquote>
 
-<p><img src="http://cc.cocimg.com/api/uploads/20170710/1499657090104458.gif" alt="img" /></p>
+<p><img src="http://cc.cocimg.com/api/uploads/20170710/1499657090104458.gif" alt="img"></p>
 
 <h2 id="2当使用-performselectorwithobjectwithobjectafterdelay方法时需要传入多参数问题">2、当使用-performSelector:withObject:withObject:afterDelay:方法时，需要传入多参数问题</h2>
 
@@ -1524,11 +1525,11 @@ cell.layer.shadowPath = [UIBezierPath bezierPathWithRoundedRect:cell.bounds corn
 <h2 id="75使用xib设置uiview的边框圆角">75、使用xib设置UIView的边框、圆角</h2>
 
 <blockquote>
-  <p>圆角和边框看下图即可设置<img src="http://cc.cocimg.com/api/uploads/20170710/1499658702959959.png" alt="img" /></p>
+  <p>圆角和边框看下图即可设置<img src="http://cc.cocimg.com/api/uploads/20170710/1499658702959959.png" alt="img"></p>
 
   <p>但是增加layer.borderColor的keyPath设置边框颜色并不能起作用，后来查了资料，这里应该用layer.borderUIColor，但是这里设置的颜色不起作用，无论设置什么颜色显示出来的都是黑色的。后来又去查了下，有种解决方案是给CALayer添加一个分类，提供一个 - (void)setBorderUIColor:(UIColor *)color;方法就可以解决了，实现如下：</p>
 
-  <p><img src="http://cc.cocimg.com/api/uploads/20170710/1499658718937739.png" alt="img" /></p>
+  <p><img src="http://cc.cocimg.com/api/uploads/20170710/1499658718937739.png" alt="img"></p>
 </blockquote>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#import "CALayer+BorderColor.h"
@@ -1620,7 +1621,7 @@ areasOfInterest        关联的或利益相关的地标
 
 <p>}</p>
 
-<p><img src="http://cc.cocimg.com/api/uploads/20170710/1499658806305115.png" alt="img" /></p>
+<p><img src="http://cc.cocimg.com/api/uploads/20170710/1499658806305115.png" alt="img"></p>
 
 <h2 id="79处理字符串使其首字母大写">79、处理字符串，使其首字母大写</h2>
 
@@ -2113,7 +2114,7 @@ SimpleJekyllSearch({
 
             <ul class="site-footer-links right mobile-hidden">
                 <li>
-                    <a href="javascript:window.scrollTo(0,0)" >TOP</a>
+                    <a href="javascript:window.scrollTo(0,0)">TOP</a>
                 </li>
             </ul>
             <a href="http://github.com/AustinKuture/austinkuture.github.io" target="_blank" aria-label="view source code">

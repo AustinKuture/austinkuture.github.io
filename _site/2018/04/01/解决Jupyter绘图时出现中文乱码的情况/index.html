@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <title>Source Insight &mdash; Kuture</title>
+    <title>解决Jupyter绘图时出现中文乱码的情况 &mdash; Kuture</title>
     <link rel="stylesheet" href="http://localhost:4000/assets/vendor/primer-css/css/primer.css">
     <link rel="stylesheet" href="http://localhost:4000/assets/vendor/primer-markdown/dist/user-content.min.css">
     <link rel="stylesheet" href="http://localhost:4000/assets/vendor/octicons/octicons/octicons.css">
@@ -21,23 +21,23 @@
     
 
     
-    <link rel="canonical" href="http://localhost:4000/wiki/source-insight/">
+    <link rel="canonical" href="http://localhost:4000/2018/04/01/%E8%A7%A3%E5%86%B3Jupyter%E7%BB%98%E5%9B%BE%E6%97%B6%E5%87%BA%E7%8E%B0%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E7%9A%84%E6%83%85%E5%86%B5/">
     <link rel="alternate" type="application/atom+xml" title="Kuture" href="http://localhost:4000/feed.xml">
     <link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
     
-    <meta property="og:title" content="Source Insight">
+    <meta property="og:title" content="解决Jupyter绘图时出现中文乱码的情况">
       
-    <meta name="keywords" content="Source Insight">
-    <meta name="og:keywords" content="Source Insight">
+    <meta name="keywords" content="Jupyter">
+    <meta name="og:keywords" content="Jupyter">
       
-    <meta name="description" content="快捷键">
-    <meta name="og:description" content="快捷键">
+    <meta name="description" content="解决Jupyter绘图时出现中文乱码的情况">
+    <meta name="og:description" content="解决Jupyter绘图时出现中文乱码的情况">
       
     
     
         
     
-    <meta property="og:url" content="http://localhost:4000/wiki/source-insight/">
+    <meta property="og:url" content="http://localhost:4000/2018/04/01/%E8%A7%A3%E5%86%B3Jupyter%E7%BB%98%E5%9B%BE%E6%97%B6%E5%87%BA%E7%8E%B0%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E7%9A%84%E6%83%85%E5%86%B5/">
     <meta property="og:site_name" content="Kuture">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="zh_CN" />
@@ -85,12 +85,25 @@
     </header>
     <!-- / header -->
 
-    <section class="collection-head small geopattern" data-pattern-id="Source Insight">
+    <section class="collection-head small geopattern" data-pattern-id="解决Jupyter绘图时出现中">
 <div class="container">
   <div class="columns">
     <div class="column three-fourths">
       <div class="collection-title">
-        <h1 class="collection-header">Source Insight</h1>
+        <h1 class="collection-header">解决Jupyter绘图时出现中文乱码的情况</h1>
+        <div class="collection-info">
+          
+          <span class="meta-info">
+            <span class="octicon octicon-calendar"></span> 2018/04/01
+          </span>
+          
+          
+          <span class="meta-info">
+            <span class="octicon octicon-file-directory"></span>
+            <a href="http://localhost:4000/categories/#Jupyter" title="Jupyter">Jupyter</a>
+          </span>
+          
+        </div>
       </div>
     </div>
   </div>
@@ -101,71 +114,36 @@
 <div class="columns">
   <div class="column three-fourths" >
     <article class="article-content markdown-body">
-    <h3 id="快捷键">快捷键</h3>
+    <h1 id="解决jupyter绘图时出现中文乱码的情况">解决Jupyter绘图时出现中文乱码的情况</h1>
 
-<p>C –&gt; Ctrl</p>
+<p>系统：Deepin
+环境：Anaconda3</p>
 
-<p>S –&gt; Shift</p>
+<h4 id="1-下载中文字体">1 下载中文字体</h4>
+<p><a href="http://www.font5.com.cn/ziti_xiazai.php?id=151&amp;part=1237887120&amp;address=0">SimHei</a></p>
 
-<p>M –&gt; Alt</p>
+<h4 id="2-将下载的字体放在matplotlib的字体目录下">2 将下载的字体放在matplotlib的字体目录下</h4>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">功能</th>
-      <th style="text-align: left">快捷键</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">返回</td>
-      <td style="text-align: left">M-,</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">前进</td>
-      <td style="text-align: left">M-.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">跳到定义</td>
-      <td style="text-align: left">C-=</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">查找引用</td>
-      <td style="text-align: left">C-/</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">搜索</td>
-      <td style="text-align: left">C-f</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">向下搜索</td>
-      <td style="text-align: left">F4</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">向上搜索</td>
-      <td style="text-align: left">F3</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">高亮当前单词</td>
-      <td style="text-align: left">S-F8</td>
-    </tr>
-  </tbody>
-</table>
+<p>当前电脑中的路径为</p>
+<blockquote>
+  <p>~/anaconda3/lib/python3.6/site-packages/matplotlib/mpl-data/fonts/ttf</p>
+</blockquote>
 
-<h3 id="qa">Q&amp;A</h3>
+<p><img src="/images/posts/Linux/Deepin-Anaconda-fonts.png" alt="字体目录" /></p>
 
-<ol>
-  <li>
-    <p>新建工程后函数跳转等遇到 <code class="highlighter-rouge">symbol not found</code> 如何解决？</p>
+<h4 id="3-修改matplotlib的配置文件">3 修改matplotlib的配置文件</h4>
 
-    <p>打开菜单里的「Project」-「Synchronize Files」（快捷键 <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd>），勾选 <code class="highlighter-rouge">Force all files to be re-parsed</code> 后点击 <code class="highlighter-rouge">OK</code>，等待 Source Insight 重新解析工程里的文件完成即可。</p>
-  </li>
-  <li>
-    <p>如何在标题栏里显示文件全路径？</p>
+<p>打开matplotlib的配置文件</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vim ~/anaconda3/lib/python3.6/site-packages/matplotlib/mpl-data/matplotlibrc
+</code></pre></div></div>
 
-    <p>打开菜单里的「Options」-「Preferences」-「Display」，取消勾选 <code class="highlighter-rouge">Trim long path names with ellipses</code>。</p>
-  </li>
-</ol>
+<p>修改默认字体，有#号的去掉#号
+<img src="/images/posts/Linux/Anaconda-matplotlib-settings.png" alt="修改默认字体" /></p>
+
+<blockquote>
+  <p>注意：配置完成后需要重启jupyter
+<img src="/images/posts/Linux/Matplotlib-age-graphe.png" alt="graphe" /></p>
+</blockquote>
 
     </article>
     <div class="share">
@@ -173,11 +151,6 @@
     </div>
     <div class="comment">
       
-
-  
-
-  
-
 
     </div>
   </div>
