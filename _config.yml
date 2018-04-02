@@ -18,7 +18,7 @@ side_bar_repo_limit: 5
 author: Yakun
 # organization: zkh360.com
 # organization_url: http://www.zkh360.com
-github_username: austinkuture
+github_username: AustinKuture
 location: BeiJing, China
 email: austinkuture@126.com
 
@@ -83,6 +83,7 @@ repository: AustinKuture/austinkuture.github.io
 #      Comments    #
 # ---------------- #
 #support provider: disqus, gitment, gitalk
+
 
 # ---------------- #
 #      Search      #
