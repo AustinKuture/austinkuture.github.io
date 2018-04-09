@@ -34,7 +34,9 @@ brew install ta-lib
 sudo apt-get install ta-lib
 ```
 如果此时报如下错误则进行第2步：
+
 ![Wrong01](/images/posts/Linux/TA-Lib-002.png)
+
 2 继续安装依赖文件python3-dev
 ```
 sudo apt-get install python3-dev
