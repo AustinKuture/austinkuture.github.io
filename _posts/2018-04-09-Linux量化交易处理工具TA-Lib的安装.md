@@ -47,12 +47,13 @@ sudo apt-get install python3-dev
 3 前两步完成后，使用pip重新安装TA-Lib,安装执行后进入终端尝试导入该模块 import ta-lib如果仍然不能导入，则进行4步
 
 4 [点击下载安装包](http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz)
+```
 > 1 解压压缩包
->2 cd 进入当前文件夹
->3 执行 ./configure --prefix=/usr
->4 make
->5 sudo make install
-
+> 2 cd 进入当前文件夹
+> 3 执行 ./configure --prefix=/usr
+> 4 make
+> 5 sudo make install
+```
 安装编译并安装完成后，重装执行指令即可
 ```
 pip install TA-Lib
