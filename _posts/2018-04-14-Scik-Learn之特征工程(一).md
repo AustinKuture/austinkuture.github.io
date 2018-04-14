@@ -147,6 +147,7 @@ print('数据还原:',dataCount.inverse_transform(mydata))
 > TF-IDF的主要思想是：如果某个词或短语在一篇文章中出现的概率高，并且在其他文章中很少出现，则认为此词或者短语具有很好的类别区分能力，适合用来分类
 > TF-IDF作用：用以评估一字词对于一个文件集或一个语料库中的其中一份文件的重要程度。
 > 类：sklearn.feature_ectraction.text.TfidfVectorizer
+
 ###### TfidfVectorizer语法
 * TfidfVectorizer(stop_words=None,...)
   * 返回词的权重矩阵
