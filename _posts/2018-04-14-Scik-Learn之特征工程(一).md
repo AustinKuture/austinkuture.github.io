@@ -116,7 +116,9 @@ print('数据还原:',dataCount.inverse_transform(mydata))
 ```
     > 对中文进行特征提取时需要先使用jieba进行分词
     > 下载pip3 install jieba
-    > 使用
+    > 使用 import jieba
+    > jieba.cut('机器学习')
+    > 返回词语生成器
     
     
     
