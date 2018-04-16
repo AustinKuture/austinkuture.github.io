@@ -31,25 +31,19 @@ comments: true
 > 特点：通过对原始数据进行变换把数据映射到(默认为[0,1])之间
 
 公式：
-<center>&emsp;&emsp;&emsp;&emsp;$$X'$$ = $$(x-min)\over(max-min)$$</center>
-<center>&emsp;&emsp;&emsp;&emsp;$$X'' = X'*(mx-mi)+mi$$</center>
+
+![sklearn-01](/images/posts/Sklearn/sklearn-01-01.png)
+
 >注：作用于每一列，max为一列的最大值，min为一列的最小值,那么X’’为最终结果，mx，mi分别为指定区间值默认mx为1,mi为0
 
 归一化计算过程
 
-|特征1|特征2|特征3|特征4|
-| :--: | :--: | :--: | :--: |
-| 90 | 2  | 10 | 40 |
-| 60 | 4  | 25 | 45 |
-| 75 | 3  | 13 | 46 |
+![sklearn-01](/images/posts/Sklearn/sklearn-01-02.png)
+
 
 根据公式进行处理：
+![sklearn-01](/images/posts/Sklearn/sklearn-01-03.png)
 
-|特征1|特征2|特征3|特征4|
-| :--: | :--: | :--: | :--: |
-| $$(90-60)\over(90-60)$$ | $$(2-2)\over(4-2)$$ | $$(10-10)\over(15-10)$$ | $$(40-40)\over(46-40)$$ |
-| $$(60-60)\over(90-60)$$ | $$(4-2)\over(4-2)$$ | $$(15-10)\over(15-10)$$ | $$(45-40)\over(46-40)$$ |
-| $$(75-60)\over(90-60)$$ | $$(3-2)\over(4-2)$$ | $$(13-10)\over(15-10)$$ | $$(46-40)\over(46-40)$$ |
 > 注：里面是第一步，还需要第二步乘以(1-0)+0
 
 sklearn归一化API
