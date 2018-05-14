@@ -29,5 +29,29 @@ conda create --name Django_3_1.8.2 python=3
 ```
 >也可以写成conda create -n Django_3_1.8.2 python=3,其中python=3代表python版本为3
 
+![Anaconda01](/images/posts/Anaconda/Anaconda01.png)
+安装过程中会提示是否安装（y/n)?输入y进行安装
+![Anaconda02](/images/posts/Anaconda/Anaconda00.png)
 
-
+#### 访问新环境
+```
+source activate Django_3_1.8.2
+```
+安装完成后就中以进行Django的安装了，此处使用pip进行安装
+```
+pip install django==1.8.2
+```
+![Anaconda03](/images/posts/Anaconda/Anaconda02.png)
+#### 测试是否安装完成
+```
+python -c 'import django;print(django.get_version())'
+```
+#### 退出环境
+```
+source deactivate
+```
+#### 卸载环境
+```
+conda remove --name Django_3_1.8.2 --all
+```
+> windows环境下，流程基本一样，唯一的区别是，不使用source，直接用activate 虚拟环境名称即可
