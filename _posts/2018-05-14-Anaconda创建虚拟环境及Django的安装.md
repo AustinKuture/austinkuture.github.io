@@ -22,4 +22,12 @@ Django是一个开放源代码的Web应用框架，由Python写成。运用了MV
 ```
 conda info --envs
 ```
-!
+![Anaconda00](/images/posts/Anaconda/Anaconda03.png)
+#### 创建虚拟环境安装Django
+```
+conda create --name Django_3_1.8.2 python=3
+```
+>也可以写成conda create -n Django_3_1.8.2 python=3,其中python=3代表python版本为3
+
+
+
