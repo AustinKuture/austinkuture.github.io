@@ -51,4 +51,21 @@ $ {MONTH_NAME_SHORT} - 月份名称的前3个字母。 示例：1月，2月等
 
 $ {MONTH_NAME_FULL} - 一个月的全名。 示例：1月，2月等
 ```
-实例
+### 实例
+```
+#coding=utf-8
+
+"""
+    @header ${NAME}.py
+    @abstract   
+                ###
+                MyBlog: http://www.kuture.com.cn
+    @author  Created by Kuture on ${DATE}
+    @version 1.0.0 ${DATE} Creation(###)
+    
+    Copyright © ${YEAR}年 Mr.Li All rights reserved
+"""
+```
+效果如下：
+
+![Pycharm00](/images/WiKi/Pycharm02.png)
