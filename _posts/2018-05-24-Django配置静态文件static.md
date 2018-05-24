@@ -1,0 +1,68 @@
+---
+layout: post
+title: Django中配置静态文件static
+categories:
+  - Django
+description: Django中配置静态文件static
+keywords: django,static,静态文件
+comments: true
+---
+
+
+# Django中配置静态文件static
+
+项目中经常需要加载一些静态文件,在Django中为了便于管理与使用我们将静态文件统一放入static文件夹中，通常我们将静态文件夹放在app下面,每创建一个app便新建一个static静态文件夹，但是这样就会造成多个app共用同一个静态资源时其他相同的资源就显示的很浪费。对此可以将static放在一个都可以调用的地方，以节约资源。
+可以将static文件夹放在与app同级的目录中
+
+## 调试模式（DEBUG=True)
+
+#### 设置Setting中设置static路径
+打开setting在下面添加如下代码
+```
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+```
+#### 调用静态文件
+
+方式一：
+静态文件jquery.js在的static的javascript文件夹下
+```
+<script src="/static/javascript/jquery.js"></script>
+```
+方式二：
+html模板中先在头部写上
+```
+{% load staticfiles %}
+```
+加载静态文件jquery.js
+```
+<script src="{% static 'javascript/jquery.js' %}"></script>
+```
+
+## 在线模式(DEBUG=False)
+#### 设置host访问名单
+```
+ALLOWED_HOSTS = ['*',]
+```
+> 为*号时代表所有
+
+#### 设置静态文件全局访问变量
+在setting中添加变量
+```
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+```
+> 无论什么模式，使用静态文件时都要确保在INSTALLED_APPS中已添加
+'django.contrib.staticfiles'应用
+
+#### project/urls.py中加入以下代码
+```
+url(r'^static/(?P<path>.*)$','django.views.static.serve',{'document_root':settings.STATIC_ROOT})
+```
+
+#### 调用静态文件
+调用静态文件的方法与调试模式一样
+
+> 注意：当 DEBUG=False, 会出现静态⽂件查找不到, 因为⾮开发环境下, 默认不启⽤静态服务. 因为将静态⽂
+件的处理交由 Django 处理这种⽅式很低效, 会增加对服务器的压⼒, 不适合线上环境. 这种配置⽅式可
+在开发过程中使⽤， 不推荐实际线上环境使⽤.
+线上环境我们会将⽤户的静态⽂件请求交由像 Nginx 这样的 web 服务器来处理
