@@ -11,7 +11,7 @@ comments: true
 
 # Pycharm扩展JS检查插件ESLint
 
-ESLint 是用来检查我们写的 JavaScript 代码是否满足指定规则的静态代码检查工具。
+ESLint 是用来检查我们写的 JavaScript 代码是否满足指定规则的静态代码检查工具
 
 通过用 ESLint 来检查一些规则，我们可以：
 
