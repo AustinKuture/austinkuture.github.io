@@ -41,4 +41,6 @@ check-static = /mnt/Project/ML/KnowledgeGraph/KGGraph/templates/RuisiGraph
 ```
 uwsgi --ini uwsgi.ini
 ```
+结果如下所示
+![uwsgi00](/images/posts/Django/uwsgi00.png)
 
