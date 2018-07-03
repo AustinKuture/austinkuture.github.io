@@ -41,6 +41,16 @@ check-static = /mnt/Project/ML/KnowledgeGraph/KGGraph/templates/RuisiGraph
 ```
 uwsgi --ini uwsgi.ini
 ```
+重启uwsgi服务
+```
+uwsgi --reload uwsgi.pid
+```
+停止uwsgi服务
+```
+uwsgi --stop uwsgi.pid
+```
+
+
 结果如下所示
 ![uwsgi00](/images/posts/Django/uwsgi00.png)
 
