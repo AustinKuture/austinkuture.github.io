@@ -13,7 +13,9 @@ comments: true
 # Ubuntu下无法安装Uwsgi的解决方法
 
 > 系统环境： Deepin 15.6
+
 > 适用系统： Ubuntu、Centos
+
 > 语言环境： Python3.6.4
 
 虚环境下无法安装Uwsgi,主要原因是缺少依赖文件，查看当前语言版本并安装相应的依赖文件，本环境中用的的Python3.6.4 故安装如下版本的依赖文件：
