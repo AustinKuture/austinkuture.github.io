@@ -48,7 +48,7 @@ pidfile = uwsgi.pid
 # 配uWSGI搜索静态文件目录（及django项目下我们存放static文件的目录，用uWSGI作为单独服务器时才需要设置）
 #check-static = /mnt/Project/ML/AKManhua/Manhua/templates/Weihua
 ```
-> 执行它后，uWSGI将启动4个应用进程，每个进程有2个线程，和一个master主进程（监控其他进程状态，如果有进程死了，则重启）。同时，你可以访问”127.0.0.1:9191″来获取JSON格式的应用运行信息，uWSGI还提供了工具命令”uwsgitop”来像top一样监控应用运行状态，你可以用pip来安装它。
+> 执行它后，uWSGI将启动2个应用进程，每个进程有4个线程，和一个master主进程（监控其他进程状态，如果有进程死了，则重启）。同时，你可以访问”127.0.0.1:9191″来获取JSON格式的应用运行信息，uWSGI还提供了工具命令”uwsgitop”来像top一样监控应用运行状态，你可以用pip来安装它。
 
 ## 配置Nginx
 
