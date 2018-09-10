@@ -1,17 +1,25 @@
 - name: 专业技能
   keywords:
+      - Python
       - iOS
       - Swift
-      - Python
-      - Tensorflow
       - C
+      - Objective-C
+      - Tensorflow
+      - Scikit-learn
+      - Kaggle
       - Spider
       - Javascript
-      - Mongodb
+      - Django
+      - Flask
+      - Tornado
+      - Monogodb
       - Redis
       - Mysql
       - Oracle
       - Scrapy
-      - Objective-C
       - MachineLearning
+      - 嵌入式
+      - Robotics
+  
 
