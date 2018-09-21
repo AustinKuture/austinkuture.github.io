@@ -23,3 +23,8 @@ mongo
 出现以下内容则代表启动成功：
 ![Mongo_00](/images/posts/Mac/mongo_00.png)
 
+#### 启动Redis
+```
+cd /usr/local/bin
+sudo ./redis-server
+```
