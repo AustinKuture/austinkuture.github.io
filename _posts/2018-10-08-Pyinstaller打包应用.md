@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Pyinstaller打包应用
+title: Pyinstaller instructions
 categories:
   - Pytinstaller
-description: Pyinstaller打包应用
+description: Pyinstaller instructions
 keywords: 'pyinstaller, dmg, pyqt5'
 comments: true
 ---
