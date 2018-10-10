@@ -55,3 +55,16 @@ source deactivate
 conda remove --name Django_3_1.8.2 --all
 ```
 > windows环境下，流程基本一样，唯一的区别是，不使用source，直接用activate 虚拟环境名称即可
+
+#### conda 指令无效
+在ubuntu上安装anaconda时遇到的问题，转载来，方便后面自己复习方便在使用anaconda装python时，有时候路径可能没有加入到系统路径中，要手动加入：#将anaconda的bin目录加入PATH，根据版本不同。确定anaconda的名字，如果是默认的，python3生成anaconda3
+```
+echo 'export PATH="~/anaconda2/bin:$PATH"'>>~/.bashrc
+```
+然后更新bashrc，即可立即生效，不用关机
+```
+source ~/.bashrc        
+```
+    
+
+
