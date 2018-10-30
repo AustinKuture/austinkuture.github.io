@@ -13,9 +13,10 @@ CSRF（Cross-site request forgery跨站请求伪造，也被称为“one click a
 
 Django 中自带了 防止CSRF攻击的功能，但是一些新手不知道如何使用，给自己编程带来了麻烦。常常会出现下面django csrf token missing or incorrect的错误。
 
-GET 请求不需要 CSRF 认证，POST 请求需要正确认证才能得到正确的返回结果。一般在POST表单中加入 \{% csrf_token %} 
+GET 请求不需要 CSRF 认证，POST 请求需要正确认证才能得到正确的返回结果。一般在POST表单中加入 'csrf_token' (两边加入花括号与百分号)
 
 使用 jQuery 的 ajax 或者 post 之前 加入这个 js 代码
+
 ```
     jQuery(document).ajaxSend(function(event, xhr, settings) {
     function getCookie(name) {
@@ -48,9 +49,12 @@ GET 请求不需要 CSRF 认证，POST 请求需要正确认证才能得到正�
     function safeMethod(method) {
         return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
     }
- 
+
     if (!safeMethod(settings.type) && sameOrigin(settings.url)) {
         xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'));
     }
 });
 ```
+
+
+
