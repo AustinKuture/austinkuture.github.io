@@ -55,7 +55,16 @@ bundle exec jekyll serve
 </head>
 ```
 
-最后，创建或进入文件./_layouts/post.html
+最后，创建或进入文件./_layouts/post.html,在文章尾部加入评论窗口：
+```
+<!-- START 评论 -->
+  <div
+    class="just-comments"
+    data-allowguests="true"
+    data-apikey="之前注册的APIKEY">
+  </div>
+  <!-- END 评论-->
+```
 
 
 
