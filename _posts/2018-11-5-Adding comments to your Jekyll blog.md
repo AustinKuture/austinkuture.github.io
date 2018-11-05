@@ -66,8 +66,9 @@ bundle exec jekyll serve
   <!-- END 评论-->
 ```
 
+## 效果
 
-
+![jekyll01](/images/posts/Jekyll/jekyll_01.png)
 
 
 
