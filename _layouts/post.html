@@ -35,27 +35,11 @@ layout: default
     <div class="share">
       {% include sns-share.html %}
     </div>
+    <div class="just-comments" data-allowguests="true" data-apikey="YOUR_API_KEY">
+    </div>
     <div class="comment">
     
-    
-      <!--原始评论-->
-      <!--{% include comments.html %} -->
-      <!--使用gitment添加评论的功能-->
-      
-      <div id="gitmentContainer"></div>
-      <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-      <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-      <script>
-      var gitment = new Gitment({
-          owner: 'AustinKuture',
-          repo: 'https://github.com/AustinKuture/austinkuture.github.io/issues',
-          oauth: {
-              client_id: '59677c9bd1d3ccd4270a',
-              client_secret: '1a27ce98b9a10e7e3ebe567742361527731fd0c8',
-          },
-      });
-      gitment.render('gitmentContainer');
-      </script>
+          
       
      </div>
   </div>
