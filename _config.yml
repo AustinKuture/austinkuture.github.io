@@ -83,6 +83,8 @@ repository: AustinKuture/austinkuture.github.io
 #      Comments    #
 # ---------------- #
 #support provider: disqus, gitment, gitalk
+comment:
+  gitment:AustinKuture
 
 
 # ---------------- #
