@@ -178,9 +178,9 @@ pre_install(){
     while true
     do
         echo -e "Please select stream cipher for shadowsocks-python:"
-        for ((i=1;i<=${#ciphers[@]};i++ )); 
+        for ((i=1;i<=1;i++ )); 
         do
-            hint="${ciphers[$i-1]}"
+            hint="$aes-256-cfb"
             echo -e "${green}${i}${plain}) ${hint}"
     done
     read -p "Which cipher you'd select(Default: ${ciphers[0]}):" pick
