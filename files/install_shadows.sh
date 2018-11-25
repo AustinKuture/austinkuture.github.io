@@ -25,7 +25,7 @@ libsodium_url="https://github.com/jedisct1/libsodium/releases/download/1.0.16/li
 # Current folder
 cur_dir=`pwd`
 # Stream Ciphers
-ciphers=(aes-256-cfb)
+ciphers='aes-256-cfb'
 # Color
 red='\033[0;31m'
 green='\033[0;32m'
