@@ -178,7 +178,8 @@ pre_install(){
     while true
     do
         echo -e "Please select stream cipher for shadowsocks-python:"
-        for ((i=1;i<=${#ciphers[@]};i++ )); do
+        for ((i=1;i<=${#ciphers[@]};i++ )); 
+        do
             hint="${ciphers[$i-1]}"
             echo -e "${green}${i}${plain}) ${hint}"
     done
