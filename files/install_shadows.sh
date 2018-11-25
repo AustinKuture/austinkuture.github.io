@@ -177,10 +177,10 @@ pre_install(){
     # Set shadowsocks config stream ciphers
     while true
     do
-    echo -e "Please select stream cipher for shadowsocks-python:"
-    for ((i=1;i<=${#ciphers[@]};i++ )); do
-        hint="${ciphers[$i-1]}"
-        echo -e "${green}${i}${plain}) ${hint}"
+        echo -e "Please select stream cipher for shadowsocks-python:"
+        for ((i=1;i<=${#ciphers[@]};i++ )); do
+            hint="${ciphers[$i-1]}"
+            echo -e "${green}${i}${plain}) ${hint}"
     done
     read -p "Which cipher you'd select(Default: ${ciphers[0]}):" pick
     [ -z "$pick" ] && pick=1
