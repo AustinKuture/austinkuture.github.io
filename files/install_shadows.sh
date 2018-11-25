@@ -132,89 +132,6 @@ get_char(){
     stty $SAVEDSTTY
 }
 
-# Pre-installation settings
-pre_install(){
-    if check_sys packageManager yum || check_sys packageManager apt; then
-        # Not support CentOS 5
-        if centosversion 5; then
-            echo -e "$[{red}Error${plain}] Not supported CentOS 5, please change to CentOS 6+/Debian 7+/Ubuntu 12+ and try again."
-            exit 1
-        fi
-    else
-        echo -e "[${red}Error${plain}] Your OS is not supported. please change OS to CentOS/Debian/Ubuntu and try again."
-        exit 1
-    fi
-    # Set shadowsocks config password
-    echo "Please enter password for shadowsocks-python"
-    read -p "(Default password: teddysun.com):" shadowsockspwd
-    [ -z "${shadowsockspwd}" ] && shadowsockspwd="teddysun.com"
-    echo
-    echo "---------------------------"
-    echo "password = ${shadowsockspwd}"
-    echo "---------------------------"
-    echo
-    # Set shadowsocks config port
-    while true
-    do
-    dport=$(shuf -i 9000-19999 -n 1)
-    echo "Please enter a port for shadowsocks-python [1-65535]"
-    read -p "(Default port: ${dport}):" shadowsocksport
-    [ -z "$shadowsocksport" ] && shadowsocksport=${dport}
-    expr ${shadowsocksport} + 1 &>/dev/null
-    if [ $? -eq 0 ]; then
-        if [ ${shadowsocksport} -ge 1 ] && [ ${shadowsocksport} -le 65535 ] && [ ${shadowsocksport:0:1} != 0 ]; then
-            echo
-            echo "---------------------------"
-            echo "port = ${shadowsocksport}"
-            echo "---------------------------"
-            echo
-            break
-        fi
-    fi
-    echo -e "[${red}Error${plain}] Please enter a correct number [1-65535]"
-    done
-
-    # Set shadowsocks config stream ciphers
-    while true
-    do
-        echo -e "Please select stream cipher for shadowsocks-python:"
-        
-        hint="ciphers"
-            
-    done
-    read -p "Which cipher you'd select(Default: ${ciphers}):" pick
-    [ -z "$pick" ] && pick=1
-    expr ${pick} + 1 &>/dev/null
-    if [ $? -ne 0 ]; then
-        echo -e "[${red}Error${plain}] Please enter a number"
-        continue
-    fi
-    if [[ "$pick" -lt 1 || "$pick" -gt ]]; then
-        echo -e "[${red}Error${plain}] Please enter a number between 1 and"
-        continue
-    fi
-    shadowsockscipher=${ciphers}
-    echo
-    echo "---------------------------"
-    echo "cipher = ${shadowsockscipher}"
-    echo "---------------------------"
-    echo
-    break
-    done
-
-    echo
-    echo "Press any key to start...or Press Ctrl+C to cancel"
-    char=`get_char`
-    # Install necessary dependencies
-    if check_sys packageManager yum; then
-        yum install -y python python-devel python-setuptools openssl openssl-devel curl wget unzip gcc automake autoconf make libtool
-    elif check_sys packageManager apt; then
-        apt-get -y update
-        apt-get -y install python python-dev python-setuptools openssl libssl-dev curl wget unzip gcc automake autoconf make libtool
-    fi
-    cd ${cur_dir}
-}
-
 # Download files
 download_files(){
     # Download libsodium file
@@ -246,12 +163,12 @@ config_shadowsocks(){
     cat > /etc/shadowsocks.json<<-EOF
 {
     "server":"0.0.0.0",
-    "server_port":${shadowsocksport},
+    "server_port":'9990',
     "local_address":"127.0.0.1",
     "local_port":1080,
-    "password":"${shadowsockspwd}",
+    "password":"kuturevpn13",
     "timeout":300,
-    "method":"${shadowsockscipher}",
+    "method":"aes-256-cfb",
     "fast_open":false
 }
 EOF
