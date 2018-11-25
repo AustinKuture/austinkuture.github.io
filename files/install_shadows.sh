@@ -189,8 +189,8 @@ pre_install(){
         echo -e "[${red}Error${plain}] Please enter a number"
         continue
     fi
-    if [[ "$pick" -lt 1 || "$pick" -gt ${ciphers} ]]; then
-        echo -e "[${red}Error${plain}] Please enter a number between 1 and ${#ciphers}"
+    if [[ "$pick" -lt 1 || "$pick" -gt ]]; then
+        echo -e "[${red}Error${plain}] Please enter a number between 1 and"
         continue
     fi
     shadowsockscipher=${ciphers}
