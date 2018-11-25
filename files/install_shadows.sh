@@ -25,7 +25,7 @@ libsodium_url="https://github.com/jedisct1/libsodium/releases/download/1.0.16/li
 # Current folder
 cur_dir=`pwd`
 # Stream Ciphers
-ciphers='aes-256-cfb'
+ciphers=('aes-256-cfb')
 # Color
 red='\033[0;31m'
 green='\033[0;32m'
@@ -178,9 +178,9 @@ pre_install(){
     while true
     do
         echo -e "Please select stream cipher for shadowsocks-python:"
-        for ((i=1;i<=1;i++ )); 
+        for ((i=1;i<=${#ciphers[@]};i++ )); 
         do
-            hint="$aes-256-cfb"
+            hint="${ciphers[$i-1]}"
             echo -e "${green}${i}${plain}) ${hint}"
     done
     read -p "Which cipher you'd select(Default: ${ciphers[0]}):" pick
