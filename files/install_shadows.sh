@@ -303,7 +303,7 @@ uninstall_shadowsocks(){
 # Install Shadowsocks-python
 install_shadowsocks(){
     disable_selinux
-    pre_install
+    
     download_files
     config_shadowsocks
     if check_sys packageManager yum; then
