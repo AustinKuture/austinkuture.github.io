@@ -49,11 +49,13 @@ E: Unable to locate package docker
 E: Unable to locate package docker-engine E: Unable to locate package docker.io E: Couldn't find any package by glob 'docker.io'
 E: Couldn't find any package by regex 'docker.io' 
 ```
+
 ## 二、安装Docker
 ### 2.1 根据需要选择不同的方式安装Docker
 * 大多数用户 设置Docker的存储库并从中进行安装，以便安装和升级任务。这是推荐的方法。
 * 有些用户下载DEB软件包并 手动安装，并完全手动管理升级。这对于在无法访问互联网的空隙系统上安装Docker等情况很有用。
 * 在测试和开发环境中，一些用户选择使用自动 便利脚本来安装Docker。
+
 ### 2.2 使用Docker存储库进行安装
 * 首次在新主机上安装Docker CE之前，需要设置Docker存储库。之后，您可以从存储库安装和更新Docker。
 * 设置存储库
@@ -208,6 +210,7 @@ REPOSITORY          TAG                 IMAGE ID            CREATED             
 hello-world         latest              fce289e99eb9        3 weeks ago         1.84kB
 centos              latest              1e1148e4cc2c        6 weeks ago         202MB
 ```
+
 ### 3.2 容器的使用
 * 创建并启动容器
 ```
@@ -228,5 +231,18 @@ docker start id(容器id)
 * 进入容器
 ```
 docker exec -ti xxx(容器id) /bin/bash
+[root@8d5ce4c43a91 /]#
 ```
+
+### 3.3 环境的配置及新容器的生成
+进行容器内，安装Anaconda
+
+```
+yum install wget  # 安装wget
+wget https://repo.anaconda.com/archive/Anaconda3-5.3.1-Linux-x86_64.sh  # 下载anaconda
+chmod +x Anaconda3-5.3.1-Linux-x86_64.sh  # 添加可执行权限
+sh Anaconda3-5.3.1-Linux-x86_64.sh  # 安装
+```
+> Anaconda根据步骤一进行安装即可
+
 
