@@ -243,6 +243,26 @@ wget https://repo.anaconda.com/archive/Anaconda3-5.3.1-Linux-x86_64.sh  # 下载
 chmod +x Anaconda3-5.3.1-Linux-x86_64.sh  # 添加可执行权限
 sh Anaconda3-5.3.1-Linux-x86_64.sh  # 安装
 ```
-> Anaconda根据步骤一进行安装即可
+> Anaconda根据步骤一进行安装即可。
+> 报错tar: This does not look like a tar archive tar: Exiting with failure status due to previous errors 
+> 安装 yum install -y bzip2
 
+* Anaconda安装完成，保存为新的镜像
+```
+docker commit xxx(id) xxx(新的镜像名)
+```
+* 关闭并删除容器
+```
+docker stop xxx(id)  # 停止容器
+docker rm xxx(id)  # 删除容器
+```
+* 重启启动容器
+```
+docker run -dt -p xxxx:xxxx centos_anaconda /bin/bash
+```
+> 挂接本地磁盘到容器 docker run -dt -p 7000-8000:7000-8000 -v /usr/local/home:/usr/local/container/home centos/java8 /bin/bash
 
+* copy宿主机器的文件到容器：
+```
+docker cp /home/msg/name.tar xxx(id):/home/software
+```
