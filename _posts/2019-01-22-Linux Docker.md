@@ -54,6 +54,28 @@ E: Couldn't find any package by regex 'docker.io'
 * 大多数用户 设置Docker的存储库并从中进行安装，以便安装和升级任务。这是推荐的方法。
 * 有些用户下载DEB软件包并 手动安装，并完全手动管理升级。这对于在无法访问互联网的空隙系统上安装Docker等情况很有用。
 * 在测试和开发环境中，一些用户选择使用自动 便利脚本来安装Docker。
+### 2.2 使用Docker存储库进行安装
+* 首次在新主机上安装Docker CE之前，需要设置Docker存储库。之后，您可以从存储库安装和更新Docker。
+* 设置存储库
+* 1.更新apt包资源索引
+```
+root@iZbp162mb58mqtz72o389nZ:~# apt-get update
+Get:1 http://mirrors.cloud.aliyuncs.com/ubuntu xenial InRelease [247 kB]
+Get:2 http://mirrors.cloud.aliyuncs.com/ubuntu xenial-updates InRelease [109 kB]
+Get:3 http://mirrors.cloud.aliyuncs.com/ubuntu xenial-security InRelease [1
+```
+* 2.安装软件包以允许apt通过HTTPS使用存储库：
+```
+sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    software-properties-common
+```
+* 3.添加Docker的官方密钥
+```
+$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+```
 
 
 
