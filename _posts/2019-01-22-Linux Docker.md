@@ -37,7 +37,23 @@ Description:	Ubuntu 16.04.4 LTS
 Release:	16.04
 Codename:	xenial
 ```
+> Codename 为xenial查看系统要求，版本符合
 
+### 1.3 卸载旧的或已安装Docker版本
+* 旧的doceker或者已经安装过的一般叫docker或者docker-engine。
+卸载它们。出现下面这样说明，已经卸载完了
+```
+root@iZ2ze5pt2475mgiqpzlh5kZ:~# apt-get remove docker docker-engine docker.io Reading package lists... Done 
+Building dependency tree Reading state information... Done 
+E: Unable to locate package docker 
+E: Unable to locate package docker-engine E: Unable to locate package docker.io E: Couldn't find any package by glob 'docker.io'
+E: Couldn't find any package by regex 'docker.io' 
+```
+## 二、安装Docker
+### 2.1 根据需要选择不同的方式安装Docker
+* 大多数用户 设置Docker的存储库并从中进行安装，以便安装和升级任务。这是推荐的方法。
+* 有些用户下载DEB软件包并 手动安装，并完全手动管理升级。这对于在无法访问互联网的空隙系统上安装Docker等情况很有用。
+* 在测试和开发环境中，一些用户选择使用自动 便利脚本来安装Docker。
 
 
 
