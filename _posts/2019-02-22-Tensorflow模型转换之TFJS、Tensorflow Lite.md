@@ -62,6 +62,7 @@ MobileNets基于一种流线型结构使用深度可分离卷积来构造轻型�
 
 #### MobileNet网络结构
 MobileNet结构就像前面所提到的由深度可分离卷积所构成，且除了第一层之外为全卷积。通过用这些简单的项定义网络能够更容易的探索网络的拓扑结构来找到一个更好的网络。MobileNet结构由下表1定义。
+
 ![trans03.png](/images/posts/AI/trans04.png)
 
 ## Tensorflow Lite 模型转换
