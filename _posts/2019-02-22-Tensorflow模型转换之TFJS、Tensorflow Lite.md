@@ -4,7 +4,7 @@ title: Tensorflow模型转换之TFJS、Tensorflow Lite
 categories:
   - Tensorflow
   - 人工智能
-description: Tensorflow模型转换之TFJS、Tensorflow Lite
+description: 
 keywords: '动作识别, tensorflow.js, tensorflow lite, 模型转换'
 comments: true
 ---
