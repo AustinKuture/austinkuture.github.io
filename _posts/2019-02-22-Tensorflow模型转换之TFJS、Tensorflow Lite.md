@@ -121,3 +121,12 @@ output_dir='./web_posenet_model')
 ```
 成功后会生成一个js版模型的文件夹，内容如下：
 ![trans05](/images/posts/AI/trans05.png)
+
+转换后的模型精度会有所下降，但是并不妨碍使用，以下Lite模型在移动端的预测效果。
+![trans05](/images/posts/AI/trans06.png)
+> 图片来源于网络，如涉侵权联删
+
+![trans05](/images/posts/AI/trans07.png)
+> 图片来源于网络，如涉侵权联删
+
+
