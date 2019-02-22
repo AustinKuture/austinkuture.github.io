@@ -95,6 +95,7 @@ s
 在确定好输入与输出节点之后就可以进行Lite模型转换了。
 #### 使用TFLiteConverter转换模型
 ```
+# input_graph 是Frozen Graph模型的路径
 inputs = ['image']  # 输入节点
 outputs = ['heatmap',
            'offset_2',
