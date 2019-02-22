@@ -69,6 +69,8 @@ MobileNet结构就像前面所提到的由深度可分离卷积所构成，且�
 模型在转换时需要知道模型的输入与输出节点，所以我们先查看一下模型转换后的变量名称，确定一直输入与输出节点。
 
 ```
+import tensorflow as tf
+# graph_model_path 为Frozen Graph模型的路径
 with tf.gfile.GFile(graph_model_path, 'rb') as rf:
     graph_def = tf.GraphDef()
     graph_def.ParseFromString(rf.read())
@@ -82,4 +84,10 @@ with tf.Graph().as_default() as graph:
         opname_list.append(op.name)
         i += 1
 ```
+Frozen Graph格式的Posenet模型：
+```
 
+```
+>其中124行之前为Mobilenet的网络结构，124行的image是我们要找的图像输入节点。211、213与214是我们要找的输出节点。
+
+在确定好输入与输出节点之后就可以进行Lite模型转换了。
