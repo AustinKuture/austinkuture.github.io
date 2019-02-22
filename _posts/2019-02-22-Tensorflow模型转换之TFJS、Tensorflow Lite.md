@@ -10,6 +10,11 @@ comments: true
 ---
 
 # Tensorflow模型转换之TFJS、Tensorflow Lite
+```
+最近在搭建一个人工智能学习平台，主要包括在线训练图像分类模型、自学习聊天机器人、模型在线转换等功能。  
+本篇文章主要讲解如何将训练好的Save Model模型，转换成移动端使用的Tensorflow Lite模型与Web端使用的Tensorflow JS模型。  
+此处我们以Posenet为例来实现Lite与JS模型的转换。
+```
 
 > Anaconda : 4.5.11  
 > Tensorflow : 1.12.0  
@@ -20,12 +25,6 @@ comments: true
 > MobileNetV1 : 0.75
 
 _转载文章请注明来源及作者_
-
-```
-最近在搭建一个人工智能学习平台，主要包括在线训练图像分类模型、自学习聊天机器人、模型在线转换等功能。  
-本篇文章主要讲解如何将训练好的Save Model模型，转换成移动端使用的Tensorflow Lite模型与Web端使用的Tensorflow JS模型。  
-此处我们以Posenet为例来实现Lite与JS模型的转换。
-```
 
 Posenet是Tensorflow.js官方推荐的例子，本文不再赘述，感兴趣的话可以参考另篇文章[Posenet](http://www.kuture.com.cn/2019/01/24/PoseNet动作识别/)
 
