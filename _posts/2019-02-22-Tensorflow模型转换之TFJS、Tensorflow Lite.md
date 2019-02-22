@@ -84,10 +84,26 @@ with tf.Graph().as_default() as graph:
         opname_list.append(op.name)
         i += 1
 ```
-Frozen Graph格式的Posenet模型：
-```
 
+Frozen Graph格式的Posenet模型：
+
+```
+s
 ```
 >其中124行之前为Mobilenet的网络结构，124行的image是我们要找的图像输入节点。211、213与214是我们要找的输出节点。
 
 在确定好输入与输出节点之后就可以进行Lite模型转换了。
+#### 使用TFLiteConverter转换模型
+```
+inputs = ['image']  # 输入节点
+outputs = ['heatmap',
+           'offset_2',
+           'displacement_fwd_2',
+           'displacement_bwd_2']  # 出节点
+
+converter = tf.contrib.lite.TFLiteConverter.from_frozen_graph(input_graph, inputs, outputs)
+converter.post_training_quantize = True
+tflite_model = converter.convert()
+
+open(output_lite, 'wb').write(tflite_model)
+```
