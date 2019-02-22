@@ -65,3 +65,21 @@ MobileNet结构就像前面所提到的由深度可分离卷积所构成，且�
 ![trans03.png](/images/posts/AI/trans04.png)
 
 ## Tensorflow Lite 模型转换
+#### 查看Frozen Graph模型中的变量名称
+模型在转换时需要知道模型的输入与输出节点，所以我们先查看一下模型转换后的变量名称，确定一直输入与输出节点。
+
+```
+with tf.gfile.GFile(graph_model_path, 'rb') as rf:
+    graph_def = tf.GraphDef()
+    graph_def.ParseFromString(rf.read())
+
+with tf.Graph().as_default() as graph:
+    tf.import_graph_def(graph_def, name='')
+    i = 0
+    opname_list = []
+    for op in graph.get_operations():
+        print(i, ' : ', op.name, op.values())
+        opname_list.append(op.name)
+        i += 1
+```
+
