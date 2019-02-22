@@ -23,7 +23,8 @@ _转载文章请注明来源及作者_
 ```  
 最近在搭建一个人工智能学习平台，主要包括在线训练图像分类模型、自学习聊天机器人、模型在线转换等功能。  
 本篇文章主要讲解如何将训练好的Save Model模型，转换成移动端使用的Tensorflow Lite模型与Web端使用的Tensorflow JS模型。  
-此处我们以Posenet为例来实现Lite与JS模型的转换。``
+此处我们以Posenet为例来实现Lite与JS模型的转换。
+```
 
 Posenet是Tensorflow.js官方推荐的例子，本文不再赘述，感兴趣的话可以参考另篇文章[Posenet](http://www.kuture.com.cn/2019/01/24/PoseNet动作识别/)
 
@@ -31,7 +32,11 @@ Posenet是Tensorflow.js官方推荐的例子，本文不再赘述，感兴趣的
 
 Tensorflow官方文档中，对GraphDef\(.pb\)、FrozenGraphDef\(带有冻结变量的.pb\)、SavedModel\(.pb - 用于推断服务器端的通用格式\)和Checkpoint文件\(在训练过程中的序列化变量\)有明确的解释，其转换过程如下图所示：
 
-!\[\]\(./images/posts/AI/translite01.jpg\)
+![trans](/images/posts/AI/tranlite01.jpg)
+
+如果要转换tfjs或者Lite模型可以使用Keras的HDF5、SaveModel或者Froen Graphdef。由于目前Posenet只有tfjs版，为了更好的分解网络结构,我们先将js版转换为Python版的Posenet，然后再将tensorflow生成的SaveModel(.pb) 与 Checkpoints(.ckpt)，使用freeze_graph固化得到Frozen Graph(.pb)，此时的Frozen Graph(.pb)模型就可转换成Lite与tfjs模型了。
+
+## Python版Posenet的实现
 
 
 
