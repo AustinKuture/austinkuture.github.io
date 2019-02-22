@@ -9,7 +9,6 @@ comments: true
 ---
 
 # GitBook报错is not a recognized liquid tag
-
 使用gitbook编写博客上传时报错’...is not a recognized liquid tag‘，其主要原因是文章中包含html代码。Gitpage对md与html是通用的，当md文件中包含html代码进就会因为格式异常而报错。
 ### [解决办法](#)
 #### 方法一：

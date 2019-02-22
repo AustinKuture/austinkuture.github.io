@@ -11,7 +11,6 @@ comments: true
 ---
 
 # Adding comments to your Jekyll blog
-
 Jekyll 是一款基于Ruby开发的静态网站与博客生成系统，这也是一款目前较为流行的静态博客系统。本篇文章主要讲解如何使用Just Comments与Github Pages相结合生成一个具有评论功能的博客网站。
 
 ## 使用Jekyll创建博客系统

@@ -10,7 +10,6 @@ comments: true
 
 
 # Django中uwsgi的部署
-
 在django项目的setting.py文件的同级目录下，新建一个配置文件　uwsgi.ini并配置文件，内容如下
 ```
 [uwsgi]

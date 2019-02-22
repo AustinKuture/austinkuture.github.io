@@ -10,7 +10,6 @@ comments: true
 ---
 
 # Mac启动MongoDB
-
 ##### 使用终端启动MongoDB：
 打开终端输入以下指令，添加MongoDB配置文件：
 ```

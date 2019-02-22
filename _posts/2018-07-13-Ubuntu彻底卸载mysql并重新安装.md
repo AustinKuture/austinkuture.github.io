@@ -10,7 +10,6 @@ comments: true
 ---
 
 # Ubuntu彻底卸载mysql并重新安装
-
 删除mysql:
 
 ```

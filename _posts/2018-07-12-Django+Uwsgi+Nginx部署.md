@@ -12,8 +12,6 @@ comments: true
 
 
 # Django+uWSGI+Nginx部署
-
-
 uWSGI是一个Web应用服务器，它具有应用服务器，代理，进程管理及应用监控等功能。它支持WSGI协议，同时它也支持自有的uWSGI协议，该协议据说性能非常高，而且内存占用率低，为mod_wsgi的一半左右，我没有实测过。它还支持多应用的管理及应用的性能监控。虽然uWSGI本身就可以直接用来当Web服务器，但一般建议将其作为应用服务器配合Nginx一起使用，这样可以更好的发挥Nginx在Web端的强大功能。本文我们就来介绍如何搭建uWSGI+Ngnix环境来运行Python应用。
 
 ## 安装uWSGI

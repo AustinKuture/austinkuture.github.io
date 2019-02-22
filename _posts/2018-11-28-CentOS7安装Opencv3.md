@@ -10,7 +10,6 @@ comments: true
 ---
 
 # CentOS7安装Opencv3
-
 ```
 最近anaconda推出了Python3.7 ,自己就装了该版本，但是安装后发现安装opencv3不像Python3.5 版本安装opencv3那样简单，以前安装opencv3 只需要conda install –channel https://conda.anaconda.org/menpo opencv3 这条命令即可，现在安装上Python3.6，用该命令会报以下错误：
 UnsatisfiableError: The following specifications were found to be in conflict:

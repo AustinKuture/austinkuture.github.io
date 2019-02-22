@@ -11,7 +11,6 @@ comments: true
 
 
 # MicroPython(Esp32)
-
 MicroPython IDE Link Esp32 Device Records
 
 ## 一、Esp32串口驱动

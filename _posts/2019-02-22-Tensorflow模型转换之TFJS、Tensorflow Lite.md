@@ -10,7 +10,6 @@ comments: true
 ---
 
 # Tensorflow模型转换之TFJS、Tensorflow Lite
-
 > Anaconda : 4.5.11  
 > Tensorflow : 1.12.0  
 > Tensorflowjs : 0.8.0  
