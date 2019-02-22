@@ -10,7 +10,6 @@ comments: true
 ---
 
 # Tensorflow模型转换之TFJS、Tensorflow Lite
-
 > Anaconda : 4.5.11  
 > Tensorflow : 1.12.0  
 > Tensorflowjs : 0.8.0  
@@ -36,8 +35,10 @@ Tensorflow官方文档中，对GraphDef\(.pb\)、FrozenGraphDef\(带有冻结变
 ![trans](/images/posts/AI/tranlite01.jpg)
 
 如果要转换tfjs或者Lite模型可以使用Keras的HDF5、SaveModel或者Froen Graphdef。由于目前Posenet只有tfjs版，为了更好的分解网络结构,我们先将js版转换为Python版的Posenet，然后再将tensorflow生成的SaveModel(.pb) 与 Checkpoints(.ckpt)，使用freeze_graph固化得到Frozen Graph(.pb)，此时的Frozen Graph(.pb)模型就可转换成Lite与tfjs模型了。
+> 鉴于Python版的Posenet重建过程较为复杂且不是当前文章的重点，所以此处关于Python版的重建过程不再赘述。
 
-## Python版Posenet的实现
+## MobileNet_V1的模型结构
+
 
 
 
