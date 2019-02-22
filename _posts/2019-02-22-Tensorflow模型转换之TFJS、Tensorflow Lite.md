@@ -17,6 +17,7 @@ comments: true
 > Opencv3\(menpo\) : 3.1.0  
 > 系统环境 : Mac OSX 10.14.3  
 > Python\(Opencv需要3.5\) : 3.5.4
+> MobileNetV1 : 0.75
 
 _转载文章请注明来源及作者_
 
