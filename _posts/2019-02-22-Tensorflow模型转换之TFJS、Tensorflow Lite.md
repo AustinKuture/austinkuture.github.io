@@ -112,7 +112,12 @@ open(output_lite, 'wb').write(tflite_model)
 同理js转换也需要知道模型的节点名称，而且更加的简单只需要知道输出节点即可。转换方法主要是使用tensorflowjs模块，安装方法：pip install tensorflowjs
 
 ```
-tensorflowjs.converters.tf_saved_model_conversion_pb.convert_tf_frozen_model(frozen_model_path='./Merge_model_new.pb',
-                            output_node_names='heatmap,offset_2,displacement_fwd_2,displacement_bwd_2',
-                            output_dir='./web_posenet_model')
+# frozen_model_path Frozen Graph模型地址
+# output_node_names 输出节点名称
+# tfjs模型输出路径
+tensorflowjs.converters.tf_saved_model_conversion_pb.convert_tf_frozen_model(frozen_model_path='./Frozen_Model.pb',
+output_node_names='heatmap,offset_2,displacement_fwd_2,displacement_bwd_2',
+output_dir='./web_posenet_model')
 ```
+成功后会生成一个js版模型的文件夹，内容如下：
+![trans05](/images/posts/AI/trans05.png)
