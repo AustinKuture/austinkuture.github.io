@@ -67,7 +67,7 @@ MobileNet结构就像前面所提到的由深度可分离卷积所构成，且�
 
 ## Tensorflow Lite 模型转换
 #### 查看Frozen Graph模型中的变量名称
-模型在转换时需要知道模型的输入与输出节点，所以我们先查看一下模型转换后的变量名称，确定一直输入与输出节点。
+模型在转换时需要知道模型的输入与输出节点，所以我们先查看一下模型转换后的变量名称，确定模型输入与输出节点。
 
 ```
 import tensorflow as tf
@@ -335,9 +335,10 @@ output_node_names='heatmap,offset_2,displacement_fwd_2,displacement_bwd_2',
 output_dir='./web_posenet_model')
 ```
 成功后会生成一个js版模型的文件夹，内容如下：
+
 ![trans05](/images/posts/AI/trans05.png)
 
-转换后的模型精度会有所下降，但是并不妨碍使用，以下Lite模型在移动端的预测效果。
+转换后的模型精度会有所下降，但是并不妨碍使用，以下是Lite模型在移动端的预测效果。
 ![trans05](/images/posts/AI/trans06.png)
 > 图片来源于网络，如涉侵权联删
 
