@@ -18,7 +18,7 @@ comments: true
 ## 1. 安装Pynsist
 
 ##### 安装NIST
-[NSIS](https://www.baidu.com/link?url=gUJe8bNlUIK5cKHwuKL1YygidcmbMVQuj4e_jfr6e-ye8IcgDg-omtb2oxl9Whsf&wd=&eqid=c615fdac0007654a000000025ca450be)（Nullsoft Scriptable Install System）是一个开源的 Windows 系统下安装程序制作程序。它提供了安装、卸载、系统设置、文件解压缩等功能。这如其名字所指出的那样，NSIS 是通过它的脚本语言来描述安装程序的行为和逻辑的。NSIS 的脚本语言和通常的编程语言有类似的结构和语法，但它是为安装程序这类应用所设计的。
+[NSIS](https://nsis.sourceforge.io/Download)（Nullsoft Scriptable Install System）是一个开源的 Windows 系统下安装程序制作程序。它提供了安装、卸载、系统设置、文件解压缩等功能。这如其名字所指出的那样，NSIS 是通过它的脚本语言来描述安装程序的行为和逻辑的。NSIS 的脚本语言和通常的编程语言有类似的结构和语法，但它是为安装程序这类应用所设计的。
 ##### 创建虚拟环境
 使用conda创建虚拟环境xxx,完成后进入虚拟环境使用pip安装
 
