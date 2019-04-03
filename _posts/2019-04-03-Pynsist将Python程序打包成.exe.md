@@ -138,5 +138,13 @@ packages=
 
 files=xxx\mu\resources
 ```
+## 3. 打包
+配置文件编写完成之后，即可开始打包，首先以管理员的身份打开终端并进行项目的虚拟环境下例如：activate xxx 输入以下命令进行打包：
+
+```
+pynsist xxx.cfg
+```
+安装依赖文件中可能会报错，例如依赖包与Python版本不兼容，更换相应的版本即可。或者包不能打入，可以将包以packages的形式打入。例如esptool在pypi_wheels中不能正常打入的需要放入packages才可以。
+打包完成后，进入build中找到相应的.exe文件双击即可安装。
 
 
