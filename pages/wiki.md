@@ -11,11 +11,13 @@ permalink: /wiki/
 > 记多少命令和快捷键会让脑袋爆炸呢？
 
 
-<ul class="listing">
+#<ul class="listing">
+<div class="btn-inline">
 {% for wiki in site.wiki %}
 {% if wiki.title != "Wiki Template" %}
 <button class="btn btn-outline" type="button">
-<li class="listing-item"><a href="{{ site.url }}{{ wiki.url }}">{{ wiki.title }}</a></li></button>
+<a href="{{ site.url }}{{ wiki.url }}">{{ wiki.title }}</a></button>
 {% endif %}
 {% endfor %}
-</ul>
+</div>
+#</ul>
