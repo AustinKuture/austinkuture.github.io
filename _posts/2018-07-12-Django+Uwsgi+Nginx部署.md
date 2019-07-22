@@ -4,7 +4,6 @@ title: Django+uWSGI+Nginx部署
 categories:
   - Linux
   - Django
-  - Nginx
 description: Django+uWSGI+Nginx部署
 keywords: Linux,ssh,免密铤登陆
 comments: true

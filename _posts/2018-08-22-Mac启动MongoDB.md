@@ -2,8 +2,7 @@
 layout: post
 title: Mac启动MongoDB
 categories:
-  - Mac OSX
-  - Mongo
+  - Linux
 description: Mac启动MongoDB
 keywords: 'Mac, Mongo'
 comments: true

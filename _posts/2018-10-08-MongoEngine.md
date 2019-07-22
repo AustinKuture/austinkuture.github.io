@@ -2,7 +2,7 @@
 layout: post
 title: MongoEngine
 categories:
-  - Mongo
+  - Linux
 description: MongoEngine
 keywords: 'mongo, mongoengine'
 comments: true

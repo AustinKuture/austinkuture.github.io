@@ -1,11 +1,10 @@
 ---
 layout: post
-title: Ubuntu彻底制裁mysql并重新安装
+title: Ubuntu彻底卸载mysql并重新安装
 categories:
   - Linux
-  - Mysql
-description: Ubuntu彻底制裁mysql并重新安装
-keywords: 'Linux,mysql,彻底制裁mysql,mysql重新安装'
+description: Ubuntu彻底卸载mysql并重新安装
+keywords: 'Linux,mysql,彻底卸载mysql,mysql重新安装'
 comments: true
 ---
 

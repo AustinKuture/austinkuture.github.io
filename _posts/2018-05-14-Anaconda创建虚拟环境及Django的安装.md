@@ -3,7 +3,6 @@ layout: post
 title: Anaconda创建虚拟环境及Django的安装
 categories:
   - Django
-  - Anacoda
   - Linux
 description: Anaconda创建虚拟环境及Django的安装
 keywords: Linux,Anaconda,虚拟环境,Django
