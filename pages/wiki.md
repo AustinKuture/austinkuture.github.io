@@ -14,7 +14,7 @@ permalink: /wiki/
 <div class="btn-inline">
 {% for wiki in site.wiki %}
 {% if wiki.title != "Wiki Template" %}
-<button class="btn btn-outline" type="button" onclick="ocation.href='{{ site.url }}{{ wiki.url }}'">{{ wiki.title }}</button>
+<button class="btn btn-outline" type="button" onclick="location.href='{{ site.url }}{{ wiki.url }}'">{{ wiki.title }}</button>
 {% endif %}
 {% endfor %}
 </div>
