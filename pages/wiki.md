@@ -9,7 +9,7 @@ permalink: /wiki/
 ---
 
 > 记多少命令和快捷键会让脑袋爆炸呢？
-
+```
 <ul class="listing">
 {% for wiki in site.wiki %}
 {% if wiki.title != "Wiki Template" %}
@@ -17,3 +17,13 @@ permalink: /wiki/
 {% endif %}
 {% endfor %}
 </ul>
+```
+{% for category in site.data.skills %}
+### {{ category.name }}
+<div class="btn-inline">
+{% for keyword in category.keywords %}
+<button class="btn btn-outline" type="button">{{ keyword }}</button>
+{% endfor %}
+</div>
+{% endfor %}
+
