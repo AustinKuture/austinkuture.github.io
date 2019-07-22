@@ -2,8 +2,7 @@
 layout: post
 title: Pynsist制作Python程序的Windows安装包
 categories:
-  - Pynsist
-  - Python
+  - System Package
 description: Pynsist制作Python程序的Windows安装包
 keywords: 'Python打包, 打包成exe, Pynsist'
 comments: true

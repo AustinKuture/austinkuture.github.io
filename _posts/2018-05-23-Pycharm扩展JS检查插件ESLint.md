@@ -2,7 +2,7 @@
 layout: post
 title: Pycharm扩展JS检查插件ESLint
 categories:
-  - Pycharm
+  - Software
 description: Pycharm扩展JS检查插件ESLint
 keywords: Pycharm,JS,ESLint,javascript
 comments: true

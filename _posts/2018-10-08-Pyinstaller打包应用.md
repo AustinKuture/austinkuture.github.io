@@ -2,7 +2,7 @@
 layout: post
 title: Pyinstaller instructions
 categories:
-  - Pytinstaller
+  - System Package
 description: Pyinstaller instructions
 keywords: 'pyinstaller, dmg, pyqt5'
 comments: true

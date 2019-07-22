@@ -2,8 +2,7 @@
 layout: post
 title: CentOS7安装Opencv3
 categories:
-  - Opencv
-  - CentOS
+  - Linux
 description: CentOS7安装Opencv3
 keywords: 'Opencv, CentOS, libpng12.so.0'
 comments: true
