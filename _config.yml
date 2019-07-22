@@ -38,9 +38,9 @@ navs:
     href: /wiki/
     label: 百科
 
-  -
-    href: /links/
-    label: 链接
+  #-#
+    #href: /links/#
+    #label: 链接#
 
   -
     href: /about/
@@ -49,7 +49,7 @@ navs:
 # ---------------- #
 #       RSS        #
 # ---------------- #
-subscribe_rss: /feed.xml
+# subscribe_rss: /feed.xml #
 
 # ---------------- #
 #      Jekyll      #
