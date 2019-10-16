@@ -68,7 +68,7 @@ layout: default
     }
     function showCount(Counter){
       // 是否需要创建新纪录的标志（添加一篇新文章）
-      var flag=false;
+      var flag=true;
       var query = new AV.Query(name);
       query.greaterThanOrEqualTo('time', 0);
       query.find().then(function (results) {
