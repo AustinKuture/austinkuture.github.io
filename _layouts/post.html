@@ -70,15 +70,15 @@ layout: default
       query.find().then(function (results) {
         // 当获取到的记录为0时置默认值
         console.log(results)
-        //if(results.length==0 || results.length==1){
-        $('.leancloud_visitors').text('-');
-        flag=true;
-        console.log('返回查询记录为空');
-        // 如果获取到空记录就创建新记录
-        console.log('开始创建新记录')
-        createRecord(Counter);
-        return;
-        //}
+        if(results.length==0){
+          $('.leancloud_visitors').text('-');
+          flag=true;
+          console.log('返回查询记录为空');
+          // 如果获取到空记录就创建新记录
+          console.log('开始创建新记录')
+          createRecord(Counter);
+          return;
+        }
         // 将获取到的数据设置为text
         for (var i = 0; i < results.length; i++) {
           var item = results[i];
