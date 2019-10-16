@@ -30,19 +30,27 @@ layout: default
     var name='Counter';
     function createRecord(Counter){
       // 设置 ACL
+      console.log('---5')
       var acl = new AV.ACL();
       acl.setPublicReadAccess(true);
       acl.setPublicWriteAccess(true);
       // 获得span的所有元素
       var elements=document.getElementsByClassName('leancloud_visitors');
+      console.log(elements)
+      console.log(elements.length)
       // 一次创建多条记录
       var allcounter=[];
       for (var i = 0; i < elements.length ; i++) {
         // 若某span的内容不包括 '-' ，则不必创建记录
+        console.log('---6')
+        console.log(elements[i].textContent.indexOf('-'))
         if(elements[i].textContent.indexOf('-') == -1){
           continue;
         }
+        console.log('---7')
         var title = elements[i].getAttribute('data-flag-title');
+        console.log('---8')
+        console.log(title)
         var url = elements[i].id;
         console.log(url)
         var newcounter = new Counter();
@@ -87,17 +95,23 @@ layout: default
           var element = document.getElementById(url);
           element.textContent = time;
         }
+        console.log('---1')
         // 当某个span含有默认值时说明需要创建记录
         if($('.leancloud_visitors').text().indexOf("-") != -1){
           flag=true;
         }
+        console.log('---2')
         // 当获取的记录数与span个数不吻合时
         if(results.length != $('.leancloud_visitors').length){
           flag=true;
         }
+        console.log('---3')
+        console.log($('.leancloud_visitors').length)
+
         if(flag){
           createRecord(Counter);
         }
+        console.log('---4')
       }, function (error) {
         console.log('query error:'+error.message);
       });
