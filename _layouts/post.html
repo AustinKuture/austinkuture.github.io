@@ -73,6 +73,7 @@ layout: default
       query.greaterThanOrEqualTo('time', 0);
       query.find().then(function (results) {
         // 当获取到的记录为0时置默认值
+        console.log(results)
         if(results.length==0){
           $('.leancloud_visitors').text('-');
           flag=true;
