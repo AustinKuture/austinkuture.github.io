@@ -127,9 +127,13 @@ layout: default
               element.textContent = time;
             }
             // 当某个span含有默认值时说明需要创建记录
+            console.log('18--->indexOf:');
+            console.log($('.leancloud_visitors').text().indexOf("-"))
             if($('.leancloud_visitors').text().indexOf("-") != -1){
               flag=true;
             }
+            console.log('19--->length:');
+            console.log(results.length + '<--->' + $('.leancloud_visitors').length );
             // 当获取的记录数与span个数不吻合时
             if(results.length != $('.leancloud_visitors').length){
               flag=true;
