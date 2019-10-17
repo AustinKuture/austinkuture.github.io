@@ -24,6 +24,13 @@ comments: true
                         <a href="https://github.com/{{ site.github_username }}" target="_blank">{{ site.github_username }}</a>
                     </span>
                     <!-- 首页流量统计-->
+                    {% if site.leancloud.enable %}
+                        <span id="{{ post.url }}" class="leancloud_visitors" data-flag-title="{{ post.title }}">
+                         <span class="post-meta-divider">|</span>
+                         <span class="post-meta-item-text"> Hits:  </span>
+                         <span class="leancloud-visitors-count"></span>
+                        </span>
+                    {% endif %}
                 </div>
             </div>
         </div>

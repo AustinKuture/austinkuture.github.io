@@ -11,6 +11,10 @@ keywords: Kuture, yakun, AI, Pytorch, Keras, Tensorflow, Python, Spider, austink
 timezone: Asia/Shanghai
 encoding: "utf-8"
 side_bar_repo_limit: 5
+leancloud:
+  enable: true
+  app_id: OuqtgYuaTMxmXSBx310IKuWY-gzGzoHsz
+  app_key: AAiznz9nMSOA8uJqrJ9Cay6v
 
 # ---------------- #
 #      Author      #
