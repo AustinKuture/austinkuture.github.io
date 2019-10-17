@@ -49,19 +49,23 @@ layout: default
           acl.setPublicWriteAccess(true);
           // 获得span的所有元素
           var elements=document.getElementsByClassName('leancloud_visitors');
-          console.log('11--->Elements:'+elements);
+          console.log('11--->Elements:');
+          console.log(elements);
           // 一次创建多条记录
           var allcounter=[];
           for (var i = 0; i < elements.length ; i++) {
             // 若某span的内容不包括 '-' ，则不必创建记录
-            console.log('12--->indexOf:'+elements[i].textContent.indexOf('-'));
+            console.log('12--->indexOf:');
+            console.log(elements[i].textContent.indexOf('-'));
             if(elements[i].textContent.indexOf('-') == -1){
               continue;
             }
             var title = elements[i].getAttribute('data-flag-title');
-            console.log('13--->Title:'+title);
+            console.log('13--->Title:');
+            console.log(title);
             var url = elements[i].id;
-            console.log('14--->URL:'+url);
+            console.log('14--->URL:');
+            console.log(url);
             var newcounter = new Counter();
             newcounter.setACL(acl);
             newcounter.set("title", title);
@@ -87,11 +91,14 @@ layout: default
           console.log('1--->ShowCount:'+Counter);
           var flag=false;
           var query = new AV.Query(name);
-          console.log('2--->QVQuery:'+query);
+          console.log('2--->QVQuery:');
+          console.log(query);
           query.greaterThanOrEqualTo('time', 0);
           query.find().then(function (results) {
-            console.log('3--->QueryFind_Results:'+results);
-            console.log('4--->Results.length:'+results.length);
+            console.log('3--->QueryFind_Results:');
+            console.log(results);
+            console.log('4--->Results.length:');
+            console.log(results.length);
             // 当获取到的记录为0时置默认值
             if(results.length==0){
               $('.leancloud_visitors').text('-');
@@ -102,16 +109,21 @@ layout: default
               return;
             }
             // 将获取到的数据设置为text
-            console.log('6--->设置Text:'+results);
+            console.log('6--->设置Text:');
+            console.log(results);
             for (var i = 0; i < results.length; i++) {
               var item = results[i];
-              console.log('7--->Item:'+item);
+              console.log('7--->Item:');
+              console.log(item);
               var url = item.get('url');
-              console.log('8--->URL:'+url);
+              console.log('8--->URL:');
+              console.log(url);
               var time = item.get('time');
-              console.log('9--->Time:'+time);
+              console.log('9--->Time:');
+              console.log(time);
               var element = document.getElementById(url);
-              console.log('10--->Element:'+element);
+              console.log('10--->Element:');
+              console.log(element);
               element.textContent = time;
             }
             // 当某个span含有默认值时说明需要创建记录
