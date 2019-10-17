@@ -121,14 +121,15 @@ layout: default
               console.log('8--->URL:');
               console.log(url);
               var time = item.get('time');
-              oldtime = time
+              
               console.log('9--->Time:');
               console.log(time);
               var element = document.getElementById(url);
               if (element != null){
                 console.log('10--->Element:');
                 console.log(element);
-                element.textContent = time;
+                oldtime = time+1
+                element.textContent = oldtime;
                 console.log('20--->textContent');
                 console.log(element.textContent);
               }
