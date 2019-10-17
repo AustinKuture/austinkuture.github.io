@@ -76,9 +76,9 @@ layout: default
         // 若某span的内容不包括 '-' ，则不必创建记录
         console.log('12--->indexOf:');
         console.log(elements[i].textContent.indexOf('-'));
-        //if(elements[i].textContent.indexOf('-') == -1){
-          //continue;
-        //}
+        if(elements[i].textContent.indexOf('-') == -1){
+          continue;
+        }
         var title = elements[i].getAttribute('data-flag-title');
         console.log('13--->Title:');
         console.log(title);
