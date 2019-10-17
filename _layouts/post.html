@@ -97,7 +97,7 @@ layout: default
             console.log('17--->Default')
           }
           //AV.Object.saveAll(allcounter).then(function (todo) {
-          AV.Object.save(allcounter).then(function (todo) {
+          AV.Object.saveAll(allcounter).then(function (todo) {
             // 成功保存记录之后
             console.log('创建记录成功！');
           }, function (error) {
