@@ -58,25 +58,6 @@ layout: default
             console.log('12--->indexOf:');
             console.log(elements[i].textContent.indexOf('-'));
             if(elements[i].textContent.indexOf('-') == -1){
-              var title = elements[i].getAttribute('data-flag-title');
-              console.log('13--->Title:');
-              console.log(title);
-              var url = elements[i].id;
-              console.log('14--->URL:');
-              console.log(url);
-              var newcounter = new Counter();
-              newcounter.setACL(acl);
-              newcounter.set("title", title);
-              newcounter.set("url", url);
-              console.log('OldTime:'+oldtime);
-              newcounter.set("time", oldtime+1);
-              console.log('15--->push start');
-              allcounter.push(newcounter);
-              console.log('16--->push end');
-              // 顺便更新显示span为默认值0
-              elements[i].textContent=0;
-              console.log('17--->Default')
-
               continue;
             }
             var title = elements[i].getAttribute('data-flag-title');
