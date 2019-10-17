@@ -32,7 +32,7 @@ layout: default
   <div class="column three-fourths" >
     <article class="article-content markdown-body">
     {{ content }}
-    浏览量:&nbsp;<span id="{{ page.url }}" class="leancloud_visitors" data-flag-title="{{ page.title }}"> - </span>次.
+    浏览量:&nbsp;<h2><span id="{{ page.url }}" class="leancloud_visitors" data-flag-title="{{ page.title }}"> - </span>次.</h2>
     <!-- 流量统计script -->
     <!-- 同时兼容http与https -->
     <script src="//cdn1.lncld.net/static/js/2.5.0/av-min.js"></script>
@@ -41,7 +41,7 @@ layout: default
         AV.initialize("OuqtgYuaTMxmXSBx310IKuWY-gzGzoHsz", "AAiznz9nMSOA8uJqrJ9Cay6v");
         // 自己创建的Class的名字
         var name='Counter';
-        function createRecord(Counter){
+        function createRecord(Counter, oldtime){
           console.log('5--->CreateRecord');
           // 设置 ACL
           var acl = new AV.ACL();
@@ -58,6 +58,25 @@ layout: default
             console.log('12--->indexOf:');
             console.log(elements[i].textContent.indexOf('-'));
             if(elements[i].textContent.indexOf('-') == -1){
+              var title = elements[i].getAttribute('data-flag-title');
+              console.log('13--->Title:');
+              console.log(title);
+              var url = elements[i].id;
+              console.log('14--->URL:');
+              console.log(url);
+              var newcounter = new Counter();
+              newcounter.setACL(acl);
+              newcounter.set("title", title);
+              newcounter.set("url", url);
+              console.log('OldTime:'+oldtime);
+              newcounter.set("time", oldtime+1);
+              console.log('15--->push start');
+              allcounter.push(newcounter);
+              console.log('16--->push end');
+              // 顺便更新显示span为默认值0
+              elements[i].textContent=0;
+              console.log('17--->Default')
+
               continue;
             }
             var title = elements[i].getAttribute('data-flag-title');
@@ -111,6 +130,7 @@ layout: default
             // 将获取到的数据设置为text
             console.log('6--->设置Text:');
             console.log(results);
+            var oldtime = 0;
             for (var i = 0; i < results.length; i++) {
               var item = results[i];
               console.log('7--->Item:');
@@ -119,6 +139,7 @@ layout: default
               console.log('8--->URL:');
               console.log(url);
               var time = item.get('time');
+              oldtime = time
               console.log('9--->Time:');
               console.log(time);
               var element = document.getElementById(url);
@@ -143,8 +164,9 @@ layout: default
             if(results.length != $('.leancloud_visitors').length){
               flag=true;
             }
+            console.log('22--->OldTime:'+oldtime);
             if(flag){
-              createRecord(Counter);
+              createRecord(Counter, oldtime);
             }
           }, function (error) {
             console.log('query error:'+error.message);
