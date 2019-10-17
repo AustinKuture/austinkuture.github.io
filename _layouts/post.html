@@ -18,8 +18,9 @@ layout: default
             <span class="octicon octicon-file-directory"></span>
             <a href="{{ site.url }}/categories/#{{ cat }}" title="{{ cat }}">{{ cat }}</a>
           </span>
-          {% endfor %}
           浏览量:&nbsp;<span id="{{ page.url }}" class="leancloud_visitors" data-flag-title="{{ page.title }}"> - </span>次.
+          {% endfor %}
+          
           <!-- 流量统计script -->
           <!-- 同时兼容http与https -->
           <script src="//cdn1.lncld.net/static/js/2.5.0/av-min.js"></script>
