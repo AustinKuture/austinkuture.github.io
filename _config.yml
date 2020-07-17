@@ -15,21 +15,6 @@ leancloud:
   enable: true
   app_id: OuqtgYuaTMxmXSBx310IKuWY-gzGzoHsz
   app_key: AAiznz9nMSOA8uJqrJ9Cay6v
-busuanzi_count:
-  # count values only if the other configs are false
-  enable: true
-  # custom uv span for the whole site
-  site_uv: true
-  site_uv_header: <i class="fa fa-user"></i> 访问人数
-  site_uv_footer: 人次 
-  # # custom pv span for the whole site
-  site_pv: true
-  site_pv_header: <i class="fa fa-eye"></i> 总访问量
-  site_pv_footer: 次 
-  # custom pv span for one page only
-  page_pv: false
-  page_pv_header: <i class="fa fa-file-o"></i> 阅读
-  page_pv_footer: 次 
 
 # ---------------- #
 #      Author      #
@@ -103,8 +88,8 @@ repository: AustinKuture/austinkuture.github.io
 #      Comments    #
 # ---------------- #
 #support provider: disqus, gitment, gitalk
-comment:
-  gitment:AustinKuture
+#comment:
+  #gitment:AustinKuture
 
 
 # ---------------- #
@@ -119,5 +104,5 @@ simple_jekyll_search:
 # ---------------- #
 #    Analytics     #
 # ---------------- #
-google:
-    analytics_id: UA-80669434-1
+#google:
+    #analytics_id: UA-80669434-1
