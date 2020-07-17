@@ -96,8 +96,8 @@ collections:
         output: true
         permalink: /wiki/:path/
 
-#repository: AustinKuture/austinkuture.github.io
-repository:AustinKuture
+repository: AustinKuture/austinkuture.github.io
+
 
 # ---------------- #
 #      Comments    #
