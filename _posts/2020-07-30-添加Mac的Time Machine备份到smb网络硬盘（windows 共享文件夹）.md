@@ -9,7 +9,6 @@ comments: true
 ---
 
 # 添加Mac的Time Machine备份到smb网络硬盘
-
 家里的极路由支持smb协议，也就是windows 共享文件夹。路由器上插上移动硬盘，然后装上局域网文件中转站插件即可。
 
 Mac 支持Time machine备份，于是今天闲来无事，就做一下系统备份。过程也不是很复杂，看下面的截图吧。[<sup>1</sup>](#refer-anchor-1)
