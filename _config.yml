@@ -1,7 +1,7 @@
 # ---------------- #
 #   Main Configs   #
 # ---------------- #
-baseurl:
+baseurl: http://kuture.com.cn
 url: http://kuture.com.cn
 date_format: "ordinal"
 title: Kuture
