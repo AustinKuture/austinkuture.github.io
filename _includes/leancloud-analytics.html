@@ -1,8 +1,8 @@
 {% if site.leancloud.enable %}
 
   <!-- <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script> -->
-  <script src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script src="{{ site.url }}/assets/js/jquery.min.js"></script>
+  <script src="{{ site.url }}/assets/js/av-core-mini-0.6.1.js"></script>
   <script>AV.initialize("{{site.leancloud.app_id}}", "{{site.leancloud.app_key}}");</script>
   <script>
     function showHitCount(Counter) {
