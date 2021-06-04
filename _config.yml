@@ -1,6 +1,3 @@
-# ---------------- #
-#   Main Configs   #
-# ---------------- #
 url: "http://www.kuture.com.cn"
 date_format: "ordinal"
 title: "Kuture"
