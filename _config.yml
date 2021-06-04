@@ -1,7 +1,7 @@
 # ---------------- #
 #   Main Configs   #
 # ---------------- #
-url: "http://kuture.com.cn"
+url: "http://www.kuture.com.cn"
 date_format: "ordinal"
 title: "Kuture"
 subtitle: "汲众言者博识，阅众家者博学。"
