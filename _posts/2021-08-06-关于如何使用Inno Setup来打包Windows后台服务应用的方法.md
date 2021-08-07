@@ -8,7 +8,7 @@ keywords: 'Inno Setup, 打包Windows Server, 打包windows后台应用, windows�
 comments: true
 ---
 
-# 关于如何使用Inno Setup来打包Windows后台服务应用的方法
+# 关于如何使用Inno Setup打包Windows后台服务应用的方法
 
 ```
 系统：Windows 7
@@ -82,6 +82,8 @@ class MytestServer(win32serviceutil.ServiceFramework):
         self.ReportServiceStatus(win32service.SERVICE_STOPPED)
 
 ```
+
+
 
 ###2. Inno Setup打包文件
 
