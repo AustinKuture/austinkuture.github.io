@@ -54,5 +54,17 @@ keywords: Linux, Ubuntu
   supervisorctl restart       //重启es
   ```
 
+* **获取设备序列号**
+
+  ```shell
+  echo password | sudo - S dmidecode -t 1
+  ```
+
+* **获取U盘序列号**
+
+  ```
+  ll /dev/disk/by-id
+  ```
+
   
 
