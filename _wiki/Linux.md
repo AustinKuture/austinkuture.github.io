@@ -62,9 +62,13 @@ keywords: Linux, Ubuntu
 
 * **获取U盘序列号**
 
-  ```
+  ```shell
   ll /dev/disk/by-id
   ```
 
-  
+* 设置文件不可修改、删除重建
+
+  ```shell
+  sudo chattr + i filename
+  ```
 
