@@ -20,11 +20,11 @@ keywords: 树莓派，deepin
 
 Raspberry Pi Imager （官方的树莓派镜像烧录工具）
 
-地址:：[https://raspberrypi.org/software](https://raspberrypi.org/software)
+地址:：https://raspberrypi.org/software
 
 #### 镜像
 
-Google Drive: [https://drive.google.com/drive/folders/1hzIVCCGonHOn0UGdbCAYxA-0Qy8N6iea]([https://drive.google.com/drive/folders/1hzIVCCGonHOn0UGdbCAYxA-0Qy8N6iea]())
+Google Drive: https://drive.google.com/drive/folders/1hzIVCCGonHOn0UGdbCAYxA-0Qy8N6iea
 
 #### 账号密码
 
