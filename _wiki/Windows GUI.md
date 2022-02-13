@@ -39,6 +39,32 @@ keywords: Windows, GUI, USB, Serial
   
   ```
 
+* **Mac OS、Windows获取U盘序列号：**
+
+  ```python
+  from usb import core
+  
+  res = core.find(find_all=True)
+  
+  for line in res:
+      print(dir(line))
+      print(line)
+      print(line.serial_number)
+   
+  # 判断系统
+  import sys
+  os_type = sys.platform.lower()
+  print(os_type)
+  if "win" in os_type and os_type != 'darwin':
+  
+      print('win')
+  elif "linux" in os_type or os_type == 'darwin':
+  
+      print('linux')
+  ```
+
+  
+
 * **文件随机加解密：**
 
   ```python
