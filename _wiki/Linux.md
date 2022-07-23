@@ -66,9 +66,17 @@ keywords: Linux, Ubuntu
   ll /dev/disk/by-id
   ```
 
-* 设置文件不可修改、删除重建
+* **设置文件不可修改、删除重建**
 
   ```shell
   sudo chattr + i filename
   ```
 
+* **终端弹窗：**
+
+  ```shell
+  * apt install terminator
+  * terminator -e 'ls;read'
+  ```
+
+  
