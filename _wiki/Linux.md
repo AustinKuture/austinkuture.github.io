@@ -79,4 +79,11 @@ keywords: Linux, Ubuntu
   * terminator -e 'ls;read'
   ```
 
+* **error: subprocess-exited-with-error**
+
+  ```shell
+  sudo apt-get install build-essential
+  ```
+
   
+
