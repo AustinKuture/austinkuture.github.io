@@ -39,6 +39,8 @@ keywords: Jetson,nano,jetson nano,jetson nano b01,b01
 
   文章以Mac OS系统为例进行镜像的烧录，下载[树莓派镜像烧录软件](https://www.raspberrypi.com/software/)，软件安装完成后，**操作系统**选项里点击**使用自定义镜像**并选择已下载的镜像文件，**SD卡**选项选择要进行烧录的SD卡即可，设置完成后点击**烧录**按钮镜像的烧录，等待完成即可。
 
+  ![](/images/WiKi/Jetson/jetson_001.png)
+
 ### 2. 环境配置
 
 * **修改环境变量**
