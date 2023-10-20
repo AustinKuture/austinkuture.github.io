@@ -9,7 +9,7 @@ keywords: Jetson,nano,jetson nano,jetson nano b01,b01
 # Jetson Nano
 
 ```
-本文主要用于记录，基于Jetson Nano开发板上应用于无人驾驶小车的系统开发流程，主要包括镜像制作、环境配置、硬件驱动、自动驾驶模型的训练等。
+本文主要用于记录，基于Jetson Nano开发板上应用于无人驾驶小车的系统开发流程，主要包括镜像制作、环境配置、硬件驱动等。
 ```
 
 ### 1. 镜像制作
@@ -276,6 +276,65 @@ pip3 install --upgrade pip
 
   等待一段时间后，Tensorflow就装好啦！！
   
+
+### 6. 性能设置
+
+除了无桌面模式和swap虚拟内存外，还可以提高功耗和解除硬件限制来提高性能。
+
+* **设置功耗模式：**
+  查询现有模式
+
+  ```
+  sudo nvpmodel -q
+  ```
+
+  设定高功率（10W）模式
+
+  ```
+  sudo nvpmodel -m 0
+  ```
+
+  设定低功率（5W）模式
+
+  ```
+  sudo nvpmodel -m 1
+  ```
+
+改变模式之后，可以再执行第一个”查询“指令，看看是否改变
+
+* 解除硬件限制：
+  以前Jetson系列产品 ${home} 目录下，都会有个 jetson_clocks.sh 脚步，可以用来将性能压榨到最极致，而 Nano 的 {home} 目录找不到了。。。其实 jetson_clock 没有消失，只是藏起来了。您在任何地方，只要执行以下指令就可以解除硬件限制。
+
+  ```
+  sudo jetson_clocks
+  ```
+
+### 7. OpenCV
+
+* **卸载原生opencv**
+
+  ```shell
+  sudo apt-get purge libopencv*
+  sudo apt autoremove
+  sudo apt-get update
+  sudo apt-get install -y build-essential pkg-config
+  ```
+
+* **安装opencv**
+
+  ```
+  * https://github.com/yqlbu/jetson-packages-family#opencv
+  * 列表中找到opencv并根据提示进行安装
+  * 其中opencv，opencv_contrib，opencv_extra 可以先下载到home目录下，以避免因网络不稳而无法安装
+  ```
+
+  > 参考：https://blog.csdn.net/qq_68080661/article/details/132057624
+
+  
+
+
+
+
 
 
 
