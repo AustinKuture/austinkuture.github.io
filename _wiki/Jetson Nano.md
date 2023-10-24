@@ -344,7 +344,31 @@ pip3 install --upgrade pip
 
   
 
+## 常见问题
 
+* **Illegal instruction (core dumped)**
+
+  * 终端运行
+
+    ```
+    sudo vim ~/.bashrc
+    ```
+
+  * 末尾添加环境变量，保存并关闭文件
+
+    ```
+    export OPENBLAS_CORETYPE=ARMV8
+    ```
+
+  * 终端运行
+
+    ```
+    source ~/.bashrc
+    ```
+
+    
+
+  
 
 
 
