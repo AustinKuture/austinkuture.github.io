@@ -275,7 +275,15 @@ pip3 install --upgrade pip
   ```
 
   等待一段时间后，Tensorflow就装好啦！！
-  
+
+* **安装Torch**
+
+  使用pip3安装torch与torchvision
+
+  ```
+  sudo pip3 install torch==1.8.1
+  sudo pip3 install torchvision==0.9.1
+  ```
 
 ### 6. 性能设置
 
@@ -310,6 +318,10 @@ pip3 install --upgrade pip
   ```
 
 ### 7. OpenCV
+
+```
+安装比较麻烦，且容易失败，如无必要可继续使用原生opencv
+```
 
 * **卸载原生opencv**
 
