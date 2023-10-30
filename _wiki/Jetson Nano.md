@@ -332,7 +332,15 @@ pip3 install --upgrade pip
   sudo apt-get install -y build-essential pkg-config
   ```
 
-* **安装opencv**
+* **通过opencv本地包进行安装**
+
+  ```
+  * pip官网下载opencv-python=4.5.1.48
+  * 直接下载文件opencv_python-4.5.1.48-cp36-cp36m-manylinux2014_aarch64.whl
+  * 本地安装完成后，安装numpy==1.16.1
+  ```
+
+* **通过opencv项目编译安装（不推荐）**
 
   安装v4l2
   
@@ -617,8 +625,8 @@ pip3 install --upgrade pip
   ```
   
   > 参考：https://blog.csdn.net/qq_68080661/article/details/132057624
-  
-  
+
+
 
 ## 常见问题
 
@@ -645,13 +653,14 @@ pip3 install --upgrade pip
 * **Cannot identify device '/dev/video...**
 
   ```
-  [ WARN:0] global /home/nvidia/host/build_opencv/nv_opencv/modules/videoio/src/cap_gstreamer.cpp (933) open OpenCV | GStreamer warning: Cannot query video position: status=0, value=-1, duration=-1
-  [ WARN:0] global /home/nvidia/host/build_opencv/nv_opencv/modules/videoio/src/cap_gstreamer.cpp (1757) handleMessage OpenCV | GStreamer warning: Embedded video playback halted; module v4l2src0 reported: Internal data stream error.
-  [ WARN:0] global /home/nvidia/host/build_opencv/nv_opencv/modules/videoio/src/cap_gstreamer.cpp (515) startPipeline OpenCV | GStreamer warning: unable to start pipeline
-  [ WARN:0] global /home/nvidia/host/build_opencv/nv_opencv/modules/videoio/src/cap_gstreamer.cpp (1055) setProperty OpenCV | GStreamer warning: no pipeline
+  * pip官网下载opencv-python=4.5.1.48
+  * 直接下载文件opencv_python-4.5.1.48-cp36-cp36m-manylinux2014_aarch64.whl
+  * 本地安装完成后，安装numpy==1.16.1
   ```
 
   > https://blog.csdn.net/qq_56548850/article/details/123967404
+  >
+  > https://blog.csdn.net/weixin_45235219/article/details/128840418
 
 
 
