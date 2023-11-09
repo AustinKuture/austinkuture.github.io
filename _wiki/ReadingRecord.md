@@ -94,6 +94,11 @@ keywords: Reading,Records,阅读,记录,阅读记录
   https://github.com/AtsushiSakai/PythonRobotics
   ```
 
+  > * https://www.sohu.com/a/302914754_355123
+  >
+  > * https://mp.weixin.qq.com/s?__biz=MzU1NjEwMTY0Mw==&mid=2247534757&idx=1&sn=28fb13c48e4c60da575827d877bb7e4a&chksm=fbc831c1ccbfb8d740c920eec8a80afdc767590a18f56613e7993f7e1e32d0a50afbc7e0add8&scene=27
+  > * https://www.51cto.com/article/614590.html
+
 
 
 ## 3. Algorithm
