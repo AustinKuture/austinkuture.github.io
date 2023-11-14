@@ -72,6 +72,20 @@ keywords: Reading,Records,阅读,记录,阅读记录
   * https://modelscope.cn/models/damo/cv_yolopv2_image-driving-perception_bdd100k/summary
   ```
 
+* **基于gpt的图表生成：**
+
+  ```
+  * https://www.chartgpt.dev/
+  ```
+
+* **漫画上色：**
+
+  ```
+  * https://petalica.com/index_zh.html
+  ```
+
+  
+
 
 
 ## 2. SLAM
