@@ -1,5 +1,5 @@
 ---
-layout: wiki
+flayout: wiki
 title: PHP
 categories: php
 description: 学习 php 过程中遇到的问题记录。

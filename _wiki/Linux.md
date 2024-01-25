@@ -91,5 +91,19 @@ keywords: Linux, Ubuntu
   https://www.oschina.net/p/Bottom
   ```
 
-  
+### VirtualBox
+
+**命令行安装与卸载：**
+
+```shell
+sudo apt-get update
+sudo apt install virtualbox
+sudo apt-get remove virtualbox*
+```
+
+> https://blog.csdn.net/qq_39257814/article/details/125506511
+
+**创建虚拟机:**
+
+
 
