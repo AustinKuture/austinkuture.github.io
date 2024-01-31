@@ -99,11 +99,12 @@ keywords: Linux, Ubuntu
 sudo apt-get update
 sudo apt install virtualbox
 sudo apt-get remove virtualbox*
+* 启动命令： virtualbox
 ```
 
 > https://blog.csdn.net/qq_39257814/article/details/125506511
 
-**创建虚拟机:**
+
 
 
 
